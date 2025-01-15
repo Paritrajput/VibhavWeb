@@ -1,0 +1,54 @@
+{
+    "projects": [
+        {
+            "title": "Smart Home Automation",
+            "shortDescription": "IoT-based home automation system with mobile app control",
+            "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "AI Traffic Management",
+            "shortDescription": "Intelligent traffic management using computer vision",
+            "image": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Renewable Energy Monitor",
+            "shortDescription": "Solar panel efficiency monitoring platform",
+            "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Smart Agriculture System",
+            "shortDescription": "IoT-based farming monitoring and automation",
+            "image": "https://images.unsplash.com/photo-1592982537447-6f2a6a71dd1b?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Health Monitoring Device",
+            "shortDescription": "Wearable health tracking system",
+            "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Waste Management System",
+            "shortDescription": "Smart waste collection and sorting system",
+            "image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Smart Street Lighting",
+            "shortDescription": "Energy-efficient automated street lights",
+            "image": "https://images.unsplash.com/photo-1515871204537-49a5fe66a31f?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Water Quality Monitor",
+            "shortDescription": "Real-time water quality analysis system",
+            "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Emergency Response System",
+            "shortDescription": "Quick emergency detection and response",
+            "image": "https://images.unsplash.com/photo-1582213782179-e0d53f982ca?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Smart Parking System",
+            "shortDescription": "Automated parking management solution",
+            "image": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&q=80"
+        }
+    ]
+}

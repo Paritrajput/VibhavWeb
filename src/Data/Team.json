@@ -1,0 +1,75 @@
+{
+    "team": [
+        
+        {
+            "name": "Dr. Sarah Johnson",
+            "position": "Faculty Advisor",
+            "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80",
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        },
+        {
+            "name": "Alex Chen",
+            "position": "Team Lead",
+            "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        },
+        {
+            "name": "Emily Rodriguez",
+            "position": "Technical Head",
+            "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80",
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        },
+        {
+            "name": "Michael Zhang",
+            "position": "Project Manager",
+            "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80",
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        },
+        {
+            "name": "Priya Patel",
+            "position": "Software Developer",
+            "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80",
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        },
+        {
+            "name": "David Kim",
+            "position": "Hardware Specialist",
+            "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80",
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        },
+        {
+            "name": "Lisa Wang",
+            "position": "IoT Developer",
+            "image": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80",
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        },
+        {
+            "name": "James Wilson",
+            "position": "AI Researcher",
+            "image": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80",
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        },
+        {
+            "name": "Sophia Lee",
+            "position": "UI/UX Designer",
+            "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80",
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        },
+        {
+            "name": "Robert Martinez",
+            "position": "Systems Architect",
+            "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80",
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com"
+        }
+    ]
+}

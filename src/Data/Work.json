@@ -1,0 +1,54 @@
+{
+    "work": [
+        {
+            "title": "Technical Workshops",
+            "description": "Conducting hands-on workshops on cutting-edge technologies",
+            "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Hackathons",
+            "description": "Organizing coding competitions to solve real-world problems",
+            "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Research Projects",
+            "description": "Collaborating on innovative research initiatives",
+            "image": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Technical Seminars",
+            "description": "Hosting industry experts for knowledge sharing sessions",
+            "image": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Robotics Lab",
+            "description": "Building and experimenting with robotics projects",
+            "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Innovation Cell",
+            "description": "Fostering innovation and entrepreneurship",
+            "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Tech Talks",
+            "description": "Regular sessions on emerging technologies",
+            "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Project Mentoring",
+            "description": "Guiding students in technical project development",
+            "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Code Reviews",
+            "description": "Peer code reviews and best practices sessions",
+            "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
+        },
+        {
+            "title": "Tech Events",
+            "description": "Organizing technical competitions and events",
+            "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80"
+        }
+    ]
+}
