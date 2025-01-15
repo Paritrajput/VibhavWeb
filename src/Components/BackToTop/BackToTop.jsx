@@ -37,7 +37,7 @@ function BackToTop() {
             onClick={scrollToTop}
             className="   bg-black opacity-50 text-white p-3 rounded-full shadow-lg hover:opacity-90 hover:p-4 transition-all duration-300 animate-bounce-custom"
           >
-            <img src="BackToTop.png" className="h-5" />
+            <img src="/BackToTop.png" className="h-5" />
           </button>
         )}
       </div>

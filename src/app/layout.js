@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         >
           <div className=" background "></div>
           <Navbar />
-          <div className="">
+          <div className="text-white">
             <BackToTop />
 
             {children}
