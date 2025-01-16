@@ -44,6 +44,19 @@ function Navbar() {
 
     setShowNavbar(() => !showNavbar);
   };
+  const menus = document.querySelectorAll('.menu');
+
+  menus.forEach((menu) => {
+    menu.addEventListener('toggle', (event) => {
+      if (menu.open) {
+        menus.forEach((otherMenu) => {
+          if (otherMenu !== menu) {
+            otherMenu.open = false;
+          }
+        });
+      }
+    });
+  });
 
   return (
     <div className="navbar sticky w-full top-0 z-30 inset-0">
@@ -60,9 +73,8 @@ function Navbar() {
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
                 <Link
                   href="/"
-                  className={`${
-                    pathname === "/" ? "text-white font-bold " : "text-gray-400"
-                  } hover:text-white `}
+                  className={`${pathname === "/" ? "text-white font-bold " : "text-gray-400"
+                    } hover:text-white `}
                 >
                   Home
                 </Link>
@@ -70,11 +82,10 @@ function Navbar() {
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
                 <DropdownMenu>
                   <DropdownMenuTrigger
-                    className={`${
-                      pathname.startsWith("/Projects/")
-                        ? "text-white font-bold "
-                        : "text-gray-400"
-                    } hover:text-white `}
+                    className={`${pathname.startsWith("/Projects/")
+                      ? "text-white font-bold "
+                      : "text-gray-400"
+                      } hover:text-white `}
                   >
                     Projects
                   </DropdownMenuTrigger>
@@ -116,11 +127,10 @@ function Navbar() {
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
                 <DropdownMenu>
                   <DropdownMenuTrigger
-                    className={`${
-                      pathname.startsWith("/Team/")
-                        ? "text-white font-bold "
-                        : "text-gray-400"
-                    } hover:text-white `}
+                    className={`${pathname.startsWith("/Team/")
+                      ? "text-white font-bold "
+                      : "text-gray-400"
+                      } hover:text-white `}
                   >
                     Team
                   </DropdownMenuTrigger>
@@ -142,11 +152,10 @@ function Navbar() {
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
                 <DropdownMenu>
                   <DropdownMenuTrigger
-                    className={`${
-                      pathname.startsWith("/Work/")
-                        ? "text-white font-bold "
-                        : "text-gray-400"
-                    } hover:text-white `}
+                    className={`${pathname.startsWith("/Work/")
+                      ? "text-white font-bold "
+                      : "text-gray-400"
+                      } hover:text-white `}
                   >
                     Work
                   </DropdownMenuTrigger>
@@ -188,21 +197,18 @@ function Navbar() {
               className="relative w-6 h-6 flex flex-col justify-center items-center group"
             >
               <span
-                className={`block w-full h-[3px] bg-stone-300 rounded-md transition-all duration-300 ease-in-out ${
-                  showNavbar ? "rotate-45 translate-y-2" : ""
-                }`}
+                className={`block w-full h-[3px] bg-stone-300 rounded-md transition-all duration-300 ease-in-out ${showNavbar ? "rotate-45 translate-y-2" : ""
+                  }`}
               ></span>
 
               <span
-                className={`block w-full h-[3px] bg-stone-300 rounded-md my-1 transition-all duration-300 ease-in-out ${
-                  showNavbar ? "opacity-0" : ""
-                }`}
+                className={`block w-full h-[3px] bg-stone-300 rounded-md my-1 transition-all duration-300 ease-in-out ${showNavbar ? "opacity-0" : ""
+                  }`}
               ></span>
 
               <span
-                className={`block w-full h-[3px] bg-stone-300 rounded-md transition-all duration-300 ease-in-out ${
-                  showNavbar ? "-rotate-45 -translate-y-2" : ""
-                }`}
+                className={`block w-full h-[3px] bg-stone-300 rounded-md transition-all duration-300 ease-in-out ${showNavbar ? "-rotate-45 -translate-y-2" : ""
+                  }`}
               ></span>
             </button>
 
@@ -214,90 +220,205 @@ function Navbar() {
         </ul>
 
         <div
-          className={`sm:hidden transition-all duration-700 delay-100 ease-in-out fixed top-14 bg-black w-[100%]   overflow-hidden ${
-            showNavbar ? " h-full" : " h-0"
-          } `}
+          className={`sm:hidden transition-all duration-700 delay-100 ease-in-out fixed top-14 bg-black w-[100%]   overflow-hidden ${showNavbar ? " h-full" : " h-0"
+            } `}
         >
-          <ul
-            className={` flex flex-col gap-4 p-5 ml-4 justify-evenly  mx-auto z-20`}
-          >
-            <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white flex gap-4">
-              <img src="/home.png" />
-              <button
-                onClick={() => {
-                  router.push("/");
-                  toggleNavbar();
-                }}
-              >
-                Home
-              </button>
-            </li>
-            <li className="text-3xs flex gap-4 border-solid border-4 border-black p-1 rounded w-20 text-white  top-3">
-              <img src="/projects.png" />
-              <button
-                onClick={() => {
-                  router.push("/Projects");
-                  toggleNavbar();
-                }}
-              >
-                Projects
-              </button>
-            </li>
-            <li className="text-3xs flex gap-4 border-solid border-4 border-black p-1 rounded w-20 text-white  top-3">
-              <img src="/team.png" />
-              <button
-                onClick={() => {
-                  router.push("/Team");
-                  toggleNavbar();
-                }}
-              >
-                Team
-              </button>
-            </li>
-            {/* <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
-              <button
-                onClick={() => {
-                  router.push("/Work");
-                  toggleNavbar();
-                }}
-              >
-                Work
-              </button>
-            </li> */}
-            <DropdownMenu>
-              <DropdownMenuTrigger>
-                <li className="text-3xs flex gap-4 border-solid border-4 border-black p-1 rounded w-20 text-white  top-3">
-                  <img src="/projects.png" />
-                  Work
+
+          <div class="flex h-screen flex-col justify-between border-e text-gray-500">
+            <div class="px-4 py-6">
+              <ul class="mt-6 space-y-1">
+                <li>
+                  <a
+                    href="/"
+                    class="block rounded-lg px-4 py-2 text-sm font-medium"
+                  >
+                    Home
+                  </a>
                 </li>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>
-                  <button onClick={() => router.push("/Work/CurrentYear")}>
-                    Current Year
-                  </button>
-                  {/* <Link href="/Projects">AI/ML</Link> */}
-                </DropdownMenuItem>
-                {/* <DropdownMenuSeparator /> */}
-                <DropdownMenuItem>
-                  <button onClick={() => router.push("/Work/PreviousYear")}>
-                    Previous Year
-                  </button>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <li className="text-3xs flex gap-4 border-solid border-4 border-black p-1 rounded w-20 text-white  top-3">
-              <img src="/contact-us.png" />
-              <button
-                onClick={() => {
-                  handleContactClick();
-                  toggleNavbar();
-                }}
-              >
-                Contact
-              </button>
-            </li>
-          </ul>
+
+                <li>
+                  <details class="group menu [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                      class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2"
+                    >
+                      <span class="text-sm font-medium"> Projects </span>
+
+                      <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="size-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                    </summary>
+
+                    <ul class="mt-2 space-y-1 px-4">
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        >
+                          AI/ML
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        >
+                          AR/VR
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        >
+                          IOT
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        >
+                          DSP
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        >
+                          EMBEDDED SYSTEMS
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        >
+                          QUANTAM COMPUTING
+                        </a>
+                      </li>
+                    </ul>
+                  </details>
+                </li>
+
+                <li>
+                  <details class="group menu [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                      class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2"
+                    >
+                      <span class="text-sm font-medium"> Team </span>
+
+                      <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="size-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                    </summary>
+
+                    <ul class="mt-2 space-y-1 px-4">
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        >
+                          Current
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        >
+                          Alumini
+                        </a>
+                      </li>
+                    </ul>
+                  </details>
+                </li>
+
+                <li>
+                  <details class="group menu [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                      class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2"
+                    >
+                      <span class="text-sm font-medium"> Work </span>
+
+                      <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="size-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                    </summary>
+
+                    <ul class="mt-2 space-y-1 px-4">
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        >
+                          Current Year
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        >
+                          Previous Year
+                        </a>
+                      </li>
+                    </ul>
+                  </details>
+                </li>
+                
+                <li>
+                  <a
+                    href="/"
+                    class="block rounded-lg px-4 py-2 text-sm font-medium"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
