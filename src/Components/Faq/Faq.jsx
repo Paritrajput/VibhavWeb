@@ -22,8 +22,9 @@ function Faq() {
   const toggleFaq = (index) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
+
   return (
-    <div className="w-[90%] sm:w-[80%]">
+    <div className="w-[100%] sm:w-[80%] mx-auto">
       <div className="text-white p-6 m-9 h-fit rounded-lg shadow-md">
         <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
         {faqs.map((faq, index) => (
@@ -33,13 +34,21 @@ function Faq() {
               onClick={() => toggleFaq(index)}
             >
               {faq.question}
-              <span className="text-gray-500">
-                {openFaqIndex === index ? "-" : "+"}
+              <span
+                className={ `transform transition-transform duration-300 ease-in-out ${
+                  openFaqIndex === index ? "rotate-45" : "rotate-0"
+                } text-gray-500`}
+              >
+                <span className="h-20 w-20">+</span>
               </span>
             </button>
-            {openFaqIndex === index && (
-              <p className=" h-fit-content  mt-2 text-gray-600">{faq.answer}</p>
-            )}
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                openFaqIndex === index ? "max-h-40" : "max-h-0"
+              }`}
+            >
+              <p className="mt-2 text-gray-600">{faq.answer}</p>
+            </div>
           </div>
         ))}
       </div>

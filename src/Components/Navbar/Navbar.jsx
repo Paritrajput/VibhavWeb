@@ -176,9 +176,9 @@ function Navbar() {
               </li>
             </ul>
           </li>
-          <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
-            <button
-              className="text-gray-400 hover:text-white"
+          <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20  mr-3">
+          <button
+              className="text-gray-400 hover:text-black transition-all duration-500 ease-in-out hover:scale-125 px-3 py-1 bg-white text-black rounded-3xl "
               onClick={handleContactClick}
             >
               Contact
@@ -407,13 +407,17 @@ function Navbar() {
                   </details>
                 </li>
                 
-                <li>
-                  <a
-                    href="/"
-                    class="block rounded-lg px-4 py-2 text-sm font-medium"
-                  >
-                    Contact
-                  </a>
+                <li onClick={()=>
+                {
+                  setShowNavbar(false)
+                  setTimeout(()=>{handleContactClick()},800)
+                  
+                }
+                   }>
+                    <span className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">Contact</span>
+                 
+                
+                
                 </li>
               </ul>
             </div>
