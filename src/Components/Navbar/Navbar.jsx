@@ -13,6 +13,17 @@ import {
   DropdownMenuTrigger,
 } from "@/Components/ui/dropdown-menu";
 
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@radix-ui/react-navigation-menu";
+
 function Navbar() {
   const { scrollToContact } = useContext(UserContext);
   const router = useRouter();
@@ -44,10 +55,10 @@ function Navbar() {
 
     setShowNavbar(() => !showNavbar);
   };
-  const menus = document.querySelectorAll('.menu');
+  const menus = document.querySelectorAll(".menu");
 
   menus.forEach((menu) => {
-    menu.addEventListener('toggle', (event) => {
+    menu.addEventListener("toggle", (event) => {
       if (menu.open) {
         menus.forEach((otherMenu) => {
           if (otherMenu !== menu) {
@@ -65,7 +76,7 @@ function Navbar() {
           <li className="w-20">
             <img
               src="/vibhav_logo.png"
-              className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-150 hover:ml-3"
+              className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
             />
           </li>
           <li>
@@ -73,19 +84,22 @@ function Navbar() {
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
                 <Link
                   href="/"
-                  className={`${pathname === "/" ? "text-white font-bold " : "text-gray-400"
-                    } hover:text-white `}
+                  className={`${
+                    pathname === "/" ? "text-white font-bold " : "text-gray-400"
+                  } hover:text-white `}
                 >
                   Home
                 </Link>
               </li>
+             
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
                 <DropdownMenu>
                   <DropdownMenuTrigger
-                    className={`${pathname.startsWith("/Projects/")
-                      ? "text-white font-bold "
-                      : "text-gray-400"
-                      } hover:text-white `}
+                    className={`${
+                      pathname.startsWith("/Projects/")
+                        ? "text-white font-bold "
+                        : "text-gray-400"
+                    } hover:text-white `}
                   >
                     Projects
                   </DropdownMenuTrigger>
@@ -127,10 +141,11 @@ function Navbar() {
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
                 <DropdownMenu>
                   <DropdownMenuTrigger
-                    className={`${pathname.startsWith("/Team/")
-                      ? "text-white font-bold "
-                      : "text-gray-400"
-                      } hover:text-white `}
+                    className={`${
+                      pathname.startsWith("/Team/")
+                        ? "text-white font-bold "
+                        : "text-gray-400"
+                    } hover:text-white `}
                   >
                     Team
                   </DropdownMenuTrigger>
@@ -152,10 +167,11 @@ function Navbar() {
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
                 <DropdownMenu>
                   <DropdownMenuTrigger
-                    className={`${pathname.startsWith("/Work/")
-                      ? "text-white font-bold "
-                      : "text-gray-400"
-                      } hover:text-white `}
+                    className={`${
+                      pathname.startsWith("/Work/")
+                        ? "text-white font-bold "
+                        : "text-gray-400"
+                    } hover:text-white `}
                   >
                     Work
                   </DropdownMenuTrigger>
@@ -177,7 +193,7 @@ function Navbar() {
             </ul>
           </li>
           <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20  mr-3">
-          <button
+            <button
               className="text-gray-400 hover:text-black transition-all duration-500 ease-in-out hover:scale-125 px-3 py-1 bg-white text-black rounded-3xl "
               onClick={handleContactClick}
             >
@@ -197,18 +213,21 @@ function Navbar() {
               className="relative w-6 h-6 flex flex-col justify-center items-center group"
             >
               <span
-                className={`block w-full h-[3px] bg-stone-300 rounded-md transition-all duration-300 ease-in-out ${showNavbar ? "rotate-45 translate-y-2" : ""
-                  }`}
+                className={`block w-full h-[3px] bg-stone-300 rounded-md transition-all duration-300 ease-in-out ${
+                  showNavbar ? "rotate-45 translate-y-2" : ""
+                }`}
               ></span>
 
               <span
-                className={`block w-full h-[3px] bg-stone-300 rounded-md my-1 transition-all duration-300 ease-in-out ${showNavbar ? "opacity-0" : ""
-                  }`}
+                className={`block w-full h-[3px] bg-stone-300 rounded-md my-1 transition-all duration-300 ease-in-out ${
+                  showNavbar ? "opacity-0" : ""
+                }`}
               ></span>
 
               <span
-                className={`block w-full h-[3px] bg-stone-300 rounded-md transition-all duration-300 ease-in-out ${showNavbar ? "-rotate-45 -translate-y-2" : ""
-                  }`}
+                className={`block w-full h-[3px] bg-stone-300 rounded-md transition-all duration-300 ease-in-out ${
+                  showNavbar ? "-rotate-45 -translate-y-2" : ""
+                }`}
               ></span>
             </button>
 
@@ -220,10 +239,10 @@ function Navbar() {
         </ul>
 
         <div
-          className={`sm:hidden transition-all duration-700 delay-100 ease-in-out fixed top-14 bg-black w-[100%]   overflow-hidden ${showNavbar ? " h-full" : " h-0"
-            } `}
+          className={`sm:hidden transition-all duration-700 delay-100 ease-in-out fixed top-14 bg-black w-[100%]   overflow-hidden ${
+            showNavbar ? " h-full" : " h-0"
+          } `}
         >
-
           <div class="flex h-screen flex-col justify-between border-e text-gray-500">
             <div class="px-4 py-6">
               <ul class="mt-6 space-y-1">
@@ -238,9 +257,7 @@ function Navbar() {
 
                 <li>
                   <details class="group menu [&_summary::-webkit-details-marker]:hidden">
-                    <summary
-                      class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2"
-                    >
+                    <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
                       <span class="text-sm font-medium"> Projects </span>
 
                       <span class="shrink-0 transition duration-300 group-open:-rotate-180">
@@ -262,7 +279,7 @@ function Navbar() {
                     <ul class="mt-2 space-y-1 px-4">
                       <li>
                         <a
-                          href="#"
+                          href="/Projects/aiml"
                           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           AI/ML
@@ -271,7 +288,7 @@ function Navbar() {
 
                       <li>
                         <a
-                          href="#"
+                          href="/Projects/arvr"
                           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           AR/VR
@@ -280,7 +297,7 @@ function Navbar() {
 
                       <li>
                         <a
-                          href="#"
+                          href="/Projects/iot"
                           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           IOT
@@ -289,7 +306,7 @@ function Navbar() {
 
                       <li>
                         <a
-                          href="#"
+                          href="/Projects/dsp"
                           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           DSP
@@ -298,7 +315,7 @@ function Navbar() {
 
                       <li>
                         <a
-                          href="#"
+                          href="/Projects/embedded"
                           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           EMBEDDED SYSTEMS
@@ -307,7 +324,7 @@ function Navbar() {
 
                       <li>
                         <a
-                          href="#"
+                          href="/Projects/quantumC"
                           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           QUANTAM COMPUTING
@@ -319,9 +336,7 @@ function Navbar() {
 
                 <li>
                   <details class="group menu [&_summary::-webkit-details-marker]:hidden">
-                    <summary
-                      class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2"
-                    >
+                    <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
                       <span class="text-sm font-medium"> Team </span>
 
                       <span class="shrink-0 transition duration-300 group-open:-rotate-180">
@@ -343,7 +358,7 @@ function Navbar() {
                     <ul class="mt-2 space-y-1 px-4">
                       <li>
                         <a
-                          href="#"
+                          href="/Team/CurrentTeam"
                           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           Current
@@ -352,10 +367,10 @@ function Navbar() {
 
                       <li>
                         <a
-                          href="#"
+                          href="/Team/Alumni"
                           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
-                          Alumini
+                          Alumni
                         </a>
                       </li>
                     </ul>
@@ -364,9 +379,7 @@ function Navbar() {
 
                 <li>
                   <details class="group menu [&_summary::-webkit-details-marker]:hidden">
-                    <summary
-                      class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2"
-                    >
+                    <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
                       <span class="text-sm font-medium"> Work </span>
 
                       <span class="shrink-0 transition duration-300 group-open:-rotate-180">
@@ -388,7 +401,7 @@ function Navbar() {
                     <ul class="mt-2 space-y-1 px-4">
                       <li>
                         <a
-                          href="#"
+                          href="/Work/CurrentYear"
                           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           Current Year
@@ -397,7 +410,7 @@ function Navbar() {
 
                       <li>
                         <a
-                          href="#"
+                          href="/Work/PreviousYear"
                           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           Previous Year
@@ -406,23 +419,22 @@ function Navbar() {
                     </ul>
                   </details>
                 </li>
-                
-                <li onClick={()=>
-                {
-                  setShowNavbar(false)
-                  setTimeout(()=>{handleContactClick()},800)
-                  
-                }
-                   }>
-                    <span className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">Contact</span>
-                 
-                
-                
+
+                <li
+                  onClick={() => {
+                    setShowNavbar(false);
+                    setTimeout(() => {
+                      handleContactClick();
+                    }, 800);
+                  }}
+                >
+                  <span className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                    Contact
+                  </span>
                 </li>
               </ul>
             </div>
           </div>
-
         </div>
       </div>
     </div>
