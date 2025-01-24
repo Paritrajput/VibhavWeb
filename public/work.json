@@ -1,0 +1,213 @@
+{
+    "AI/ML": [
+      {
+        "name": "Steganomage",
+        "content": "Our objective is to hide secret image data within an ordinary, non-secret, file or message in order to avoid detection, the secret image data is then extracted at its destination. Our objective is to hide secret image data within an ordinary, non-secret, file or message in order to avoid detection, the secret image data is then extracted at its destination.",
+        "github": "",
+        "images": "/Assets/Projects/AI/steganography.webp"
+      },
+      {
+        "name": "Diabetic Retinopathy",
+        "content": "This research project is aimed at determining the risk a patient has of losing his/her vision due to diabetic retinopathy. This project will give the desired medication to low-risk patients and will help to identify high-risk patients so that they can get immediate medication. This will be achieved with the help of convolutional neural networks which will classify the retinopathy image of the patient into 5 categories and according to the output of the model medication will be given.",
+        "github": "",
+        "images": "/Assets/Projects/AI/diabetic.webp"
+      },
+      {
+        "name": "Circuit Solver",
+        "content": "This project aims to create LTspice schematic from hand-drawn circuits for the students who dont know the interface of simulators.",
+        "github": "https://github.com/Team-Vibhav/Circuit-Solver",
+        "images": "/Assets/Projects/AI/circuitsolver.webp"
+      },
+      {
+        "name": "E-Exhibition",
+        "content": "Our objective is to create an interactive virtual environment for the exhibition of various hardware projects by their 3D models and interaction with a question answering bot. We made 3D models of the projects using Blender. After that we created an environment of exhibition hall in Unity.",
+        "github": "https://github.com/Team-Vibhav/E-Exhibition",
+        "images": "/Assets/Projects/AI/eexhib.webp"
+      },
+      {
+        "name": "Braille OCR",
+        "content": "Braille is a tactile writing system used by people who are visually impaired. It is traditionally written with embossed paper. The motive behind building this project is to make a system which could read and convert the written data into braille language.",
+        "github": "https://github.com/Mukulthakur17/BrailleOcr",
+        "images": "/Assets/Projects/AI/braileOcr.webp"
+      },
+      {
+        "name": "C. A. R. T.",
+        "content": "A crowd analysis system that will detect every face in the crowd and based upon that will give the crowd count. Further those detected faces will be run through different models to detect the Emotion, Age, Gender and Ethinicity of the crowd.",
+        "github": "https://github.com/Mukulthakur17/Crowd-Analysis-in-Real-Time",
+        "images": "/Assets/Projects/AI/cart.webp"
+      },
+      {
+        "name": "Anti-Depression Bot",
+        "content": "The life of people working in the corporate sector and students who are studying in cities far from home is quite lonely. Depression is a real problem out there and costs thousands of human lives per year. The main motive behind building this bot is to cure that problem and help people to live a peaceful life.",
+        "github": "https://github.com/Team-Vibhav/Projects-TeamVibhav/tree/main/Anti-Depression%20and%20Companion%20Bot%20(ADCB)",
+        "images": "/Assets/Projects/AI/antiDepressionBot.webp"
+      },
+      {
+        "name": "Top-Crop Farm Bot",
+        "content": "Traditionally humans have to manually look after their large farms and this consumes a lot of time but this bot solves the problem. The main aim of this project is to monitor large fields, conditions of soil, crops in a more efficient manner.",
+        "github": "https://github.com/Team-Vibhav/Projects-TeamVibhav/tree/main/TOPCROP",
+        "images": "/Assets/Projects/AI/CropFarmBot.webp"
+      },
+      {
+        "name": "PCB Fault Detection",
+        "content": "In this project, we aim to use semantic segmentation to detect inconsistencies in circuit board images by using pre-recorded and labelled circuit imagery of working and non-working PCBs. Semantic segmentation involves assigning a class to every pixel of the image, wherein we treat multiple members of a class as a single entity.",
+        "github": "https://github.com/Team-Vibhav/PCB-FAULT-DETECTION",
+        "images": "/Assets/Projects/AI/pcb_fault.webp"
+      },
+      {
+        "name": "Virtual Tablet",
+        "content": "An OpenCV project to create a virtual tab that allows us to write on the screen while writing in the air, resulting in a digital text document. The project's purpose is to create a virtual tablet that will allow us to write on the screen while also writing on the air. It will use OpenCV to track the position of the pen's tip in order to determine the pen's exact location.",
+        "github": "https://github.com/Team-Vibhav/Virtual-tablet",
+        "images": "/Assets/Projects/AI/tablet-1.webp"
+      }
+    ],
+    "IoT": [
+      {
+        "name": "Li-Fi Based Communication System",
+        "content": "The project aims to design a system capable of transmitting data from one node to another by the use of Li-Fi technology. Anything in this universe that needs to change or we can say that developing is called technology. People are accepting the change created by the people. As the number of devices that access the internet is increasing, the limited bandwidth leads to a decrease in the speed of data transfer.",
+        "github": "",
+        "images": "/Assets/Projects/IOT/liFi.webp"
+      },
+      {
+        "name": "Mount Connect",
+        "content": "This is a advanced trekking pole with an ability to connect other trekking pole with the help of LoRa. When people go on trekking, there is no way to communicate with the other people. So, we propose a LoRa based local mesh network system through which people on different location on the trek can communicate through text messages and share GPRS location in text message.",
+        "github": "",
+        "images": "/Assets/Projects/IOT/mountconnect.webp"
+      },
+      {
+        "name": "Joint Rehabilitation",
+        "content": "This aims to identify and track a person's muscle movement in order to provide him and his doctor with a better progress report. There is currently no (efficient-cost effective-available at home) option for persons who use orthotic legs despite the fact that healthcare facilities are quite advanced. As the person is unable to provide precise information about his daily schedule, there is also a lack of information exchange. Here, we develop a method or tool to assist the patient and the doctor in monitoring the situation and taking appropriate action.",
+        "github": "",
+        "images": "/Assets/Projects/IOT/jointrehab.webp"
+      },
+      {
+        "name": "Safety Glove",
+        "content": "The idea is to design a safety glove consisting of a Hall Effect Sensor, Arduino Mega and a radio transmitter, which is to be worn by the workers in factories who are in close proximity to heavy machinery which can cause potential injuries.",
+        "github": "https://github.com/Team-Vibhav/Safety-Glove",
+        "images": "/Assets/Projects/IOT/glove.webp"
+      },
+      
+      {
+        "name": "Swarm Bot",
+        "content": "Swarm robotics is an approach to the coordination of multiple robots as a system that consists of large numbers of mostly simple physical robots. It is supposed that a desired collective behaviour emerges from the interactions between the robots and interactions of robots with the environment.",
+        "github": "https://github.com/kamatji/SWARM_BOT",
+        "images": "/Assets/Projects/IOT/swarm bot.webp"
+      },
+      {
+        "name": "Smart Blind",
+        "content": "This project aim to create a pair of smart glasses and a smart stick for the blind that enables them to walk without any assistance and get to know things that are happening around them.",
+        "github": "",
+        "images": "/Assets/Projects/IOT/smart_blind.webp"
+      }
+    ],
+    "AR/VR": [
+      {
+        "name": "NITH VR",
+        "content": "The NIT Hamirpur VR project is an one of its kind simulation of NITH campus with a simple user interface. The simulation incorporates the whole NITH campus.",
+        "github": "https://github.com/Team-Vibhav/NithVR",
+        "images": "/Assets/Projects/AR/nithvr.webp"
+      },
+      {
+        "name": "V.T.R.",
+        "content": "V.T.R. is a virtual telepresence robot. This robot with a camera is placed in a remote location to capture the environment in visual form using Arduino Uno . The captured visuals are displayed on the user’s virtual reality (VR) headset. An added feature allows the camera to move in the direction of the users head movements. This gives the user a real-time experience as if he is present where the virtual telepresence robot is located.",
+        "github": "https://github.com/Team-Vibhav/VTB",
+        "images": "/Assets/Projects/AR/vtr.webp"
+      },
+      {
+        "name": "AR Education",
+        "content": "It provides a common platform for students from different family background to learn and explore concepts of their interest. Apart from this, it also promotes home learning which is the need of the hour in this period of turmoil. Students generally face problem in visualizing the concepts, this application develop better understanding of the subject.",
+        "github": "https://github.com/jashwant543/ARedu",
+        "images": "/Assets/Projects/AR/aredu.webp"
+      },
+      {
+        "name": "AR Math Visualizer",
+        "content": "In this project, a student can enter conic equations of their choice to see the real-time generated 3D models. This makes it easier to understand 3D curves and conic sections. Augmented Reality is used to project virtual objects on target images.",
+        "github": "https://github.com/Team-Vibhav/Projects-TeamVibhav/tree/main/AR%20Maths%20Visualizer",
+        "images": "/Assets/Projects/AR/arMathsVisualizer.webp"
+      },
+      {
+        "name": "AR Newsletter",
+        "content": "AR newsletter is a newsletter that takes readers beyond the printed page. The main aim of AR newsletter is to attract new audiences especially young people to increase their waning number of readers with an interactive environment.",
+        "github": "https://github.com/Team-Vibhav/Projects-TeamVibhav/tree/main/AR%20News%20Letter",
+        "images": "/Assets/Projects/AR/arNewsLetter.webp"
+      },
+      {
+        "name":"VR Classroom",
+        "content": "The Education system under the Covid-19 circumstances has become monotonous. A virtual classroom will increase the interest of the students in classes and help them to learn everything that is taught in the class in a more comprehensive way. In this project, we can interact with each other's virtual 3D avatar and this way it sums like we are attending our class together.",
+        "github": "https://github.com/Team-Vibhav/VR_Classroom" ,
+        "images": "/Assets/Projects/AR/vr_classroom.webp"
+      }
+    ],
+    "EMBEDDED SYSTEMS": [
+      {
+        "name": "Bionic Arm",
+        "content": "This project seeks to create a model that will allow people without arms to function normally by sensing the presence of their end muscles. The human hand is capable of a broad range of complex manoeuvres that allow us to interact with our surroundings and communicate with one anothr. One of the cutting-edge technologies that are assisting the next generation in living a more comfortable daily life is prosthetics. A powered bionic limb controlled by muscles, a prosthetic arm is powered by high-performance motors, sophisticated software, long-lasting batteries, and 3D printing technology.",
+        "github": "",
+        "images": "/Assets/Projects/Embd/bionicarm.webp"
+      },
+      {
+        "name": "Auto Cart",
+        "content": "The aim of this project is to eliminate the long queues in front of the bill counters in the malls and, thus making shopping in the malls and the supermarkets hassle-free and more automated, which will save a lot of time of the customers.",
+        "github": "https://github.com/Team-Vibhav/Auto_cart",
+        "images": "/Assets/Projects/Embd/autocart.webp"
+      },
+      {
+        "name": "Smart Entry System",
+        "content": "As there is a major problem of seat occupancy in library due to the unnecessary seat reservation of many students for a day without being present in the library. So we developed a system that shows the presently occupied seats in the library and live count of seats available to sit in the library.",
+        "github": "https://github.com/kamatji/Smart_Library_System",
+        "images": "/Assets/Projects/Embd/SmartEntrySystem.webp"
+      },
+      {
+        "name": "Covid Gateway",
+        "content": "Our project is  Automatic Covid Gateway used to detect mask, measure the human body temperature and sanitize hands. This project will reduce the contact as well as extra labour needed for the whole process. The main benefit of the project is that it reduces the contact needed for checking the temperature of the person as it will replace the person with a machine. Also,it can perform multiple operations that makes it cost efficient in the present pandemic conditions.",
+        "github": "",
+        "images": "/Assets/Projects/Embd/covidgateway.webp"
+      },
+      {
+        "name": "RecoverX",
+        "content": "It works on a user-controlled Bluetooth device where they could train themselves by using our prototype to cure the problem of finger strokes. While using RecoverX, the user can perform exercises in the form of compression and relaxation via controlling the finger's movement using their mobile device.",
+        "github": "",
+        "images": "/Assets/Projects/Embd/recoverx.webp"
+      },
+      {
+        "name": "Human To Human control",
+        "content": "This project aim to bring back the movement of physically disabled people by using EMG to detect the potential difference in motor neurons. The project also helps the people who can't speak and convey their messages to regular people by converting their hand gestures to audio.",
+        "github": "",
+        "images": "/Assets/Projects/Embd/human_to_human.webp"
+      }
+    ],
+    "DSP": [
+      {
+        "name": "Audio WaterMark",
+        "content": "Designing a digital audio watermarking procedure to insert some data bits known as watermark into an audio signal. It is a procedure of inserting some ownership data bits into the audio which would be extracted for the purpose of the authentication. A watermark is dispersed consistently in low frequencies, which builds the robustness and inaudibility of the watermark data.",
+        "github": "",
+        "images": "/Assets/Projects/DSP/audiowatermark.webp"
+      },
+      {
+        "name": "DTMF",
+        "content": "This project aims to create a user-friendly environment where one can easily control all the appliances in his home through DTMF tones.Whatever appliances we are dealing with, in our daily life, we want to control them without physically moving to the control unit. We use many different types of communication in control applications to control home appliances, industrial appliances, and other types of automation.",
+        "github": "https://github.com/Team-Vibhav/DTMF-Application",
+        "images": "/Assets/Projects/DSP/dtmf.webp"
+      },
+      {
+        "name": "Senso",
+        "content": "Senso is a project based on Digital Signal Processing. Our project aims to acumulate sound from the surrounding and check if it matches with the already availabe dataset of chainsaw or any other electronic equipment with which cutting of tree takes place.",
+        "github": "https://github.com/Team-Vibhav/Senso",
+        "images": "/Assets/Projects/DSP/senso.webp"
+      }
+    ],
+    "QUANTUM COMPUTING": [
+      {
+        "name": "Quantum Teleportation",
+        "content": "The project aims to research the method of data transfer without any medium using Quantum Entanglement. Quantum entanglement allows instant communication between particles, even across vast distances. By manipulating the spin of one particle, information can be encoded and transferred to its entangled partner, enabling secure and instantaneous communication without physical mediums.",
+        "github": "",
+        "images": "/Assets/Projects/Quantum/quantum2.webp"
+      },
+      {
+        "name": "Quantum Key Distribution",
+        "content": "Quantum Key Distribution (QKD) is a secure communication method that implements a cryptographic protocol involving components of quantum mechanics. It enables two parties to produce a shared random secret key known only to them, which can then be used to encrypt and decrypt messages. It is often incorrectly called Quantum cryptography, as it is the best-known example of such a task.",
+        "github": "",
+        "images": "/Assets/Projects/Quantum/quantum.webp"
+      }
+    ]
+  }

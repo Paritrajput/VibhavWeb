@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import GradientText from '@/Components/ui/GradientText'
+import SplashCursor from "../ui/SplashCursor"
+import Navbar from "../Navbar/Navbar";
+
+
+
+
 
 function Intro() {
   return (
-    <div className="h-screen text-white mt-7 pt-5 mb-16">
-      <div className="h-2/3 flex flex-col items-end justify-center  ">
+    <div className="h-screen w-screen text-white mt-7 pt-5 mb-16  bg-white">
+      <div className="h-2/3 flex flex-col">
         <div className=" text-align mt-5 pt-5 ">
+          <SplashCursor/>
           <GradientText
             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
             animationSpeed={3}

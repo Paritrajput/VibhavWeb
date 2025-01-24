@@ -5,7 +5,7 @@ import First from "../Components/Main/First/First"
 import { UserContext } from "@/Context/UserContext/UserContext";
 import { useContext } from "react";
 import Intro from "../Components/IntroSection/Intro";
-import SparklesCore from "@/Components/ui/sparkles"
+
 
 
 const logoImgs = [
@@ -23,6 +23,7 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden flex flex-col items-center gap-2">
       <Intro />
+
       <First />
       <Faq />
       <Contact ref={contactRef} />

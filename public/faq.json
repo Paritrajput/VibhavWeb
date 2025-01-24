@@ -1,0 +1,34 @@
+{
+    "faqs":[
+        {
+
+            "question":"What is Team Vibhav?",
+            "answer":"Team Vibhav is the departmental club of Electronics and Communication in Technical Fest Nimbus at NIT Hamirpur."
+        },
+        {
+            "question":"What is Vibhav Day?",
+            "answer":"Annually, Fest Nimbus's Team Vibhav organizes Vibhav Day, featuring a variety of entertaining games open to all, regardless of their branch or year."
+        },
+        {
+            "question":"What are the Domains of Team Vibhav?",
+            "answer":"Team Vibhav contributes in different type of domains like AI/ML, Embedded System, IOT, AR/VR, Web Development, DSP, Blockchain and many more."
+        },
+        {
+            "question":"What Events Does Team Vibhav Organise?",
+            "answer":"Vibhav hosts various awareness programs such as 'Pahal', informative games at both institutional and departmental levels, as well as workshops covering trending topics."
+        },
+        {
+            "question":"What is Pahal?",
+            "answer":"'Pahal', an event orchestrated by Team Vibhav, serves as an awareness campaign aimed at informing individuals about various government policies that have not yet gained widespread recognition."
+        },
+        {
+            "question":"How can Vibhav contribute to your personal Development?",
+            "answer":"Vibhav conducts a range of internal workshops providing comprehensive overviews of various domains. Interested members receive guidance tailored to their preferred domain, fostering personal development."
+        },
+        {
+            "question":"What are Team Vibhav Ambitions Ahead? ",
+            "answer":"Our aspirations include maintaining our status as the Best Departmental Team of the Technical fest Nimbus, while also expanding further within our domain."
+
+        }
+    ]
+}
