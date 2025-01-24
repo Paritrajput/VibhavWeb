@@ -4,8 +4,6 @@ import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import UserContextProvider from "../Context/UserContext/UserContext";
 import BackToTop from "../Components/BackToTop/BackToTop";
-import SplashCursor from "../Components/ui/SplashCursor"
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +27,6 @@ export default function RootLayout({ children }) {
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased `}
         >
-          <SplashCursor/>
           <div className=" background bg-black "></div>
           <Navbar />
           <div className="text-white">
