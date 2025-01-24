@@ -37,7 +37,7 @@ function Navbar({ className }) {
         <HomeButton href="/" setActive={setActive} />
 
         <MenuItem setActive={setActive} active={active} item="Projects" className="hover:text-white">
-          <div className="flex flex-col space-y-4 text-sm">
+          <div className="grid grid-cols-3 gap-4 space-y-4 text-sm">
             <HoveredLink href="/Projects/aiml">AI/ML</HoveredLink>
             <HoveredLink href="/Projects/arvr">AR/VR</HoveredLink>
             <HoveredLink href="/Projects/iot">IOT</HoveredLink>

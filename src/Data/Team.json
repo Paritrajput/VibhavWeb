@@ -1,15 +1,24 @@
 {
     "superFinal": [
+      
         {
-            "id": 5,
-            "name": "Priya Patel",
-            "position": "Software Developer",
-            "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80",
-            "github": "https://github.com",
-            "linkedin": "https://linkedin.com"
-        },
+            "name": "Bhavneesh Chaudhary",
+            "NickName": "Bhuvi💚",
+            "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
+            "github": "https://github.com/BhavneeshOG",
+            "linkedin": "https://www.linkedin.com/in/bhavneeshog/",
+            "position": "Superfinal Year MEMBER"
+          },
+          {
+            "name": "Suyash Sachdeva",
+            "NickName": "Suyash",
+            "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80",
+            "github": "https://github.com/suyashsachdeva",
+            "linkedin": "https://www.linkedin.com/in/suyash-sachdeva-3096b3202/",
+            "position": "MEMBER"
+          },
         {
-            "id": 3,
+       
             "name": "Alex Chen",
             "position": "Team Lead",
             "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",

@@ -1,4 +1,4 @@
-import { div } from "motion/react-client";
+
 import { useEffect, useRef } from "react";
 
 class Pixel {

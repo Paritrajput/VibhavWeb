@@ -29,7 +29,7 @@ export function Popup({ title, description, image, onClose }) {
           className="w-full h-48 object-cover rounded-md mb-4"
         /> */}
         <h2 className="text-2xl font-bold mb-4">{title}</h2>
-        <p className="text-gray-700">{description}</p>
+        <p className="text-gray-200">{description}</p>
       </motion.div>
       </CardSpotlight>
     </div>
