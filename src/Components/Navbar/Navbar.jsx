@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 
 import { UserContext } from "@/Context/UserContext/UserContext";
 import Link from "next/link";
+import Nav, { NavbarDemo } from "./Nav";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -68,10 +69,20 @@ function Navbar() {
       }
     });
   });
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    
+    setIsProjectsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsProjectsOpen(false);
+  };
 
   return (
     <div className="navbar sticky w-full top-0 z-30 inset-0">
-      <div className="max-sm:hidden  py-1 bg-black px-2 w-[100%] ">
+      <div className="max-sm:hidden   bg-black px-2 w-[100%] ">
         <ul className="flex justify-between items-center ">
           <li className="w-20">
             <img
@@ -79,9 +90,10 @@ function Navbar() {
               className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
             />
           </li>
-          <li>
-            <ul className="flex items-center justify-evenly py-1 gap-5 bg-black w-[100%] ">
-              <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
+          <li className="h-12"><NavbarDemo/></li>
+          {/* <li>
+            <ul className="flex items-center justify-evenly px-1 gap-5 bg-black w-[100%] ">
+              <li className="text-3xs border-solid border-4 border-black px-1 rounded w-20 text-white">
                 <Link
                   href="/"
                   className={`${
@@ -91,52 +103,71 @@ function Navbar() {
                   Home
                 </Link>
               </li>
-             
-              <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
-                <DropdownMenu>
-                  <DropdownMenuTrigger
-                    className={`${
-                      pathname.startsWith("/Projects/")
-                        ? "text-white font-bold "
-                        : "text-gray-400"
-                    } hover:text-white `}
-                  >
-                    Projects
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    <DropdownMenuItem
-                      onClick={() => router.push("/Projects/aiml")}
-                    >
-                      AI/ML
-                    </DropdownMenuItem>
-                    {/* <DropdownMenuSeparator /> */}
-                    <DropdownMenuItem
-                      onClick={() => router.push("/Projects/arvr")}
-                    >
-                      AR/VR
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      onClick={() => router.push("/Projects/iot")}
-                    >
-                      IOT
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      onClick={() => router.push("/Projects/dsp")}
-                    >
-                      DSP
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      onClick={() => router.push("/Projects/embedded")}
-                    >
-                      EMBEDDED SYSTEMS
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      onClick={() => router.push("/Projects/quantumC")}
-                    >
-                      QUANTUM COMPUTING
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+              
+
+              <li
+                className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white  h-[4.1rem] flex items-center"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              
+              >
+                  {isProjectsOpen && (
+                  <div className="absolute top-[4.0rem]  mt-0 bg-black  text-white rounded shadow-md z-10">
+                    <ul className="grid ">
+                      <li>
+                        <button
+                          className="block px-4 py-2 hover:bg-gray-200"
+                          onClick={() => router.push("/Projects/aiml")}
+                        >
+                          AI/ML
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className="block px-4 py-2 hover:bg-gray-200"
+                          onClick={() => router.push("/Projects/arvr")}
+                        >
+                          AR/VR
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className="block px-4 py-2 hover:bg-gray-200"
+                          onClick={() => router.push("/Projects/iot")}
+                        >
+                          IOT
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className="block px-4 py-2 hover:bg-gray-200"
+                          onClick={() => router.push("/Projects/dsp")}
+                        >
+                          DSP
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className="block px-4 py-2 hover:bg-gray-200"
+                          onClick={() => router.push("/Projects/embedded")}
+                        >
+                          EMBEDDED SYSTEMS
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className="block px-4 py-2 hover:bg-gray-200"
+                          onClick={() => router.push("/Projects/quantumC")}
+                        >
+                          QUANTUM COMPUTING
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                )}
+
+                Projects
+           
               </li>
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
                 <DropdownMenu>
@@ -191,7 +222,7 @@ function Navbar() {
                 </DropdownMenu>
               </li>
             </ul>
-          </li>
+          </li> */}
           <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20  mr-3">
             <button
               className="text-gray-400 hover:text-black transition-all duration-500 ease-in-out hover:scale-125 px-3 py-1 bg-white text-black rounded-3xl "
