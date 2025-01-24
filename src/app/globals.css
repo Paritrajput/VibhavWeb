@@ -20,7 +20,7 @@ body {
   left: 0;
   right: 0;
   background-size: cover;
-  background-image: url("/web_coverimg.jpg");
+  /* background-image: url("/web_coverimg.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   opacity: .7;
