@@ -1,8 +1,13 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import PixelCard from "@/Components/ui/PixelCard"
 
-function First() {
-  return <div>This is main section</div>;
+
+const First = () => {
+  return (
+    <div>
+      <PixelCard/>
+    </div>
+  )
 }
 
-export default First;
+export default First

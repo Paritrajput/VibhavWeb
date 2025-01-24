@@ -24,7 +24,7 @@ function Faq() {
   };
 
   return (
-    <div className="w-[100%] sm:w-[80%] mx-auto">
+    <div className="w-[100%] sm:w-[70%] mx-auto">
       <div className="text-white p-6 m-9 h-fit rounded-lg shadow-md">
         <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
         {faqs.map((faq, index) => (
