@@ -18,6 +18,9 @@ export default function WorkDetails() {
       <h1 className="text-3xl font-bold mb-4">{project.name}</h1>
       <div className="relative w-full h-80 bg-cover bg-center rounded-lg mb-6" style={{ backgroundImage: `url(${project.images})` }}></div>
       <p className="text-lg">{project.content}</p>
+      <p className="text-lg">{project.round1}</p>
+      <p className="text-lg">{project.round2}</p>
+      <p className="text-lg">{project.round3}</p>
     </div>
   );
 }

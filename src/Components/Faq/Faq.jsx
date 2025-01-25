@@ -33,7 +33,7 @@ function Faq() {
                 openFaqIndex === index ? "max-h-40" : "max-h-0"
               }`}
             >
-              <p className="mt-2 text-gray-600">{faq.answer}</p>
+              <p className="mt-2 text-gray-200">{faq.answer}</p>
             </div>
           </div>
         ))}

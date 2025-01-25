@@ -5,32 +5,35 @@ import { CardSpotlight } from "@/Components/ui/card-spotlight";
 // Popup Component
 export function Popup({ title, description, image, onClose }) {
   return (
-    
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black backdrop-opacity-10 backdrop-blur-xl bg-opacity-70  rounded-2xl">
-        <CardSpotlight className="h-2/3 w-2/3 rounded-2xl backdrop-blur-xl">
-      <motion.div
-        className="relative w-full  bg-transparent rounded-lg shadow-lg p-6"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.8, opacity: 0 }}
-      >
-        {/* Close Button */}
-        <button
-          className="absolute top-0 right-0 text-gray-200 hover:text-white transition-all duration-300 ease-in-out hover:scale-125 hover:bg-black rounded-full px-1"
-          onClick={onClose}
+    <div className="fixed top-12 inset-0 z-50 flex items-center justify-center bg-black backdrop-opacity-10 backdrop-blur-xl bg-opacity-70  rounded-2xl">
+      <CardSpotlight className="h-4/5 w-4/5 rounded-2xl backdrop-blur-xl">
+        <motion.div
+          className="relative w-full  bg-transparent rounded-lg shadow-lg p-6"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.8, opacity: 0 }}
         >
-          ✕
-        </button>
+          {/* Close Button */}
+          <button
+            className="absolute top-0 right-0 text-gray-200 hover:text-white transition-all duration-300 ease-in-out hover:scale-125 hover:bg-black rounded-full px-1"
+            onClick={onClose}
+          >
+            ✕
+          </button>
 
-        {/* Content */}
-        {/* <img
+          {/* Content */}
+          {/* <img
           src={image}
           alt={title}
           className="w-full h-48 object-cover rounded-md mb-4"
         /> */}
-        <h2 className="text-2xl font-bold mb-4">{title}</h2>
-        <p className="text-gray-200">{description}</p>
-      </motion.div>
+          <div className="indent-20 flex flex-col items-center">
+          <h2 className="text-3xl font-bold my-4">{title}</h2>
+          <p className="text-gray-200 w-10/12 px-0 text-center">
+            {description}
+          </p>
+          </div>
+        </motion.div>
       </CardSpotlight>
     </div>
   );
