@@ -9,7 +9,7 @@ useTransform,
 const RollingGallery = ({
 autoplay = false,
 pauseOnHover = false,
-images = ['\Vibhav_logo.png','\showMenu.png','src\Data\web_coverimg.jpg','\Vibhav_logo.png','\showMenu.png','src\Data\web_coverimg.jpg','public\Vibhav_logo.png','public\showMenu.png','src\Data\web_coverimg.jpg','public\Vibhav_logo.png','public\showMenu.png','src\Data\web_coverimg.jpg'],
+images = ['Assets/Homepage/t1.webp','Assets/Homepage/t2.webp','Assets/Homepage/t3.webp','Assets/Homepage/t4.webp','Assets/Homepage/t5.webp','Assets/Homepage/t6.webp','Assets/Homepage/t7.webp'],
 }) => {
 const [isScreenSizeSm, setIsScreenSizeSm] = useState(
   window.innerWidth <= 640
@@ -26,13 +26,14 @@ const faceCount = images.length;
 const isMobile = window.innerWidth <= 768; // You can adjust the breakpoint as needed
 
 // Calculate faceWidth based on screen size
-const faceWidth=(cylinderWidth/faceCount)*2.4
+const faceWidth=(cylinderWidth/faceCount)*4
+const faceHeight=340;
 
 console.log(`Face Width: ${faceWidth}`);
 
 const radius = cylinderWidth / (2 * Math.PI);
 
-const dragFactor = 0.05;
+const dragFactor = 0.5;
 const rotation = useMotionValue(0);
 const controls = useAnimation();
 
@@ -125,6 +126,7 @@ return (
           transform: transform,
           rotateY: rotation,
           width: cylinderWidth,
+          height: faceHeight,
           transformStyle: "preserve-3d",
         }}
         className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
@@ -142,7 +144,7 @@ return (
             <img
               src={url}
               alt="gallery"
-              className="pointer-events-none h-[120px] w-[300px] rounded-[15px] border-white object-contain
+              className="pointer-events-none h-[120px] w-[300px] rounded-[15px] border-white object-cover
                          transition-transform duration-300 ease-out group-hover:scale-105
                          sm:h-[100px] sm:w-[220px]"
             />

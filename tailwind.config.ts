@@ -20,6 +20,7 @@ export default {
 				}
 			},
 			animation: {
+				'spin-slow': 'spin 1.5s linear infinite',
 				gradient: 'gradient 8s linear infinite'
 			},
 			colors: {
