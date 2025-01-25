@@ -19,19 +19,19 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container text-center mx-auto mt-1 p-2">
+    <div className="container text-center mx-auto mt-12 p-2">
    
-      <div className="h-[15rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className="h-[10rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
       <h1 className="md:text-7xl text-2xl lg:text-4xl font-bold text-center text-white relative z-20">
-        Our Work
+      Current Year Work
       </h1>
-      <div className="w-[40rem] h-40 relative">
+      <div className="w-[40rem] h-28 relative">
         {/* Gradients */}
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
         <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
         <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
- 
+        
         {/* Core component */}
         <SparklesCore
           background="transparent"
@@ -48,7 +48,7 @@ export default function Home() {
     </div>
       <div>
       
-      <div className='text-3xl font-bold my-5 p-5'>Current Year Events</div>
+      {/* <div className='text-3xl font-bold my-5 p-5'>Current Year Events</div> */}
 
       <div className='text-3xl text-center '>Comming Soon ...</div>
       {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
