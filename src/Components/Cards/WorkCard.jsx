@@ -1,14 +1,14 @@
 import { FaEye } from "react-icons/fa";
 import Link from "next/link"; // Import Link for routing
 
-const WorkCard = ({ work }) => {
+const WorkCard = ({ work ,type,year}) => {
   return (
-    <Link href={`/Work/${work.id}`}>
+    <Link href={`/Work/${year}/${type}/${work.id}`}>
       <div className="group relative w-full h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${work.image})` }}
+          style={{ backgroundImage: `url(${work.images})` }}
         ></div>
 
         {/* Hover Overlay */}
@@ -28,7 +28,7 @@ const WorkCard = ({ work }) => {
               {work.name}
             </h3>
 
-            <h4 className="text-center">{work.description}</h4>
+            {/* <h4 className="text-center">{work.content}</h4> */}
           </div>
         </div>
       </div>

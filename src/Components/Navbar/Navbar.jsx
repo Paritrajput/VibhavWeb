@@ -90,7 +90,7 @@ function Navbar() {
               className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
             />
           </li>
-          <li className="h-12"><NavbarDemo/></li>
+          <li className="h-[4.5rem] p-5"><NavbarDemo/></li>
           {/* <li>
             <ul className="flex items-center justify-evenly px-1 gap-5 bg-black w-[100%] ">
               <li className="text-3xs border-solid border-4 border-black px-1 rounded w-20 text-white">

@@ -267,7 +267,7 @@ export default function PixelCard({
         tabIndex={finalNoFocus ? -1 : 0}
       >
         <canvas
-          className=" w-[70%] h- block opacity-45"
+          className=" w-[70%] h-fit block opacity-45"
           ref={canvasRef}
         />
         <div className="flex flex-col gap-3 absolute top-0 p-4 m-4 h-[90%] items-center justify-start">

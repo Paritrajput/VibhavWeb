@@ -9,7 +9,7 @@ import Navbar from "../Navbar/Navbar";
 
 function Intro() {
   return (
-    <div className="h-screen w-screen text-white mt-7 pt-5 mb-16  bg-white">
+    <div className="h-screen w-screen text-white  pt-5 mb-16  bg-white">
       <div className="h-2/3 flex flex-col">
         <div className=" text-align mt-5 pt-5 ">
           <SplashCursor/>

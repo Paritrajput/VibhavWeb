@@ -14,22 +14,22 @@ const ProjectCard = ({ project }) => {
       {/* Card */}
       <motion.div
         className="relative bg-cover bg-center rounded-lg shadow-lg overflow-hidden group cursor-pointer hover:shadow-xl"
-        style={{ backgroundImage: `url(${project.image})`, height: "300px" }}
+        style={{ backgroundImage: `url(${project.images})`, height: "300px" }}
         whileHover={{ scale: 1.05 }}
         onClick={openPopup}
       >
         <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-black to-transparent text-white">
-          <h2 className="text-xl font-bold">{project.title}</h2>
-          <p className="text-sm">{project.shortDescription}</p>
+          <h2 className="text-xl font-bold">{project.name}</h2>
+          {/* <p className="text-sm">{project.shortDescription}</p> */}
         </div>
       </motion.div>
 
       {/* Popup */}
       {isPopupOpen && (
         <Popup
-          title={project.title}
-          description={project.fullDescription}
-          image={project.image}
+          title={project.name}
+          description={project.content}
+          image={project.images}
           onClose={closePopup}
         />
       )}

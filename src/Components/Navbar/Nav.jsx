@@ -8,10 +8,8 @@ import Link from "next/link";
 export function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
-      <Navbar className="top-2 h-10" />
-      <p className="text-black dark:text-white">
-        The Navbar will show on top of the page
-      </p>
+      <Navbar className="top-0 h-16" />
+    
     </div>
   );
 }
@@ -37,7 +35,7 @@ function Navbar({ className }) {
         <HomeButton href="/" setActive={setActive} />
 
         <MenuItem setActive={setActive} active={active} item="Projects" className="hover:text-white">
-          <div className="grid grid-cols-3 gap-4 space-y-4 text-sm">
+          <div className="grid grid-cols-3 gap-4 space-y-4 text-sm p-3">
             <HoveredLink href="/Projects/aiml">AI/ML</HoveredLink>
             <HoveredLink href="/Projects/arvr">AR/VR</HoveredLink>
             <HoveredLink href="/Projects/iot">IOT</HoveredLink>

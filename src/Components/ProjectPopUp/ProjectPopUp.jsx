@@ -7,7 +7,7 @@ export function Popup({ title, description, image, onClose }) {
   return (
     
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black backdrop-opacity-10 backdrop-blur-xl bg-opacity-70  rounded-2xl">
-        <CardSpotlight className="h-1/2 w-1/2 rounded-2xl backdrop-blur-xl">
+        <CardSpotlight className="h-2/3 w-2/3 rounded-2xl backdrop-blur-xl">
       <motion.div
         className="relative w-full  bg-transparent rounded-lg shadow-lg p-6"
         initial={{ scale: 0.8, opacity: 0 }}

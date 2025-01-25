@@ -29,7 +29,7 @@ function ProfileCard({
       </div>
 
       {/* Blurred Text Container */}
-      <div className="absolute bottom-0 w-full group-hover:p-12 backdrop-blur-md p-4 text-white transition-all duration-500 ease-in-out group-hover:flex group-hover:flex-col group-hover:items-center overflow-hidden">
+      <div className="absolute bottom-0 w-full group-hover:p-10 backdrop-blur-md p-4 text-white transition-all duration-500 ease-in-out group-hover:flex group-hover:flex-col group-hover:items-center overflow-hidden">
         <h1 className="text-lg font-semibold">{name}</h1>
         <p className="text-sm text-gray-300">{position}</p>
         <div className="flex justify-center space-x-4 mt-4">

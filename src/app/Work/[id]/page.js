@@ -1,6 +1,6 @@
 "use client"
 import { useParams, useRouter } from 'next/navigation';
-import workData from '@/Data/Work.json'; // Import work data
+import workData from '@/Data/Ourwork.json'; // Import work data
 
 export default function WorkDetails() {
   const router = useRouter();

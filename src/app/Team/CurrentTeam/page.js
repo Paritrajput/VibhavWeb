@@ -4,14 +4,14 @@ import Team from "@/Data/Team.json";
 import ProfileCard from "@/Components/Cards/ProfileCard";
 
 const CurrentTeam = () => {
-  const [selectedYear, setSelectedYear] = useState("superFinal");
+  const [selectedYear, setSelectedYear] = useState("SuperFinal Year");
 
   const yearLabels = {
-    superFinal: "Super Final Year Members",
-    final: "Final Year Members",
-    third: "Coordinaters",
-    second: "Executive",
-    first: "Volunteers",
+    "SuperFinal Year": "Super Final Year Members",
+    "Final Year": "Final Year Members",
+    "Third Year": "Third Year Members",
+    "Second Year": "Second Year Members",
+    "First Year": "First Year Members",
   };
 
   const handleYearChange = (year) => {
@@ -46,10 +46,10 @@ const CurrentTeam = () => {
 
   return (
     <div className="p-4 ">
-      <h1 className="text-4xl font-extrabold text-center mb-6">Current Team</h1>
+      <h1 className="sm:text-4xl text-3xl font-extrabold text-center mb-6">Current Team</h1>
       <div className="flex flex-col items-center">
         <div className=" w-[95vw]  flex items-center justify-center mb-12 absolute">
-          <div className="flex justify-evenly backdrop-blur max-sm:hidden  rounded-[90px] px-7 transition-all duration-500 ease-in-out hover:px-12 py-6 w-fit gap-12 items-center backdrop-brightness-75 opacity-90  border-1 border-gray-200 relative">
+          <div className="flex justify-evenly backdrop-blur max-sm:hidden  rounded-[90px] px-7 transition-all duration-500 ease-in-out hover:px-12 py-6 w-fit gap-12 items-center backdrop-brightness-75 opacity-90 bg-zinc-900  border-1 border-gray-200 relative">
             {Object.keys(Team).map((year) => (
               <button
                 key={year}
@@ -58,7 +58,7 @@ const CurrentTeam = () => {
                 } transition-all duration-500 ease-in-out hover:bg-black hover:scale-110 z-10`}
                 onClick={() => handleYearChange(year)}
               >
-                {yearLabels[year]}
+                {year}
               </button>
             ))}
           </div>
@@ -128,7 +128,7 @@ const CurrentTeam = () => {
         <div className="mt-28">
 
         {/* Display Selected Year */}
-        <div className="text-4xl font-bold flex justify-center mb-4">
+        <div className="text-xl sm:text-4xl font-bold flex justify-center mb-4">
           <h1>{yearLabels[selectedYear]}</h1>
         </div>
 
@@ -136,12 +136,12 @@ const CurrentTeam = () => {
         <div className="p-4 flex justify-center flex-wrap gap-12">
           {Team[selectedYear].map((member) => (
             <ProfileCard
-              name={member.name}
-              position={member.position}
-              profileImg={member.image}
-              backgroundImg={member.image}
-              githubLink={member.github}
-              linkdinLink={member.linkedin}
+              name={member.Name}
+              position={member.Position}
+              profileImg={member.Profile}
+              backgroundImg={member.Profile}
+              githubLink={member.Github}
+              linkdinLink={member.LinkedIn}
             />
           ))}
         </div>
