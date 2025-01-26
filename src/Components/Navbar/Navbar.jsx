@@ -79,10 +79,9 @@ function Navbar() {
   const handleMouseLeave = () => {
     setIsProjectsOpen(false);
   };
-
   return (
     <div className="navbar sticky w-full top-0 z-30 inset-0">
-      <div className="max-sm:hidden   bg-black px-2 w-[100%] ">
+      <div className="max-sm:hidden px-2 w-[100%] ">
         <ul className="flex justify-between items-center ">
           <li className="w-20">
             <img
@@ -223,9 +222,9 @@ function Navbar() {
               </li>
             </ul>
           </li> */}
-          <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20  mr-3">
+          <li className="text-3xs p-1 rounded w-20  mr-3">
             <button
-              className="text-gray-400 hover:text-black transition-all duration-500 ease-in-out hover:scale-125 px-3 py-1 bg-white text-black rounded-3xl "
+              className=" hover:text-black transition-all duration-500 ease-in-out hover:scale-125 px-3 py-1 bg-white text-black rounded-3xl "
               onClick={handleContactClick}
             >
               Contact
@@ -234,7 +233,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="sm:hidden flex flex-col w-full   top-0">
-        <ul className="flex items-center justify-between px-3 py-1 w-[100%] mx-auto w-full  bg-black ">
+        <ul className="flex items-center justify-between px-3 py-1 mx-auto w-full ">
           <li className="z-40">
             <img src="/vibhav_logo.png" className="h-14 " />
           </li>

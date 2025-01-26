@@ -9,6 +9,10 @@ export default {
 	],
 	theme: {
 		extend: {
+			fontFamily:{
+				robotech: ['robotech', 'sans-serif'],
+			},
+
 			transitionDuration: {
 				'10000': '10000ms'
 			},
@@ -20,6 +24,7 @@ export default {
 				}
 			},
 			animation: {
+				'spin-slow': 'spin 4s linear infinite',
 				gradient: 'gradient 8s linear infinite'
 			},
 			colors: {

@@ -5,7 +5,6 @@
 body {
   
   font-family: Arial, Helvetica, sans-serif;
- 
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -20,7 +19,7 @@ body {
   left: 0;
   right: 0;
   background-size: cover;
-  /* background-image: url("/web_coverimg.jpg"); */
+  background-image: url("/assets/video/1.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   opacity: .7;
@@ -158,4 +157,19 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'robotech'; /* Custom font name */
+  src: url('/fonts/Robotech.ttf') format('truetype'); /* Adjust format based on file type */
+  font-weight: 400; /* Normal weight */
+  font-style: normal; /* Normal style */
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
 
