@@ -4,11 +4,11 @@ import Link from "next/link"; // Import Link for routing
 const WorkCard = ({ work ,type,year}) => {
   return (
     <Link href={`/Work/${year}/${type}/${work.id}`}>
-      <div className="group relative w-full h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
-        {/* Background Image */}
+      <div className="group relative bg-cover w-72 h-[22rem] md:w-80 md:h-96 bg-center rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+        
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${work.images})` }}
+          style={{ backgroundImage: `url(${work.images[0]})` , backgroundSize:"cover"}}
         ></div>
 
         {/* Hover Overlay */}

@@ -71,18 +71,26 @@
         "id": 1,
         "name": "Pahal",
         "content": "This is a Event in ehich the locals are given information about meritious goverment schemes for their upliftment.",
-        "images": "/Assets/Events/pahal.webp",
+        "images": ["/Assets/Events/pahal.webp",
+      "/Assets/Events/pahal.webp",
+    "/Assets/Events/pahal.webp"],
         "round1": "Team Vibhav achieved remarkable success in organising PAHAL, an awareness campaign on March 15, at barot village, our goal is not only to inform but to inspire.",
         "round2": "By spreading awareness about 'PM VISHWAKARMA YOJANA' in Barot, which aims to empower skilled workers by providing financial assistance for toolkits. Himachal Pradesh government launched these schemes to uplift its skilled and unskilled workforce and contribute to the state's economic growth and prosperity.",
-        "round3": "Overall, PAHAL was a meritorious effort in upliftment of lives of people and spreading awareness. The campaign was a great example of how technology and government schemes can be used to benefit and bring about changes."
+        "round3": "Overall, PAHAL was a meritorious effort in upliftment of lives of people and spreading awareness. The campaign was a great example of how technology and government schemes can be used to benefit and bring about changes.",
+        "round4": "2Overall, PAHAL was a meritorious effort in upliftment of lives of people and spreading awareness. The campaign was a great example of how technology and government schemes can be used to benefit and bring about changes.",
+            "round5": "3Overall, PAHAL was a meritorious effort in upliftment of lives of people and spreading awareness. The campaign was a great example of how technology and government schemes can be used to benefit and bring about changes.",
+        "round6": "4Overall, PAHAL was a meritorious effort in upliftment of lives of people and spreading awareness. The campaign was a great example of how technology and government schemes can be used to benefit and bring about changes."
       },
       {
         "id": 2,
         "name": "Prerak",
         "content": "Reflecting on a day filled with inspiration and hope at Government Senior Secondary Girls School, Hamirpur,",
-        "images": "/Assets/Events/prerak.webp",
+        "images":[ "/Assets/Events/prerak.webp",
+        "/Assets/Events/prerak.webp"
+        ],
         "round1": "Witnessing the spark of curiosity in young minds as we shared the wonders of engineering and technical fields was truly uplifting. Let's continue to sow seeds of empowerment and nurture dreams, knowing that each small step today shapes a brighter tomorrow!",
-        "round2": "Overall, the event organized by Team Vibhav proved to be a resounding success, leaving a lasting impact on the students of the local girl's school in Hamirpur. By demystifying the world of engineering and empowering young minds with knowledge and inspiration, Team Vibhav has undoubtedly planted the seeds for a future generation of innovative engineers."
+        "round2": "Overall, the event organized by Team Vibhav proved to be a resounding success, leaving a lasting impact on the students of the local girl's school in Hamirpur. By demystifying the world of engineering and empowering young minds with knowledge and inspiration, Team Vibhav has undoubtedly planted the seeds for a future generation of innovative engineers.",
+          "round3": "Overall, the event organized by Team Vibhav proved to be a resounding success, leaving a lasting impact on the students of the local girl's school in Hamirpur. By demystifying the world of engineering and empowering young minds with knowledge and inspiration, Team Vibhav has undoubtedly planted the seeds for a future generation of innovative engineers."
       }
     ],
     "Workshops": [
@@ -90,7 +98,8 @@
         "id": 1,
         "name": "Aavardhan",
         "content": "Anytime is a Good time to start a Company. Driven by passion and perseverance, startups have the power to disrupt industries and shape the future.",
-        "images": "/Assets/Workshop/aavardhan.webp",
+        "images": ["/Assets/Workshop/aavardhan.webp",
+      "/Assets/Workshop/aavardhan.webp"],
         "round1": "Team Vibhav, in collaboration with the Incubation Centre, NIT Hamirpur under CM Startup Project of Himachal Pradesh, proudly presents 'आवर्धनः' From Spark to Unicorn Brilliance, a dynamic guest lecture aimed at inspiring and educating aspiring entrepreneurs and innovators.We are thrilled to welcome Dr. Puran Singh, Associate Professor at IIT Mandi and Director of Incubation Centre, IIT Mandi as our esteemed guest lecturer.",
         "round2": "He has a plenty of experience and expertise in entrepreneurship and innovation. Participants will have the opportunities to ask questions, share thoughts, through this interactive session.",
         "round3": "Join us for an inspiring session that could spark your entrepreneurial journey."
@@ -99,7 +108,8 @@
         "id": 2,
         "name": "Cloud Computing",
         "content": "This workshop offers practical training and insights into utilizing remote servers to store, manage, and process data and applications over the internet.",
-        "images": "/Assets/Workshop/cloudcomputing.webp",
+        "images":[ "/Assets/Workshop/cloudcomputing.webp",
+      "/Assets/Workshop/aavardhan.webp"],
         "round1": "Embark on a journey into the realm of cloud computing with our upcoming workshop. Whether you're just starting out or a seasoned cloud aficionado, this workshop is designed to cater to individuals eager to explore the intricacies of cloud technology and elevate their expertise.Throughout the workshop, participants will gain valuable insights into essential cloud service models including laaS, PaaS, and SaaS.",
         "round2": "Dive into hands-on exercises that demystify the workings of leading cloud providers such as Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform.Join us for an immersive experience that transcends theoretical knowledge, empowering you with the practical skills required to leverage the potential of cloud computing effectively.",
         "round3": " We eagerly anticipate your active involvement in this dynamic cloud computing workshop!"
@@ -108,7 +118,8 @@
         "id": 3,
         "name": "System on Chip",
         "content": "This workshop provides hands-on learning and expertise in developing integrated circuits that incorporate all necessary components of electronic system onto a single chip.",
-        "images": "/Assets/Workshop/systemonchips.webp",
+        "images": ["/Assets/Workshop/systemonchips.webp",
+      "/Assets/Workshop/systemonchips.webp"],
         "round1": "Ready to dive deep into the revolutionary world of System on Chip (SoC) technology? Join us for an electrifying workshop where we unravel the mysteries behind SoC architecture and its groundbreaking applications.",
         "round2": "Whether you're an aspiring engineer, a seasoned developer, or just a tech enthusiast hungry for knowledge, this workshop promises to fuel your curiosity and expand your skill set.",
         "round3": "Don't miss out on this opportunity to connect with fellow tech aficionados and dive into the world of SoC innovation! Let's unlock the potential of SoC together!"

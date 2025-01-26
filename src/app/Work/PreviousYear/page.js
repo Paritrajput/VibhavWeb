@@ -45,9 +45,9 @@ export default function Home() {
         <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
       </div>
     </div>
-      <div className='mb-3'>
-      <div className='text-3xl font-bold my-5'>Previous Year Events</div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className='mb-3 md:p-5 xl:p-10'>
+      <div className='text-3xl font-bold pb-5 mb-5'>Previous Year Events</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center max-sm:gap-10 px-0">
       {events.map((item, index) => (
           <WorkCard key={item.id} index={index} work={item} year="PreviousYear" type="Events" />
         ))}
@@ -55,9 +55,9 @@ export default function Home() {
       </div>
 
       {/* Workshops Section */}
-      <div className="mt-5 pt-7">
-      <div className="text-3xl font-bold my-5">Previous Year Workshops</div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="mt-7 mb-4 pt-7 md:p-5 xl:p-10">
+      <div className="text-3xl font-bold pb-5 ">Previous Year Workshops</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center max-sm:gap-10  mt-5 ">
         {workshops.map((item, index) => (
           <WorkCard key={item.id} work={item} year="PreviousYear" type="Workshops" />
         ))}
