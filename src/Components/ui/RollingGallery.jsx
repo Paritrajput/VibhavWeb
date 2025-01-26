@@ -9,7 +9,7 @@ useTransform,
 const RollingGallery = ({
 autoplay = false,
 pauseOnHover = false,
-images = ['Assets/Homepage/t1.webp','Assets/Homepage/t2.webp','Assets/Homepage/t3.webp','Assets/Homepage/t4.webp','Assets/Homepage/t5.webp','Assets/Homepage/t6.webp','Assets/Homepage/t7.webp'],
+images = ['Assets/Homepage/t1.webp','Assets/Homepage/t2.webp','Assets/Homepage/t3.webp','Assets/Homepage/t4.webp','Assets/Homepage/t5.webp','Assets/Homepage/t6.webp','Assets/Homepage/t7.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp'],
 }) => {
 const [isScreenSizeSm, setIsScreenSizeSm] = useState(
   window.innerWidth <= 640
@@ -20,14 +20,14 @@ useEffect(() => {
   return () => window.removeEventListener("resize", handleResize);
 }, []);
 
-const cylinderWidth = 2400;
+const isMobile = window.innerWidth <= 768; // You can adjust the breakpoint as needed
+const cylinderWidth=((isMobile)?1800:3600);
 const faceCount = images.length;
 // Check if the user is on mobile
-const isMobile = window.innerWidth <= 768; // You can adjust the breakpoint as needed
 
 // Calculate faceWidth based on screen size
-const faceWidth=(cylinderWidth/faceCount)*4
-const faceHeight=340;
+const faceWidth=(isMobile)?(cylinderWidth/faceCount)*2.5:(cylinderWidth/faceCount)*4
+const faceHeight=isMobile?180:340;
 
 console.log(`Face Width: ${faceWidth}`);
 
@@ -69,19 +69,19 @@ const handleUpdate = (latest) => {
   }
 };
 
-const handleDrag = (_, info) => {
-  controls.stop();
-  rotation.set(rotation.get() + info.offset.x * dragFactor);
-};
+// const handleDrag = (_, info) => {
+//   controls.stop();
+//   rotation.set(rotation.get() + info.offset.x * dragFactor);
+// };
 
-const handleDragEnd = (_, info) => {
-  const finalAngle = rotation.get() + info.velocity.x * dragFactor;
-  rotation.set(finalAngle);
+// const handleDragEnd = (_, info) => {
+//   const finalAngle = rotation.get() + info.velocity.x * dragFactor;
+//   rotation.set(finalAngle);
 
-  if (autoplay) {
-    startInfiniteSpin(finalAngle);
-  }
-};
+//   if (autoplay) {
+//     startInfiniteSpin(finalAngle);
+//   }
+// };
 
 const handleMouseEnter = () => {
   if (autoplay && pauseOnHover) {
@@ -116,8 +116,8 @@ return (
       <motion.div
         drag="x"
         dragElastic={0}
-        onDrag={handleDrag}
-        onDragEnd={handleDragEnd}
+        // onDrag={handleDrag}
+        // onDragEnd={handleDragEnd}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         animate={controls}

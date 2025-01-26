@@ -6,6 +6,7 @@ import { UserContext } from "@/Context/UserContext/UserContext";
 import { useContext } from "react";
 import Intro from "../Components/IntroSection/Intro";
 import RollingGallery from '@/Components/ui/RollingGallery'
+import { Video } from "lucide-react";
 
 
 
@@ -13,6 +14,7 @@ export default function Home() {
   const { contactRef } = useContext(UserContext);
   return (
     <div className="overflow-x-hidden flex flex-col items-center gap-2">
+  
       <Intro />
       <First />
       {/* <div style={{ height: '600px', width: '100%', position: 'relative' }}>
@@ -28,8 +30,8 @@ export default function Home() {
         />
       </div> */}
       <div className="flex flex-col items-center">
-      <h6 className="mx-auto sm:text-5xl text-3xl mt-10 p-7 pb-1">REFLECTING ON THE JOURNEY</h6>
-      <h6 className="mx-auto sm:text-2xl text-xl p-7 pt-0">A glimpse into our team's past adventures, memories that shape our present.</h6>
+      <h6 className="mx-auto sm:text-5xl text-3xl mt-10 p-7 pb-1 font-bold text-center">REFLECTING ON THE JOURNEY</h6>
+      <h6 className="pl-4 pr-4 mx-auto sm:opacity-100 sm:mx-auto sm:text-2xl sm:pl-7 sm:pt-0 text-center">A glimpse into our team's past adventures, memories that shape our present.</h6>
       </div>
 
       <div className="gallery">
