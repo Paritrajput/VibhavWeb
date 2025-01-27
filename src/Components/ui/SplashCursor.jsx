@@ -1,5 +1,6 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { UserContext } from '@/Context/UserContext/UserContext';
+import { useContext, useEffect, useRef } from 'react';
 
 function SplashCursor({
 // Add whatever props you like for customization
@@ -1197,10 +1198,11 @@ useEffect(() => {
   BACK_COLOR,
   TRANSPARENT,
 ]);
+ const {showEffect, setShowEffect}=useContext(UserContext)
 
 return (
   <div className="fixed top-0 left-0 z-50 pointer-events-none">
-    <canvas ref={canvasRef} id="fluid" className="w-screen h-screen" />
+    <canvas ref={canvasRef} id="fluid" className={`w-screen h-screen ${showEffect? "" :"hidden"} ` }/>
   </div>
 );
 }

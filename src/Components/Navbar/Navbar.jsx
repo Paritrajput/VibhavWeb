@@ -79,9 +79,31 @@ function Navbar() {
   const handleMouseLeave = () => {
     setIsProjectsOpen(false);
   };
+
+  const [isVisible, setIsVisible] = useState(false);
+  
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 90) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+      useEffect(() => {
+        // Add event listener for scroll
+        window.addEventListener("scroll", handleScroll);
+    
+        // Cleanup event listener on component unmount
+        return () => {
+          window.removeEventListener("scroll", handleScroll);
+        };
+      }, []);
+  
   return (
-    <div className="navbar sticky w-full top-0 z-30 inset-0">
-      <div className="max-sm:hidden px-2 w-[100%] ">
+    <div className="navbar sticky w-full top-0 z-[100] inset-0">
+      <div className={`max-sm:hidden px-2 w-[100%] z-90 transition-colors duration-300
+         ease-in-out ${isVisible?"bg-black backdrop:opacity-20 bg-opacity-80 backdrop-blur-md":"" } `}>
         <ul className="flex justify-between items-center ">
           <li className="w-20">
             <img
@@ -232,7 +254,8 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="sm:hidden flex flex-col w-full   top-0">
+      <div className={`sm:hidden flex flex-col w-full   top-0 z-90 transition-colors duration-300
+         ease-in-out ${isVisible?"bg-black backdrop:opacity-20 bg-opacity-90 backdrop-blur-md":"" } `}>
         <ul className="flex items-center justify-between px-3 py-1 mx-auto w-full ">
           <li className="z-40">
             <img src="/vibhav_logo.png" className="h-14 " />

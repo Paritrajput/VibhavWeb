@@ -1,5 +1,32 @@
 import { FaEye } from "react-icons/fa";
-import Link from "next/link"; // Import Link for routing
+import Link from "next/link"; 
+
+export const SkeletonWorkCard = () => {
+  return (
+    <div className="relative bg-gray-300 animate-pulse w-72 h-[22rem] md:w-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
+      {/* Skeleton Background Image */}
+      <div className="absolute inset-0 bg-gray-400"></div>
+
+      {/* Hover Overlay Placeholder */}
+      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+
+      {/* Eye Icon Placeholder */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="bg-gray-500 p-2 rounded-2xl">
+          <div className="w-8 h-8 bg-gray-400 rounded-full"></div>
+        </div>
+      </div>
+
+      {/* Name Section Placeholder */}
+      <div className="absolute bottom-0 left-0 w-full p-0">
+        <div className="bg-black bg-opacity-50 backdrop-blur-sm rounded-md p-2">
+          <div className="h-5 bg-gray-400 rounded w-3/4 mx-auto"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 const WorkCard = ({ work ,type,year}) => {
   return (

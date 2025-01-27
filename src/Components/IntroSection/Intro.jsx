@@ -12,7 +12,7 @@ import FloatingDeck from '@/Components/ui/floating-dock'
 
 function Intro() {
   return (
-    <div className="h-screen w-screen text-white  pt-16 mb-16 mt-14">
+    <div className="h-screen w-screen text-white  pt-16 mb-16 mt-14 z-40">
 
       <div className="h-2/3 flex flex-col ">
         <div className="image p-0 mx-auto opacity-0 absolute sm:right-60 sm:bottom-11 sm:opacity-100 flex items-center justify-center">
