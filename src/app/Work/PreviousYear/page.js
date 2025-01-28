@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import WorkCard, {SkeletonWorkCard} from "@/Components/Cards/WorkCard";
 
 import ourWorkData from "@/Data/Ourwork.json";
-import { SparklesCore } from "@/Components/ui/sparkles";
+// import { SparklesCore } from "@/Components/ui/sparkles";
 
 
 
@@ -38,14 +38,14 @@ export default function Home() {
           <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
         
-          <SparklesCore
+          {/* <SparklesCore
             background="transparent"
             minSize={0.4}
             maxSize={1}
             particleDensity={1200}
             className="w-full h-full"
             particleColor="#FFFFFF"
-          />
+          /> */}
 
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>

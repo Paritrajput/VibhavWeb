@@ -32,8 +32,8 @@ export default {
 				}
 			},
 			animation: {
-				scrollX: "scrollX var(--duration) linear infinite",
-				scrollY: "scrollY var(--duration) linear infinite",
+				scrollX: "scrollX 15s linear infinite",
+				scrollY: "scrollY 15s linear infinite",
 				'spin-slow': 'spin 8s linear infinite',
 				gradient: 'gradient 8s linear infinite'
 			},
