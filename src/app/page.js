@@ -14,13 +14,13 @@ export default function Home() {
   const { contactRef } = useContext(UserContext);
   return (
     <div className="overflow-x-hidden flex flex-col items-center gap-2">
-            <video
+            {/* <video
         className="fixed top-0 left-0 w-screen h-screen object-cover "
         src="/Assets/video/WhatsApp Video 2025-01-26 at 16.20.59_302f2ed0.mp4" // Replace with your video file path
         autoPlay
         loop
         muted
-      />
+      /> */}
   
       <Intro />
       <First />
