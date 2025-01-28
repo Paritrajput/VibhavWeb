@@ -9,7 +9,7 @@ export default {
 	],
 	theme: {
 		extend: {
-			fontFamily:{
+			fontFamily: {
 				robotech: ['robotech', 'sans-serif'],
 			},
 
@@ -21,10 +21,20 @@ export default {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
 					'100%': { backgroundPosition: '0% 50%' },
+				},
+				scrollX: {
+					"0%": { transform: "translateX(0)" },
+					"100%": { transform: "translateX(-100%)" }
+				},
+				scrollY: {
+					"0%": { transform: "translateY(0)" },
+					"100%": { transform: "translateY(-100%)" }
 				}
 			},
 			animation: {
-				'spin-slow': 'spin 4s linear infinite',
+				scrollX: "scrollX var(--duration) linear infinite",
+				scrollY: "scrollY var(--duration) linear infinite",
+				'spin-slow': 'spin 8s linear infinite',
 				gradient: 'gradient 8s linear infinite'
 			},
 			colors: {

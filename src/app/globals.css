@@ -190,8 +190,8 @@ body {
 
 @font-face {
   font-family: 'robotech'; /* Custom font name */
-  src: url('/fonts/Robotech.ttf') format('truetype'); /* Adjust format based on file type */
-  font-weight: 400; /* Normal weight */
+  src: url('../../public/Assets/Fonts/Robotech.ttf') format('truetype'); /* Adjust format based on file type */
+  font-weight: 700; /* Normal weight */
   font-style: normal; /* Normal style */
 }
 

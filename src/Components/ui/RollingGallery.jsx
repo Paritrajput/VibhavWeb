@@ -27,7 +27,7 @@ const faceCount = images.length;
 
 // Calculate faceWidth based on screen size
 const faceWidth=(isMobile)?(cylinderWidth/faceCount)*2.5:(cylinderWidth/faceCount)*4
-const faceHeight=isMobile?180:340;
+// const faceHeight=isMobile?180:340;
 
 console.log(`Face Width: ${faceWidth}`);
 
@@ -96,7 +96,7 @@ const handleMouseLeave = () => {
 };
 
 return (
-  <div className="relative h-[500px] w-full overflow-hidden">
+  <div className="relative mb-6 w-full overflow-hidden">
     <div
       className="absolute top-0 left-0 h-full w-[48px] z-10"
       style={{
@@ -112,7 +112,7 @@ return (
       }}
     />
 
-    <div className="flex h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
+    <div className="flex mt-8 h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
       <motion.div
         drag="x"
         dragElastic={0}
@@ -126,7 +126,7 @@ return (
           transform: transform,
           rotateY: rotation,
           width: cylinderWidth,
-          height: faceHeight,
+          // height: faceHeight,
           transformStyle: "preserve-3d",
         }}
         className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
