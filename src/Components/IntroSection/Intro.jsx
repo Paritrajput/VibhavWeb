@@ -4,7 +4,7 @@ import SplashCursor from "../ui/SplashCursor"
 import Navbar from "../Navbar/Navbar";
 import Image from "next/image";
 import { Orbitron, Michroma } from "next/font/google";
-import FloatingDeck from '@/Components/ui/floating-dock'
+import FloatingDockDemo from '@/Components/ui/FloatingDock'
 
 
 
@@ -39,7 +39,7 @@ function Intro() {
 
         </div>
         <div className="text-3xl font-light relative p-5 mx-auto sm:text-7xl sm:ml-7"> Beyond the infinity</div>
-        {/* <FloatingDeck /> */}
+        {/* <FloatingDockDemo/> */}
       </div>
     </div>
   );

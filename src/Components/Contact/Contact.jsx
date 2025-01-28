@@ -48,7 +48,7 @@ const ContactUs = () => {
       className=" relative w-[90%] sm:w-[80%] flex justify-center"
       ref={contactRef}
     >
-      <div className=" text-white md:m-9 p-6 shadow-md w-[80%] mx-auto">
+      <div className=" text-white  shadow-md md:w-[80%] mx-auto">
         <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
