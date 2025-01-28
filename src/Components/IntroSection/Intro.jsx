@@ -15,13 +15,13 @@ function Intro() {
     <div className="h-screen w-screen text-white  pt-16 mb-16 mt-14 z-40">
 
       <div className="h-2/3 flex flex-col ">
-        <div className="image p-0 mx-auto opacity-0 absolute sm:right-60 sm:bottom-11 sm:opacity-100 flex items-center justify-center">
-          <Image className="hover:border-white" src={'/Assets/video/pngegg.png'} width={240} height={330} />
-        </div>
+        <div className="image p-0 mx-auto opacity-0 absolute sm:right-60 sm:bottom-24 sm:opacity-100 flex items-center justify-center animate-spin-slow">
+          <Image className="hover:border-white" src={'/Assets/video/balle.png'} width={360} height={360} alt="Ball"/>
         {/* <SplashCursor /> */}
-        <div className="flex flex-col items-center mt-5 pt-5 ">
+        </div>
+        <div className="flex flex-col items-center mt-5 sm:ml-5 sm:mt-0 ">
           <GradientText
-            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+            colors={["#0D0D0D", "#4169E1", "#4B0082","#FF00FF","#FFD700","#00CED1"]}
             animationSpeed={3}
             showBorder={false}
             className="custom-class text-6xl font-bold font-robotech mx-auto sm:text-9xl sm:ml-5"
@@ -29,7 +29,7 @@ function Intro() {
             TEAM
           </GradientText>
           <GradientText
-            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+            colors={["#0D0D0D", "#4169E1", "#4B0082","#FF00FF","#FFD700","#00CED1"]}
             animationSpeed={3}
             showBorder={false}
             className="custom-class text-6xl font-bold font-robotech mx-auto sm:text-9xl sm:ml-5"
@@ -38,7 +38,7 @@ function Intro() {
           </GradientText>
 
         </div>
-        <div className="text-3xl font-light relative p-5 mx-auto sm:text-7xl sm:ml-7"> Beyond the infinity</div>
+        <div className="text-3xl font-light font-robotech relative p-5 mx-auto ml-10 sm:text-7xl sm:ml-7"> Beyond the infinity</div>
         {/* <FloatingDockDemo/> */}
       </div>
     </div>
