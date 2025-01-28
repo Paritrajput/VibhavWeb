@@ -18,7 +18,7 @@ function Intro() {
         <div className="image p-0 mx-auto opacity-0 absolute sm:right-60 sm:bottom-11 sm:opacity-100 flex items-center justify-center">
           <Image className="hover:border-white" src={'/Assets/video/pngegg.png'} width={240} height={330} />
         </div>
-        <SplashCursor />
+        {/* <SplashCursor /> */}
         <div className="flex flex-col items-center mt-5 pt-5 ">
           <GradientText
             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
