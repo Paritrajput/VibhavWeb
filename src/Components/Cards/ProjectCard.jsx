@@ -3,6 +3,25 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {Popup} from '@/Components/ProjectPopUp/ProjectPopUp';
 
+export const SkeletonProjectCard = () => {
+  return (
+    <motion.div
+      className="relative bg-gray-300 animate-pulse rounded-lg shadow-lg overflow-hidden group"
+      style={{ height: "300px" }}
+      whileHover={{ scale: 1.05 }}
+    >
+      {/* Skeleton for card image */}
+      <div className="absolute inset-0 bg-gray-400"></div>
+
+      {/* Skeleton for text content */}
+      <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-gray-500 to-transparent">
+        <div className="h-6 w-3/4 bg-gray-500 rounded mb-2"></div>
+        <div className="h-4 w-1/2 bg-gray-500 rounded"></div>
+      </div>
+    </motion.div>
+  );
+};
+
 const ProjectCard = ({ project }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 

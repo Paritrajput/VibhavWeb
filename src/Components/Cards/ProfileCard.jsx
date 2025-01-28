@@ -1,5 +1,32 @@
 import React from "react";
 
+
+
+export function SkeletonProfileCard() {
+  return (
+    <div className="relative bg-gray-200 rounded-xl shadow-lg w-72 h-96 overflow-hidden animate-pulse">
+      {/* Background Image Skeleton */}
+      <div className="absolute inset-0 bg-gray-300"></div>
+
+      {/* Rounded Top Center Image Skeleton */}
+      <div className="absolute top-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full bg-gray-400 border-4 border-gray-200"></div>
+
+      {/* Blurred Text Container Skeleton */}
+      <div className="absolute bottom-0 w-full p-4 text-gray-500 backdrop-blur-md">
+        <div className="w-3/4 h-4 bg-gray-400 rounded mb-2 mx-auto"></div>
+        <div className="w-1/2 h-3 bg-gray-300 rounded mx-auto"></div>
+        <div className="flex justify-center space-x-4 mt-4">
+          <div className="w-8 h-8 bg-gray-400 rounded-full"></div>
+          <div className="w-8 h-8 bg-gray-400 rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
+
 function ProfileCard({
   name,
   position,

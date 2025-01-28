@@ -19,7 +19,7 @@ body {
   left: 0;
   right: 0;
   background-size: cover;
-  background-image: url("/assets/video/1.jpeg");
+  /* background-image: url("/assets/video/1.jpeg"); */
   background-repeat: no-repeat;
   background-position: center;
   opacity: .7;

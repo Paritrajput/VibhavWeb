@@ -79,9 +79,31 @@ function Navbar() {
   const handleMouseLeave = () => {
     setIsProjectsOpen(false);
   };
+
+  const [isVisible, setIsVisible] = useState(false);
+  
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 90) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+      useEffect(() => {
+        // Add event listener for scroll
+        window.addEventListener("scroll", handleScroll);
+    
+        // Cleanup event listener on component unmount
+        return () => {
+          window.removeEventListener("scroll", handleScroll);
+        };
+      }, []);
+  
   return (
-    <div className="navbar sticky w-full top-0 z-30 inset-0">
-      <div className="max-sm:hidden px-2 w-[100%] ">
+    <div className="navbar sticky w-full top-0 z-[100] inset-0">
+      <div className={`max-sm:hidden px-2 w-[100%] z-90 transition-colors duration-300
+         ease-in-out ${isVisible?"bg-black backdrop:opacity-20 bg-opacity-80 backdrop-blur-md":"" } `}>
         <ul className="flex justify-between items-center ">
           <li className="w-20">
             <img
@@ -232,7 +254,8 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="sm:hidden flex flex-col w-full   top-0">
+      <div className={`sm:hidden flex flex-col w-full   top-0 z-90 transition-colors duration-300
+         ease-in-out ${isVisible?"bg-black backdrop:opacity-20 bg-opacity-90 backdrop-blur-md":"" } `}>
         <ul className="flex items-center justify-between px-3 py-1 mx-auto w-full ">
           <li className="z-40">
             <img src="/vibhav_logo.png" className="h-14 " />
@@ -273,44 +296,44 @@ function Navbar() {
             showNavbar ? " h-full" : " h-0"
           } `}
         >
-          <div class="flex h-screen flex-col justify-between border-e text-gray-500">
-            <div class="px-4 py-6">
-              <ul class="mt-6 space-y-1">
+          <div className="flex h-screen flex-col justify-between border-e text-gray-500">
+            <div className="px-4 py-6">
+              <ul className="mt-6 space-y-1">
                 <li>
                   <a
                     href="/"
-                    class="block rounded-lg px-4 py-2 text-sm font-medium"
+                    className="block rounded-lg px-4 py-2 text-sm font-medium"
                   >
                     Home
                   </a>
                 </li>
 
                 <li>
-                  <details class="group menu [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
-                      <span class="text-sm font-medium"> Projects </span>
+                  <details className="group menu [&_summary::-webkit-details-marker]:hidden">
+                    <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
+                      <span className="text-sm font-medium"> Projects </span>
 
-                      <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                      <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="size-5"
+                          className="size-5"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                         >
                           <path
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"
+                            clipRule="evenodd"
                           />
                         </svg>
                       </span>
                     </summary>
 
-                    <ul class="mt-2 space-y-1 px-4">
+                    <ul className="mt-2 space-y-1 px-4">
                       <li>
                         <a
                           href="/Projects/aiml"
-                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           AI/ML
                         </a>
@@ -319,7 +342,7 @@ function Navbar() {
                       <li>
                         <a
                           href="/Projects/arvr"
-                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           AR/VR
                         </a>
@@ -328,7 +351,7 @@ function Navbar() {
                       <li>
                         <a
                           href="/Projects/iot"
-                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           IOT
                         </a>
@@ -337,7 +360,7 @@ function Navbar() {
                       <li>
                         <a
                           href="/Projects/dsp"
-                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           DSP
                         </a>
@@ -346,7 +369,7 @@ function Navbar() {
                       <li>
                         <a
                           href="/Projects/embedded"
-                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           EMBEDDED SYSTEMS
                         </a>
@@ -355,7 +378,7 @@ function Navbar() {
                       <li>
                         <a
                           href="/Projects/quantumC"
-                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           QUANTAM COMPUTING
                         </a>
@@ -365,31 +388,31 @@ function Navbar() {
                 </li>
 
                 <li>
-                  <details class="group menu [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
-                      <span class="text-sm font-medium"> Team </span>
+                  <details className="group menu [&_summary::-webkit-details-marker]:hidden">
+                    <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
+                      <span className="text-sm font-medium"> Team </span>
 
-                      <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                      <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="size-5"
+                          className="size-5"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                         >
                           <path
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"
+                            clipRule="evenodd"
                           />
                         </svg>
                       </span>
                     </summary>
 
-                    <ul class="mt-2 space-y-1 px-4">
+                    <ul className="mt-2 space-y-1 px-4">
                       <li>
                         <a
                           href="/Team/CurrentTeam"
-                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           Current
                         </a>
@@ -398,7 +421,7 @@ function Navbar() {
                       <li>
                         <a
                           href="/Team/Alumni"
-                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           Alumni
                         </a>
@@ -408,31 +431,31 @@ function Navbar() {
                 </li>
 
                 <li>
-                  <details class="group menu [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
-                      <span class="text-sm font-medium"> Work </span>
+                  <details className="group menu [&_summary::-webkit-details-marker]:hidden">
+                    <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
+                      <span className="text-sm font-medium"> Work </span>
 
-                      <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                      <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="size-5"
+                          className="size-5"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                         >
                           <path
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"
+                            clipRule="evenodd"
                           />
                         </svg>
                       </span>
                     </summary>
 
-                    <ul class="mt-2 space-y-1 px-4">
+                    <ul className="mt-2 space-y-1 px-4">
                       <li>
                         <a
                           href="/Work/CurrentYear"
-                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           Current Year
                         </a>
@@ -441,7 +464,7 @@ function Navbar() {
                       <li>
                         <a
                           href="/Work/PreviousYear"
-                          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                         >
                           Previous Year
                         </a>

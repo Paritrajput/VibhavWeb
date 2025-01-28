@@ -5,15 +5,15 @@ import { CardSpotlight } from "@/Components/ui/card-spotlight";
 // Popup Component
 export function Popup({ title, description, image, onClose }) {
   return (
-    <div className="fixed top-12 inset-0 z-50 flex items-center justify-center bg-black backdrop-opacity-10 backdrop-blur-xl bg-opacity-70  rounded-2xl">
-      <CardSpotlight className="h-4/5 w-4/5 rounded-2xl backdrop-blur-xl">
+    <div className="fixed top-12 inset-0 z-50 flex items-center justify-center bg-black backdrop-opacity-100 bg-opacity-60  rounded-2xl">
+      {/* <CardSpotlight className="h-4/5 w-4/5 rounded-2xl backdrop-blur-xl">
         <motion.div
           className="relative w-full  bg-transparent rounded-lg shadow-lg p-6"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.8, opacity: 0 }}
         >
-          {/* Close Button */}
+          
           <button
             className="absolute top-0 right-0 text-gray-200 hover:text-white transition-all duration-300 ease-in-out hover:scale-125 hover:bg-black rounded-full px-1"
             onClick={onClose}
@@ -21,12 +21,7 @@ export function Popup({ title, description, image, onClose }) {
             ✕
           </button>
 
-          {/* Content */}
-          {/* <img
-          src={image}
-          alt={title}
-          className="w-full h-48 object-cover rounded-md mb-4"
-        /> */}
+     
           <div className="indent-20 flex flex-col items-center">
           <h2 className="text-3xl font-bold my-4">{title}</h2>
           <p className="text-gray-200 w-10/12 px-0 text-center">
@@ -34,12 +29,27 @@ export function Popup({ title, description, image, onClose }) {
           </p>
           </div>
         </motion.div>
-      </CardSpotlight>
+      </CardSpotlight> */}
+      <div className="h-4/5 sm:w-4/5 w-[95%] fixed rounded-2xl bg-gray-900">
+      <button
+            className="absolute top-5 right-5 text-gray-200 hover:text-white transition-all duration-300 ease-in-out hover:scale-125 hover:bg-black rounded-full px-1"
+            onClick={onClose}
+          >
+            ✕
+          </button>
+          <div className="sm:indent-20 flex flex-col items-center p-1 sm:p-8 max-sm:mt-5">
+          <h2 className="sm:text-3xl text-2xl font-bold my-7">{title}</h2>
+          <div className="text-gray-200 text-lg w-[95%] sm:w-[88%] max-h-[330px] text-start overflow-y-auto">
+          <p className="p-2">{description}</p>
+            
+          </div>
+          </div>
+          </div>
     </div>
   );
 }
 
-// Step Component
+
 const Step = ({ title }) => {
   return (
     <li className="flex gap-2 items-start">
@@ -49,7 +59,7 @@ const Step = ({ title }) => {
   );
 };
 
-// CheckIcon Component
+
 const CheckIcon = () => {
   return (
     <svg
