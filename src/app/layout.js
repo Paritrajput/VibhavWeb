@@ -1,6 +1,8 @@
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../Components/Navbar/Navbar";
+import Navigation from "../Components/Navbar/Navigation";
 import Footer from "../Components/Footer/Footer";
 import UserContextProvider from "../Context/UserContext/UserContext";
 import BackToTop from "../Components/BackToTop/BackToTop";
@@ -29,7 +31,8 @@ export default function RootLayout({ children }) {
         >
           <div className=" background bg-black "></div>
           {/* <video src="/assets/video/video2.mp4" autoPlay muted className="opacity-35 absolute"></video> */}
-          <Navbar />
+          {/* <Navbar /> */}
+          <Navigation/>
           <div className="text-white">
             <BackToTop />
 

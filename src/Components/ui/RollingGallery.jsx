@@ -9,7 +9,7 @@ useTransform,
 const RollingGallery = ({
 autoplay = false,
 pauseOnHover = false,
-images = ['Assets/Homepage/t1.webp','Assets/Homepage/t2.webp','Assets/Homepage/t3.webp','Assets/Homepage/t4.webp','Assets/Homepage/t5.webp','Assets/Homepage/t6.webp','Assets/Homepage/t7.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp'],
+images = ['Assets/Homepage/t1.webp','Assets/Homepage/t2.webp','Assets/Homepage/t3.webp','Assets/Homepage/t4.webp','Assets/Homepage/t5.webp','Assets/Homepage/t6.webp','Assets/Homepage/t7.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp'],
 }) => {
 const [isScreenSizeSm, setIsScreenSizeSm] = useState(
   window.innerWidth <= 640
