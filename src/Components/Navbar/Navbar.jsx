@@ -105,10 +105,10 @@ function Navbar() {
       <div className={`max-sm:hidden px-2 w-[100%] z-90 transition-colors duration-300
          ease-in-out ${isVisible?"bg-black backdrop:opacity-20 bg-opacity-80 backdrop-blur-md":"" } `}>
         <ul className="flex justify-between items-center ">
-          <li className="w-20">
+          <li className="">
             <img
               src="/vibhav_logo.png"
-              className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
+              className="h-36 w-36 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
             />
           </li>
           <li className="h-[4.5rem] p-5"><NavbarDemo/></li>
