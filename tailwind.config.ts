@@ -11,6 +11,7 @@ export default {
 		extend: {
 			fontFamily: {
 				robotech: ['robotech', 'sans-serif'],
+				azonix: ["Azonix", "sans-serif"],
 			},
 
 			transitionDuration: {

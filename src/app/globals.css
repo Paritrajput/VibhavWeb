@@ -196,8 +196,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Orbitron';
-  src: url('/fonts/Orbitron-Bold.ttf') format('truetype');
+  font-family: 'azonix';
+  src: url('/fonts/Azonix.woff2') format('woff2');
   font-weight: 700; /* Bold weight */
   font-style: normal;
 }

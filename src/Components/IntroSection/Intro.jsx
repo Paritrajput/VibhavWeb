@@ -3,6 +3,7 @@ import GradientText from '@/Components/ui/GradientText'
 import Navbar from "../Navbar/Navbar";
 import Image from "next/image";
 import SocialHandles from "@/Components/ui/SocialHandle"
+import {TextRevealCard} from '@/Components/ui/text-reveal'
 
 
 
@@ -19,8 +20,8 @@ function Intro() {
           <Image className="hover:border-white" src={'/Assets/video/balle.png'} width={360} height={360} />
         </div>
         {/* <SplashCursor /> */}
-        <div className="absolute z-0 sm:left-[23%]  opacity-55 ">
-          <video src="/assets/video/aura.mp4" loop autoPlay muted></video>
+        <div className="absolute z-0 sm:left-[23%] opacity-55 ">
+          <video src="/assets/video/aura.mp4" loop autoPlay muted height={screen}></video>
         </div>
         <div className="flex flex-col items-center mt-5 pt-5 ">
           <GradientText
@@ -44,7 +45,12 @@ function Intro() {
           {" "}
           Beyond the infinity
         </div> */}
-        <div className="text-3xl font-thin relative p-5 mx-auto  sm:text-6xl sm:ml-7"> Beyond the infinity</div>
+        <div className="text-6xl font-thin relative mx-auto mt-4 sm:text-5xl sm:ml-7"> 
+        <TextRevealCard
+        text="Beyond the Infinity"
+        revealText="अनंत से भी आगे ! "
+      />
+        </div>
         {/* <div className="flex items-center justify-center h-[35rem] w-full">
               <FloatingDock
                 desktopClassName="translate-y-20"

@@ -5,7 +5,7 @@ import Image from 'next/image'
 function SocialHandle() {
   return (
     <div>
-      <ul className='flex w-full sm:flex-col gap-2 items-center p-1'>
+      <ul className='flex w-full sm:flex-col gap-2 items-center p-1 hover:shadow-md'>
         <li>
         <Link href='#'>
           <Image src={'/Assets/icons/github.png'} width={35} height={35}></Image>
