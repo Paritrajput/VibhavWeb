@@ -318,15 +318,7 @@
       "Instagram": "https://www.instagram.com/https.ak.ayush/",
       "Position": "EXECUTIVE MEMBER"
     },
-    {
-      "Name": "Amulya",
-      "NickName": "Amulya",
-      "Profile": "/Assets/TeamPhotos/Second/amulya.webp",
-      "Github": "https://github.com/amulyaa-18",
-      "LinkedIn": "https://www.linkedin.com/in/amulya-singla-26201628b/",
-      "Instagram": "https://www.instagram.com/_amuly_aa/",
-      "Position": "EXECUTIVE MEMBER"
-    },
+   
     {
       "Name": "Bhavneet Singh",
       "NickName": "Bhavneet",
@@ -337,12 +329,21 @@
       "Position": "EXECUTIVE MEMBER"
     },
     {
-      "Name": "Shivam Khanna",
-      "NickName": "Khanna",
-      "Profile": "/Assets/TeamPhotos/Second/shivam.webp",
+      "Name": "Chetan Nehra",
+      "NickName": "Chetan",
+      "Profile": "",
       "Github": "https://github.com/shivamkhana1000",
       "LinkedIn": "https://www.linkedin.com/in/shivam-k-a11279290/",
       "Instagram": "https://www.instagram.com/shivam_k_29/",
+      "Position": "EXECUTIVE MEMBER"
+    },
+    {
+      "Name": "Deepanshu Singh",
+      "NickName": "DJ Singh",
+      "Profile": "/Assets/TeamPhotos/Second/Deepanshu singh.webp",
+      "Github": "https://github.com/Deepanshusingh5151",
+      "LinkedIn": "https://www.linkedin.com/in/deepanshu-singh-492bb3283/",
+      "Instagram": "https://www.instagram.com/deepanshusingh5151/",
       "Position": "EXECUTIVE MEMBER"
     },
     {
@@ -358,6 +359,15 @@
       "Name": "Inika Agarwaal",
       "NickName": "Inika",
       "Profile": "/Assets/TeamPhotos/Second/Inika Aggarwal.webp",
+      "Github": "https://github.com/Inikaaggarwal",
+      "LinkedIn": "https://www.linkedin.com/in/inika-aggarwal-1406632aa/",
+      "Instagram": "https://www.instagram.com/inikaaggarwal.16/",
+      "Position": "EXECUTIVE MEMBER"
+    },
+    {
+      "Name": "Keshav Chandel",
+      "NickName": "Keshav",
+      "Profile": "/Assets/TeamPhotos/Second/Keshav Chandel.webp",
       "Github": "https://github.com/Inikaaggarwal",
       "LinkedIn": "https://www.linkedin.com/in/inika-aggarwal-1406632aa/",
       "Instagram": "https://www.instagram.com/inikaaggarwal.16/",
@@ -399,12 +409,30 @@
       "Position": "EXECUTIVE MEMBER"
     },
     {
+      "Name": "Parit Rajput",
+      "NickName": "Moradabadi",
+      "Profile": "/Assets/TeamPhotos/Second/Parit Rajput.webp",
+      "Github": "https://github.com/Paritrajput",
+      "LinkedIn": "https://www.linkedin.com/in/parit-rajput-9ba7651b4/",
+      "Instagram": "https://www.instagram.com/paritrajput/",
+      "Position": "EXECUTIVE MEMBER"
+    },
+    {
       "Name": "Rajat Ranseta",
       "NickName": "Rajjo ",
       "Profile": "/Assets/TeamPhotos/Second/Rajat.webp",
       "Github": "https://github.com/RajatRanseta",
       "LinkedIn": "https://www.linkedin.com/in/rajat-ranseta-6660822b0/",
       "Instagram": "https://www.instagram.com/rajat_0864/",
+      "Position": "EXECUTIVE MEMBER"
+    },
+    {
+      "Name": "Ratnesh Dev Tudu",
+      "NickName": "Ratnesh",
+      "Profile": "/Assets/TeamPhotos/Second/Ratnesh.webp",
+      "Github": "https://github.com/tuduratnesh",
+      "LinkedIn": "http://www.linkedin.com/in/ratneshdevtudu",
+      "Instagram": "https://www.instagram.com/invites/contact/?igsh=1enqid004dewq&utm_content=i7j6glh",
       "Position": "EXECUTIVE MEMBER"
     },
     {
@@ -435,24 +463,8 @@
       "Instagram": "https://www.instagram.com/_shivi.7/",
       "Position": "EXECUTIVE MEMBER"
     },
-    {
-      "Name": "Parit Rajput",
-      "NickName": "Moradabadi",
-      "Profile": "/Assets/TeamPhotos/Second/Parit Rajput.webp",
-      "Github": "https://github.com/Paritrajput",
-      "LinkedIn": "https://www.linkedin.com/in/parit-rajput-9ba7651b4/",
-      "Instagram": "https://www.instagram.com/paritrajput/",
-      "Position": "EXECUTIVE MEMBER"
-    },
-    {
-      "Name": "Deepanshu Singh",
-      "NickName": "DJ Singh",
-      "Profile": "/Assets/TeamPhotos/Second/Deepanshu singh.webp",
-      "Github": "https://github.com/Deepanshusingh5151",
-      "LinkedIn": "https://www.linkedin.com/in/deepanshu-singh-492bb3283/",
-      "Instagram": "https://www.instagram.com/deepanshusingh5151/",
-      "Position": "EXECUTIVE MEMBER"
-    },
+ 
+
     {
       "Name": "Shresth Maheshwari",
       "NickName": "Singer",
@@ -460,6 +472,33 @@
       "Github": "https://github.com/shresth2405",
       "LinkedIn": "https://www.linkedin.com/in/shresth-maheshwari-1a8a7028b/",
       "Instagram": "https://www.instagram.com/shresth2405?igsh=cGJrMGp4cWpiYnA5",
+      "Position": "EXECUTIVE MEMBER"
+    },
+    {
+      "Name": "Shresth Sharma",
+      "NickName": "Shresth",
+      "Profile": "/Assets/TeamPhotos/Second/Shreshth.webp",
+      "Github": "https://github.com/shresth2405",
+      "LinkedIn": "https://www.linkedin.com/in/shresth-maheshwari-1a8a7028b/",
+      "Instagram": "https://www.instagram.com/shresth2405?igsh=cGJrMGp4cWpiYnA5",
+      "Position": "EXECUTIVE MEMBER"
+    },
+    {
+      "Name": "Tanishq",
+      "NickName": "Tanishq",
+      "Profile": "/Assets/TeamPhotos/Second/Tanishq.webp",
+      "Github": "https://github.com/Shivi002",
+      "LinkedIn": "https://www.linkedin.com/in/shivi-singh-9b1b6226a/",
+      "Instagram": "https://www.instagram.com/_shivi.7/",
+      "Position": "EXECUTIVE MEMBER"
+    },
+    {
+      "Name": "Uday",
+      "NickName": "Uday",
+      "Profile": "/Assets/TeamPhotos/Second/Uday.webp",
+      "Github": "https://github.com/Shivi002",
+      "LinkedIn": "https://www.linkedin.com/in/shivi-singh-9b1b6226a/",
+      "Instagram": "https://www.instagram.com/_shivi.7/",
       "Position": "EXECUTIVE MEMBER"
     }
   ],

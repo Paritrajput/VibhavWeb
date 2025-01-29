@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --border-radius--menu-wrapper: 100px;
-  --border-radius--menu-link: 92px;
+  --border-radius--menu-wrapper: 20px;
+  --border-radius--menu-link: 20px;
 }
 
 
@@ -19,12 +19,12 @@ body {
 }
 
 .menuLink {
-  @apply gap-x-2 max-md:gap-x-1 text-white cursor-pointer border flex-none justify-between items-center text-sm max-sm:text-xs font-normal leading-[114.286%] max-sm:leading-none no-underline transition-[background-color] duration-200 ease-in-out flex py-4 max-sm:py-2 px-6 max-sm:px-3 rounded-[80px] border-solid border-[#999999] hover:border-[#] hover:bg-[#36353a];
+  @apply gap-x-2 max-md:gap-x-1 text-white cursor-pointer border flex-none justify-between items-center text-sm max-sm:text-xs font-normal leading-[114.286%] max-sm:leading-none no-underline transition-[background-color] duration-200 ease-in-out flex py-4 max-sm:py-2 px-6 max-sm:px-3 rounded-[8px] border-none border-[#999999] hover:border-[#] hover:bg-[#36353a];
 }
 
 
 .menuLinkm {
-  @apply gap-x-2 max-md:gap-x-1 text-white cursor-pointer flex-none justify-between items-center text-sm max-sm:text-xs font-normal leading-[114.286%] max-sm:leading-none no-underline transition-[background-color] duration-200 ease-in-out flex py-4 max-sm:py-2 px-6 max-sm:px-3 rounded-[80px] border-solid border-[#999999] hover:border-[#] hover:bg-[#36353a];
+  @apply gap-x-2 max-md:gap-x-1 text-white cursor-pointer flex-none justify-between items-center text-sm max-sm:text-xs font-normal leading-[114.286%] max-sm:leading-none no-underline transition-[background-color] duration-200 ease-in-out flex py-4 max-sm:py-2 px-6 max-sm:px-3 rounded-[2px] border-none border-[#999999] hover:border-[#] hover:bg-[#36353a];
 }
 .menuLink.active {
   background-color: #414141; /* Change this to the desired background color */

@@ -25,7 +25,6 @@ import { useRef } from "react";
 // import { faL } from "@fortawesome/free-solid-svg-icons";
 // import { faHome } from "@fortawesome/free-solid-svg-icons";
 
-
 const projects = [
   {
     name: "AI/ML",
@@ -97,8 +96,11 @@ export default function Navigation() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+
+
   const handleScroll = () => {
     if (typeof window !== "undefined") {
+      if(window.scrollY>300){
       if (window.scrollY > lastScrollY) {
         // Scrolling down
         setIsVisible(false);
@@ -106,6 +108,7 @@ export default function Navigation() {
         // Scrolling up
         setIsVisible(true);
       }
+    }
       setLastScrollY(window.scrollY);
     }
   };
@@ -277,6 +280,7 @@ export default function Navigation() {
   };
 
   return isMobile ? (
+    
     <nav
       ref={navRef}
       className="fixed bottom-0 left-0 right-0 z-50 mx-auto max-w-screen-xl gap-x-2 gap-y-2  bg-[rgba(26,27,30,0.4)] border flex-col flex  p-[9px] max-sm:p-[5px] border-solid border-[#222325]  transition-custom "
@@ -396,145 +400,144 @@ export default function Navigation() {
       </div>
     </nav> //for mobile view
   ) : (
-    <>
-    <nav
-    ref={navRef}
-    className= {`fixed top-8 left-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333] transition-custom ${(isVisible) ? 'translate-y-0': '-translate-y-full'}`}>
-       <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[30px] p-1">
-           <li className="w-20">
-             <img
-               src="/vibhav_logo.png"
-               className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
-             />
-           </li>
-          
-
-         </ul>
- 
- 
-
-  </nav> 
-    <nav
-      ref={navRef}
-      className={` fixed top-8 right-0 left-0 z-50 mx-auto w-2/3 max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom ${(isVisible) ? 'translate-y-0': '-translate-y-full'}`}
-    >
-      {ProjectVisible && (
-        <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col-reverse flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
-          <div className="gap-x-4 gap-y-4 grid-rows-[auto_auto] grid-cols-[1fr_1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6 ">
-            {projects.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
-                onClick={handleSubmenuClick}
-              >
-                <item.icon className="inline mx-4 w-6 h-6" />
-                {item.name}
-              </Link>
-            ))}
+    <div className="top-1">
+      <nav
+        ref={navRef}
+        className={`fixed top-1 left-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333] transition-custom transition-all ease-in-out duration-300 ${
+          isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        }`}
+      >
+        <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[30px] p-1">
+          <li className="w-20">
+            <img
+              src="/vibhav_logo.png"
+              className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
+            />
+          </li>
+        </ul>
+      </nav>
+      <nav
+        ref={navRef}
+        className={` fixed top-1 right-0 left-0 z-50 mx-auto w-2/3 max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom transition-all ease-in-out duration-300 ${
+          isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        }`}
+      >
+        {ProjectVisible && (
+          <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col-reverse flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
+            <div className="gap-x-4 gap-y-4 grid-rows-[auto_auto] grid-cols-[1fr_1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6 ">
+              {projects.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
+                  onClick={handleSubmenuClick}
+                >
+                  <item.icon className="inline mx-4 w-6 h-6" />
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
-      {WorkVisible && (
-        <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
-          <div className="grid-rows-[auto] grid-cols-[1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6">
-            {ourwork.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={handleSubmenuClick}
-                className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
-              >
-                <item.icon className="inline mx-4 w-6 h-6" />
-                {item.name}
-              </Link>
-            ))}
+        )}
+        {WorkVisible && (
+          <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
+            <div className="grid-rows-[auto] grid-cols-[1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6">
+              {ourwork.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={handleSubmenuClick}
+                  className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
+                >
+                  <item.icon className="inline mx-4 w-6 h-6" />
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
-      {TeamVisible && (
-        <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
-          <div className="gap-x-4 gap-y-4 grid-rows-[auto] grid-cols-[1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6">
-            {ourteam.map((item) => (
-              <Link
-                onClick={handleSubmenuClick}
-                key={item.name}
-                href={item.href}
-                className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
-              >
-                <item.icon className="inline mx-4 w-6 h-6" />
-                {item.name}
-              </Link>
-            ))}
+        )}
+        {TeamVisible && (
+          <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
+            <div className="gap-x-4 gap-y-4 grid-rows-[auto] grid-cols-[1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6">
+              {ourteam.map((item) => (
+                <Link
+                  onClick={handleSubmenuClick}
+                  key={item.name}
+                  href={item.href}
+                  className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
+                >
+                  <item.icon className="inline mx-4 w-6 h-6" />
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
-      <div className="w-full gap-x-2 max-md:gap-1 gap-y-2 rounded-[var(--border-radius--menu-link)] bg-[#1a1b1e] justify-between flex overflow-auto p-3 max-sm:p-2 transition-custom">
-        <p
-          onClick={(e) => {
-            handleProjectClick(e);
-          }}
-          className={`text-white menuLink ${
-            pathname.startsWith("/Work/") ? "active" : ""
-          }`}
-        >
-          Projects
-        </p>
-        <p
-          onClick={(e) => {
-            handleWorkClick(e);
-          }}
-          className={`menuLink ${
-            activeRoute === "/OurWork/[id]" ? "active" : ""
-          }`}
-        >
-          Work
-        </p>
-
-        <Link
-          href="/"
-          className={`flex gap-2 items-center menuLink ${location.pathname === "/" ? "active" : ""}`}
-        >
-          <Home className="w-5 h-5 text-gray-300" />
-          Home
-        </Link>
-
-        <p
-          onClick={(e) => {
-            handleTeamClick(e);
-          }}
-          className={`menuLink ${
-            activeRoute === "/OurTeam/[id]" ? "active" : ""
-          }`}
-        >
-          Team
-        </p>
-
-        <Link href="/" scroll={false}>
-          <p className="menuLink" onClick={scrollToBottom}>
-            Contact
+        )}
+        <div className="w-full gap-x-2 max-md:gap-1 gap-y-2 rounded-[var(--border-radius--menu-link)] bg-[#1a1b1e] justify-between flex overflow-auto p-3 max-sm:p-2 transition-custom">
+          <p
+            onClick={(e) => {
+              handleProjectClick(e);
+            }}
+            className={`text-white menuLink ${
+              pathname.startsWith("/Work/") ? "active" : ""
+            }`}
+          >
+            Projects
           </p>
-        </Link>
-      </div>
-    </nav> 
-    <nav
-    ref={navRef}
-    className={`fixed top-8 right-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom ${(isVisible) ? 'translate-y-0': '-translate-y-full p-0'}`}
-  >
-       <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[30px] p-1">
-           <li className="w-20">
-             <img
-               src="/vibhav_logo.png"
-               className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
-             />
-           </li>
-          
+          <p
+            onClick={(e) => {
+              handleWorkClick(e);
+            }}
+            className={`menuLink ${
+              activeRoute === "/OurWork/[id]" ? "active" : ""
+            }`}
+          >
+            Work
+          </p>
 
-         </ul>
- 
- 
+          <Link
+            href="/"
+            className={`flex gap-2 items-center menuLink ${
+              location.pathname === "/" ? "active" : ""
+            }`}
+          >
+            <Home className="w-5 h-5 text-gray-300" />
+            Home
+          </Link>
 
-  </nav> //navigation for desktop view
-    </>
+          <p
+            onClick={(e) => {
+              handleTeamClick(e);
+            }}
+            className={`menuLink ${
+              activeRoute === "/OurTeam/[id]" ? "active" : ""
+            }`}
+          >
+            Team
+          </p>
+
+          <Link href="/" scroll={false}>
+            <p className="menuLink" onClick={scrollToBottom}>
+              Contact
+            </p>
+          </Link>
+        </div>
+      </nav>
+      <nav
+        ref={navRef}
+        className={`fixed top-1 right-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom transition-all ease-in-out duration-300 ${
+          isVisible ? "translate-y-0 opacity-100" : "-translate-y-full p-0 opacity-0"
+        }`}
+      >
+        <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[30px] p-1">
+          <li className="w-20">
+            <img
+              src="/nimbusLogo.png"
+              className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
+            />
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }

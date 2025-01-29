@@ -9,7 +9,7 @@
           "/Assets/Events/insti-event.webp"
         ],
         "round1head": "Round 1 : Nonogram",
-        "round1": "Nonogram is a picture logic puzzle. To disclose a concealed picture, cells in a grid must be coloured or left blank according to the alphabet on the side of the grid, just like mine sweeper. In this puzzle type, an alphabet is a form of discrete tomography that measures how many unbroken lines of filled-in squares are in any given row or column. After all the alphabet or letters are recognized, it will lead to a location on the campus, which participants must find out. It will be a time-based task.",
+        "round1": "Nonogram is a picture logic puzzle. To disclose a concealed picture, cells in a grid must be coloured or left blank according to the alphabet on the side of the grid, just like mine sweeper. In this puzzle type, an alphabet is a form of discrete tomography that measures how many unbroken lines of filled-in squares are in any given row or column.",
         "round2head": "Round 2 : Bishopblitz",
         "round2": "In this game, participants must take the horse piece from start to finish point given on the board.",
         "round3head": "The rules are:",
@@ -88,12 +88,12 @@
           "/Assets/Events/pahal.webp",
           "/Assets/Events/pahal.webp"
         ],
-        "round1": "Team Vibhav achieved remarkable success in organising PAHAL, an awareness campaign on March 15, at barot village, our goal is not only to inform but to inspire.",
-        "round2": "By spreading awareness about 'PM VISHWAKARMA YOJANA' in Barot, which aims to empower skilled workers by providing financial assistance for toolkits. Himachal Pradesh government launched these schemes to uplift its skilled and unskilled workforce and contribute to the state's economic growth and prosperity.",
-        "round3": "Overall, PAHAL was a meritorious effort in upliftment of lives of people and spreading awareness. The campaign was a great example of how technology and government schemes can be used to benefit and bring about changes.",
-        "round4": "2Overall, PAHAL was a meritorious effort in upliftment of lives of people and spreading awareness. The campaign was a great example of how technology and government schemes can be used to benefit and bring about changes.",
-        "round5": "3Overall, PAHAL was a meritorious effort in upliftment of lives of people and spreading awareness. The campaign was a great example of how technology and government schemes can be used to benefit and bring about changes.",
-        "round6": "4Overall, PAHAL was a meritorious effort in upliftment of lives of people and spreading awareness. The campaign was a great example of how technology and government schemes can be used to benefit and bring about changes."
+        "round1": "Team Vibhav successfully organized PAHAL, an impactful awareness campaign, on March 15 in Barot village. Our mission was not just to inform people about government schemes but to inspire and empower them by highlighting opportunities that could enhance their livelihoods. By reaching out directly to the community.",
+        "round2": "As part of this initiative, we focused on spreading awareness about the PM Vishwakarma Yojana, a scheme introduced to support artisans and traditional craftsmen. The scheme provides financial assistance, modern toolkits, and skill development training, ensuring that workers can enhance their craftsmanship and sustain their livelihoods.",
+        "round3": "Through PAHAL, Team Vibhav not only educated the local community about the PM Vishwakarma Yojana but also engaged with them to understand their challenges and aspirations. Many skilled workers, including carpenters, blacksmiths, and artisans, were unaware of the financial aid and training opportunities available to them.",
+        "round4": "The campaign also highlighted the role of technology and government policies in transforming rural livelihoods. We interacted with local workers and demonstrated how access to modern tools, financial support, and skill development programs could significantly improve their productivity and earning potential.",
+        "round5": "Apart from spreading awareness, PAHAL also fostered meaningful conversations and connections between the villagers and our team. The positive response from the community reinforced our belief that small initiatives can lead to significant changes. ",
+        "round6": "Overall, PAHAL was a remarkable step towards community development, reinforcing the idea that awareness is the first step toward empowerment. The enthusiasm and participation of the villagers reflected their eagerness to embrace new opportunities. Team Vibhav remains committed to organizing such initiatives in the future."
       },
       {
         "id": 2,
@@ -103,9 +103,11 @@
           "/Assets/Events/prerak.webp",
           "/Assets/Events/prerak.webp"
         ],
-        "round1": "Witnessing the spark of curiosity in young minds as we shared the wonders of engineering and technical fields was truly uplifting. Let's continue to sow seeds of empowerment and nurture dreams, knowing that each small step today shapes a brighter tomorrow!",
-        "round2": "Overall, the event organized by Team Vibhav proved to be a resounding success, leaving a lasting impact on the students of the local girl's school in Hamirpur. By demystifying the world of engineering and empowering young minds with knowledge and inspiration, Team Vibhav has undoubtedly planted the seeds for a future generation of innovative engineers.",
-        "round3": "Overall, the event organized by Team Vibhav proved to be a resounding success, leaving a lasting impact on the students of the local girl's school in Hamirpur. By demystifying the world of engineering and empowering young minds with knowledge and inspiration, Team Vibhav has undoubtedly planted the seeds for a future generation of innovative engineers."
+        "round1": "Witnessing the spark of curiosity in young minds as we shared the wonders of engineering and technical fields was truly uplifting. The excitement in their eyes as they explored new concepts and possibilities reaffirmed our belief in the power of education and awareness. ",
+        "round2": "The event, organized at a local girls' school in Hamirpur, was designed to introduce students to the fascinating world of engineering and its real-world applications. By simplifying complex technical concepts and making them engaging, we ensured that young learners could grasp the fundamentals and develop a keen interest in science and technology.",
+        "round3": "Interactive sessions played a crucial role in making the event engaging and informative. Our team conducted hands-on activities, live demonstrations, and discussions that helped students visualize scientific principles in action. From understanding basic electronics to exploring the applications of modern technology, every session was designed to enhance curiosity and inspire creative thinking. ",
+      
+        "round4": "The impact of PRERAK extended beyond just one day—it planted the seeds of curiosity and ambition that will continue to grow with time. The school faculty and students expressed their appreciation for the event, emphasizing how such initiatives play a crucial role in shaping career perspectives. "
       }
     ],
     "Workshops": [
@@ -117,9 +119,10 @@
           "/Assets/Workshop/aavardhan.webp",
           "/Assets/Workshop/aavardhan.webp"
         ],
-        "round1": "Team Vibhav, in collaboration with the Incubation Centre, NIT Hamirpur under CM Startup Project of Himachal Pradesh, proudly presents 'आवर्धनः' From Spark to Unicorn Brilliance, a dynamic guest lecture aimed at inspiring and educating aspiring entrepreneurs and innovators.We are thrilled to welcome Dr. Puran Singh, Associate Professor at IIT Mandi and Director of Incubation Centre, IIT Mandi as our esteemed guest lecturer.",
-        "round2": "He has a plenty of experience and expertise in entrepreneurship and innovation. Participants will have the opportunities to ask questions, share thoughts, through this interactive session.",
-        "round3": "Join us for an inspiring session that could spark your entrepreneurial journey."
+        "round1": "Team Vibhav, in collaboration with the Incubation Centre, NIT Hamirpur, under the CM Startup Project of Himachal Pradesh, proudly presents आवर्धनः – From Spark to Unicorn Brilliance. This dynamic guest lecture is designed to inspire and educate aspiring entrepreneurs and innovators, providing them with valuable insights into the world of startups, business growth, and technological advancements.",
+        "round2": "We are honored to welcome Dr. Puran Singh, Associate Professor at IIT Mandi and Director of the Incubation Centre, IIT Mandi, as our esteemed guest lecturer. With extensive experience and expertise in entrepreneurship, innovation, and startup ecosystems, he has guided countless individuals in transforming their business ideas into thriving enterprises. ",
+        "round3": "This interactive session will offer a unique opportunity for students, budding entrepreneurs, and tech enthusiasts to engage in meaningful discussions, ask questions, and gain first-hand insights into the challenges and opportunities in the startup ecosystem. ",
+        "round4": "Beyond theoretical knowledge, Dr. Puran Singh will share real-life experiences and success stories, highlighting the essential skills, mindset, and resources required to navigate the competitive landscape of entrepreneurship."
       },
       {
         "id": 2,
@@ -129,9 +132,10 @@
           "/Assets/Workshop/cloudcomputing.webp",
           "/Assets/Workshop/aavardhan.webp"
         ],
-        "round1": "Embark on a journey into the realm of cloud computing with our upcoming workshop. Whether you're just starting out or a seasoned cloud aficionado, this workshop is designed to cater to individuals eager to explore the intricacies of cloud technology and elevate their expertise.Throughout the workshop, participants will gain valuable insights into essential cloud service models including laaS, PaaS, and SaaS.",
-        "round2": "Dive into hands-on exercises that demystify the workings of leading cloud providers such as Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform.Join us for an immersive experience that transcends theoretical knowledge, empowering you with the practical skills required to leverage the potential of cloud computing effectively.",
-        "round3": " We eagerly anticipate your active involvement in this dynamic cloud computing workshop!"
+        "round1": "Embark on a transformative journey into the world of cloud computing with our upcoming workshop. Whether you're a beginner eager to explore the fundamentals or a seasoned professional looking to enhance your expertise, this workshop is tailored to equip you with the essential knowledge and hands-on experience needed to navigate the ever-evolving cloud landscape.",
+        "round2": "Dive into hands-on exercises that demystify the workings of leading cloud providers such as Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform.",
+        "round3": " Beyond technical skills, the workshop will delve into cloud security, cost optimization, and best practices for effectively managing cloud resources. Whether you're interested in building cloud-native applications, understanding DevOps in the cloud, or exploring AI and machine learning integrations, this session will provide you with a strong foundation and hands-on exposure to cutting-edge cloud technologies.",
+        "round4": "This workshop is not just about learning—it’s about collaboration and networking.  With cloud adoption accelerating across industries, acquiring cloud skills will open new doors in fields such as software development, cybersecurity, and IT infrastructure management."
       },
       {
         "id": 3,
@@ -141,9 +145,10 @@
           "/Assets/Workshop/systemonchips.webp",
           "/Assets/Workshop/systemonchips.webp"
         ],
-        "round1": "Ready to dive deep into the revolutionary world of System on Chip (SoC) technology? Join us for an electrifying workshop where we unravel the mysteries behind SoC architecture and its groundbreaking applications.",
-        "round2": "Whether you're an aspiring engineer, a seasoned developer, or just a tech enthusiast hungry for knowledge, this workshop promises to fuel your curiosity and expand your skill set.",
-        "round3": "Don't miss out on this opportunity to connect with fellow tech aficionados and dive into the world of SoC innovation! Let's unlock the potential of SoC together!"
+        "round1": "Ready to dive deep into the revolutionary world of System on Chip (SoC) technology? Join us for an electrifying workshop where we explore the architecture, functionality, and real-world applications of SoC. This cutting-edge technology integrates multiple components, such as processors, memory, input/output interfaces, and more, onto a single chip, making it a game-changer in modern electronics. ",
+        "round2": "Whether you're an aspiring engineer, a seasoned developer, or a tech enthusiast hungry for knowledge, this workshop promises to fuel your curiosity and enhance your expertise. We will break down the fundamentals of SoC architecture, including processor cores, communication buses, power management, and hardware-software co-design.",
+        "round3": "Beyond theory, the workshop will feature interactive hands-on sessions, allowing participants to work with SoC development boards and simulation tools. ",
+        "round4": "Don’t miss out on this chance to unlock the potential of System on Chip and explore its transformative impact on modern technology. Whether you aspire to design the next-gen processors, optimize embedded systems, or innovate in IoT and AI-driven applications, this workshop is the perfect stepping stone toward mastering SoC technology. Join us and be a part of the future of chip innovation!"
       }
     ]
   }

@@ -137,7 +137,7 @@ export default function PixelCard({
   colors,
   noFocus,
   className = "",
-  children
+  children,
 }) {
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
@@ -223,8 +223,6 @@ export default function PixelCard({
   };
 
   const handleAnimation = (name) => {
-
-    
     cancelAnimationFrame(animationRef.current);
     animationRef.current = requestAnimationFrame(() => doAnimate(name));
   };
@@ -259,30 +257,23 @@ export default function PixelCard({
     <div className="w-screen relative ">
       <div
         ref={containerRef}
-        className={` relative w-[90%] sm:w-[60%] overflow-hidden grid place-items-center  border border-[#27272a] rounded-[25px]  isolate transition-colors duration-200 mx-auto ease-[cubic-bezier(0.5,1,0.89,1)  mt-14] select-none ${className}`}
-
+        className={`relative w-[90%] sm:w-[60%] overflow-hidden grid place-items-center border border-[#27272a] rounded-[25px]  isolate transition-colors duration-200 mx-auto ease-[cubic-bezier(0.5,1,0.89,1)] mt-14 select-none ${className}`}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-
         onFocus={finalNoFocus ? undefined : onFocus}
         onBlur={finalNoFocus ? undefined : onBlur}
         tabIndex={finalNoFocus ? -1 : 0}
       >
         <canvas
-          className=" absolute inset-0 opacity-45"
+          className="absolute inset-0 opacity-45"
           ref={canvasRef}
         />
         <div className="flex flex-col gap-3 p-6">
           <h1 className="text-2xl sm:text-4xl text-center">About Us</h1>
-          <p className="text-base sm:text-lg p-0 pt-2 text-justify">Team Vibhav is the Departmental team of Electronics & Communication Engineering Department which works for Nimbus-Annual Technical Festival of National Institute of Technology, Hamirpur.
-            Team Vibhav nurtures intense and genuine commitment. We have a diverse pool of students who are constantly trying to innovate and push the boundaries.
-            Team Vibhav is the Departmental team of Electronics & Communication Engineering Department which works for Nimbus-Annual Technical Festival of National Institute of Technology, Hamirpur.
-
-            Team Vibhav nurtures intense and genuine commitment. We have a diverse pool of students who are constantly trying to innovate and push the boundaries.
-
+          <p className="text-base sm:text-lg text-center leading-6">
+            Team Vibhav is the Departmental team of the Electronics & Communication Engineering Department which works for Nimbus, the Annual Technical Festival of the National Institute of Technology, Hamirpur. Team Vibhav nurtures intense and genuine commitment. We have a diverse pool of students who are constantly trying to innovate and push the boundaries.
           </p>
         </div>
-
       </div>
     </div>
   );

@@ -10,13 +10,13 @@ function Faq() {
   };
 
   return (
-    <div className="w-[100%] sm:w-[70%] mx-auto z-50">
-      <div className="text-white p-6 m-9 h-fit rounded-lg shadow-md">
-        <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+    <div className="w-[100%] sm:w-[70%] mx-auto z-30">
+      <div className="text-white p-2 sm:p-6 m-9 h-fit rounded-lg shadow-md">
+        <h2 className="sm:text-3xl text-2xl font-bold mb-4">Frequently Asked Questions</h2>
         {Faqs.faqs.map((faq, index) => (
           <div key={index} className="mb-6 border-b pb-4">
             <button
-              className="w-full text-left text-lg font-semibold text-black-600 flex justify-between items-center"
+              className="w-full text-left text-md sm:text-lg sm:font-semibold font-medium text-black-600 flex justify-between items-center"
               onClick={() => toggleFaq(index)}
             >
               {faq.question}
@@ -33,7 +33,7 @@ function Faq() {
                 openFaqIndex === index ? "max-h-40" : "max-h-0"
               }`}
             >
-              <p className="mt-2 text-gray-200">{faq.answer}</p>
+              <p className="mt-2 text-sm sm:text-md font-light text-gray-200">{faq.answer}</p>
             </div>
           </div>
         ))}

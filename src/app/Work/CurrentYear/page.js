@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className="container text-center mx-auto mt-0 p-1">
     
-      <div className="h-[10rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      {/* <div className="h-[10rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <h1 className="md:text-4xl text-2xl lg:text-4xl font-bold text-center text-white relative z-20">
           Our Work
         </h1>
@@ -51,7 +51,8 @@ export default function Home() {
 
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
-      </div>
+      </div> */}
+      <h1 className="text-3xl font-extrabold">Our Work</h1>
 
      
       <div className="mb-3 md:p-5 xl:p-10">

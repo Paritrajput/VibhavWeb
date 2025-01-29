@@ -31,11 +31,11 @@ function BackToTop() {
   }, []);
   return (
     <div className="w-full ">
-      <div className="w-full fixed flex justify-center z-20 top-24">
+      <div className="w-full fixed flex justify-center z-[110] top-32">
         {isVisible && (
           <button
             onClick={scrollToTop}
-            className="   bg-black opacity-50 text-white p-3 rounded-full shadow-lg hover:opacity-90 hover:p-4 transition-all duration-300 animate-bounce-custom"
+            className="   bg-gray-500 opacity-50 text-white p-3 rounded-full shadow-lg hover:opacity-90 hover:p-4 transition-all duration-300 animate-bounce-custom"
           >
             <img src="/BackToTop.png" className="h-5" />
           </button>

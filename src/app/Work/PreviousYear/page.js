@@ -24,7 +24,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container text-center mx-auto mt-0 p-1">
+    <div className="container text-center mx-auto mt-0 p-1" style={{ backgroundImage: `url("/WorkPageBackGnd.jpg")` , backgroundSize:"contain"}}>
+      <h1 className="text-3xl font-extrabold">Our Work</h1>
     
       <div className="h-[10rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <h1 className="md:text-4xl text-2xl lg:text-4xl font-bold text-center text-white relative z-20">

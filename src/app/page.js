@@ -1,19 +1,28 @@
 "use client";
 import Faq from "../Components/Faq/Faq";
 import Contact from "../Components/Contact/Contact";
-import First from "../Components/Main/First/First"
+import First from "../Components/Main/First/First";
 import { UserContext } from "@/Context/UserContext/UserContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import Intro from "../Components/IntroSection/Intro";
-import LogoWall from "@/Components/ui/Logowall"
-import RollingGallery from '@/Components/ui/RollingGallery'
-import { Video } from "lucide-react";
-
-
+import LogoWall from "@/Components/ui/Logowall";
+import Team from "@/Data/Team.json";
+import ProfileCard from "@/Components/Cards/ProfileCard";
 
 
 export default function Home() {
   const { contactRef } = useContext(UserContext);
+  const [cc, setCc] = useState([]);
+
+  // Fetch Core Coordinators
+  useEffect(() => {
+    const coreCoordinators = Team["Third Year"].filter(
+      (member) => member.Position === "CORE COORDINATOR"
+    );
+    setCc(coreCoordinators);
+  }, []);
+
+
 
   const logoImgs = [
     { imgUrl: '/Assets/Homepage/t1.webp', altText: "React Bits Logo" },
@@ -45,7 +54,7 @@ export default function Home() {
         {/* <div className="text"></div> */}
         <LogoWall
           items={logoImgs}
-          direction='horizontal'
+          direction="horizontal"
           pauseOnHover={true}
           size='clamp(8rem, 1rem + 20vmin, 25rem)'
           duration='60s'
@@ -54,16 +63,22 @@ export default function Home() {
         /></div>
       </div>
 
-      {/* <div className="gallery">
-        <RollingGallery autoplay={true} pauseOnHover={false} className='w-[100%]' />
-      </div> */}
+      <div className="mt-12  ">
+        <h1 className="sm:text-4xl text-2xl  text-center font-extrabold mt-10">Core Coordinators</h1>
+        <div className="flex  flex-wrap gap-24 pt-7 mt-4">
+          {cc.map((member, index) => (
+            <ProfileCard 
+            key={index} name={member.Name}
+            position={member.Position}
+            profileImg={member.Profile}
+            backgroundImg={member.Profile}/>
+            
+          ))}
+        </div>
+      </div>
+
       <Faq />
       <Contact ref={contactRef} />
-
     </div>
   );
 }
-
-
-
-
