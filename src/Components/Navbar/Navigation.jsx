@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext } from "react";
+import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import { RiTeamLine } from "react-icons/ri";
@@ -22,10 +22,8 @@ import {
 } from "lucide-react";
 import { Bot } from "lucide-react";
 import { useRef } from "react";
-import { faL } from "@fortawesome/free-solid-svg-icons";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { UserContext } from "@/Context/UserContext/UserContext";
-
+// import { faL } from "@fortawesome/free-solid-svg-icons";
+// import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 const projects = [
   {
@@ -90,11 +88,36 @@ export default function Navigation() {
   const [ProjectVisible, setProjectVisible] = useState(false);
   const [WorkVisible, setWorkVisible] = useState(false);
   const [TeamVisible, setTeamVisible] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
   const navRef = useRef(null);
   const router = useRouter();
   const [activeRoute, setActiveRoute] = useState("");
   const pathname = usePathname();
+
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [lastScrollY]);
 
   const scrollToBottom = () => {
     setTimeout(() => {
@@ -111,8 +134,6 @@ export default function Navigation() {
       }
     }, 800);
   };
-
-  
 
   useEffect(() => {
     const handleResize = () => {
@@ -137,20 +158,20 @@ export default function Navigation() {
     if (ProjectVisible) {
       document.documentElement.style.setProperty(
         "--border-radius--menu-wrapper",
-        "15px"
+        "50px"
       );
       document.documentElement.style.setProperty(
         "--border-radius--menu-link",
-        "15px"
+        "192px"
       );
     } else {
       document.documentElement.style.setProperty(
         "--border-radius--menu-wrapper",
-        "20px"
+        "32px"
       );
       document.documentElement.style.setProperty(
         "--border-radius--menu-link",
-        "20px"
+        "23px"
       );
     }
     toggleProjectVisibility();
@@ -167,20 +188,20 @@ export default function Navigation() {
     if (WorkVisible) {
       document.documentElement.style.setProperty(
         "--border-radius--menu-wrapper",
-        "15px"
+        "50px"
       );
       document.documentElement.style.setProperty(
         "--border-radius--menu-link",
-        "15px"
+        "192px"
       );
     } else {
       document.documentElement.style.setProperty(
         "--border-radius--menu-wrapper",
-        "20px"
+        "32px"
       );
       document.documentElement.style.setProperty(
         "--border-radius--menu-link",
-        "20px"
+        "23px"
       );
     }
     toggleWorkVisibility();
@@ -197,20 +218,20 @@ export default function Navigation() {
     if (TeamVisible) {
       document.documentElement.style.setProperty(
         "--border-radius--menu-wrapper",
-        "15px"
+        "50px"
       );
       document.documentElement.style.setProperty(
         "--border-radius--menu-link",
-        "15px"
+        "192px"
       );
     } else {
       document.documentElement.style.setProperty(
         "--border-radius--menu-wrapper",
-        "20px"
+        "32px"
       );
       document.documentElement.style.setProperty(
         "--border-radius--menu-link",
-        "20px"
+        "23px"
       );
     }
     toggleTeamVisibility();
@@ -254,342 +275,22 @@ export default function Navigation() {
     setTeamVisible(false);
   };
 
-   const [showNavbar, setShowNavbar] = useState(false);
-    const [isAnimating, setIsAnimating] = useState(false);
-    
-   const { scrollToContact } = useContext(UserContext);
-    const handleContactClick = () => {
-      if (window.location.pathname === "/") {
-        scrollToContact();
-      } else {
-        router.push("/");
-        setTimeout(() => scrollToContact(), 100);
-      }
-    };
-  
-    const toggleNavbar = () => {
-      if (isAnimating) return;
-  
-      setIsAnimating(true);
-      if (!showNavbar) {
-        document.body.classList.add("overflow-hidden");
-      } else {
-        document.body.classList.remove("overflow-hidden");
-      }
-      setTimeout(() => {
-        setIsAnimating(false);
-      }, 500);
-  
-      setShowNavbar(() => !showNavbar);
-    };
-    const menus = document.querySelectorAll(".menu");
-  
-    menus.forEach((menu) => {
-      menu.addEventListener("toggle", (event) => {
-        if (menu.open) {
-          menus.forEach((otherMenu) => {
-            if (otherMenu !== menu) {
-              otherMenu.open = false;
-            }
-          });
-        }
-      });
-    });
-
-    const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 300) {
-        if (currentScrollY > lastScrollY) {
-          // Scrolling down - hide navbar
-          setIsVisible(false);
-        } else {
-          // Scrolling up - show navbar
-          setIsVisible(true);
-        }
-      } else {
-        // Always show if less than 300px from top
-        setIsVisible(true);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
-
-
   return isMobile ? (
-    <div className={` flex fixed  flex-col w-full   top-0 z-90 transition-colors duration-300
-      ease-in-out bg-black backdrop:opacity-20 bg-opacity-90 backdrop-blur-md `}>
-     <ul className="flex items-center justify-between px-3 py-1 mx-auto w-full ">
-       <li className="z-40">
-         <img src="/vibhav_logo.png" className="h-14 " />
-       </li>
-       <li>
-         <button
-           onClick={toggleNavbar}
-           className="relative w-6 h-6 flex flex-col justify-center items-center group"
-         >
-           <span
-             className={`block w-full h-[3px] bg-stone-300 rounded-md transition-all duration-300 ease-in-out ${
-               showNavbar ? "rotate-45 translate-y-2" : ""
-             }`}
-           ></span>
-
-           <span
-             className={`block w-full h-[3px] bg-stone-300 rounded-md my-1 transition-all duration-300 ease-in-out ${
-               showNavbar ? "opacity-0" : ""
-             }`}
-           ></span>
-
-           <span
-             className={`block w-full h-[3px] bg-stone-300 rounded-md transition-all duration-300 ease-in-out ${
-               showNavbar ? "-rotate-45 -translate-y-2" : ""
-             }`}
-           ></span>
-         </button>
-
-         {/* <img
-           src={showNavbar ? "/cross.png" : "/showMenu.png"}
-           className="w-7 z-20 "
-         /> */}
-       </li>
-     </ul>
-
-     <div
-       className={` transition-all duration-700 delay-100 ease-in-out fixed top-14 bg-black w-[100%]   overflow-hidden ${
-         showNavbar ? " h-full" : " h-0"
-       } `}
-     >
-       <div className="flex h-screen flex-col justify-between border-e text-gray-500">
-         <div className="px-4 py-6">
-           <ul className="mt-6 space-y-1">
-             <li>
-               <a
-                 href="/"
-                 className="block rounded-lg px-4 py-2 text-sm font-medium"
-               >
-                 Home
-               </a>
-             </li>
-
-             <li>
-               <details className="group menu [&_summary::-webkit-details-marker]:hidden">
-                 <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
-                   <span className="text-sm font-medium"> Projects </span>
-
-                   <span className="shrink-0 transition duration-300 group-open:-rotate-180">
-                     <svg
-                       xmlns="http://www.w3.org/2000/svg"
-                       className="size-5"
-                       viewBox="0 0 20 20"
-                       fill="currentColor"
-                     >
-                       <path
-                         fillRule="evenodd"
-                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                         clipRule="evenodd"
-                       />
-                     </svg>
-                   </span>
-                 </summary>
-
-                 <ul className="mt-2 space-y-1 px-4">
-                   <li>
-                     <a
-                       href="/Projects/aiml"
-                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                     >
-                       AI/ML
-                     </a>
-                   </li>
-
-                   <li>
-                     <a
-                       href="/Projects/arvr"
-                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                     >
-                       AR/VR
-                     </a>
-                   </li>
-
-                   <li>
-                     <a
-                       href="/Projects/iot"
-                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                     >
-                       IOT
-                     </a>
-                   </li>
-
-                   <li>
-                     <a
-                       href="/Projects/dsp"
-                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                     >
-                       DSP
-                     </a>
-                   </li>
-
-                   <li>
-                     <a
-                       href="/Projects/embedded"
-                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                     >
-                       EMBEDDED SYSTEMS
-                     </a>
-                   </li>
-
-                   <li>
-                     <a
-                       href="/Projects/quantumC"
-                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                     >
-                       QUANTAM COMPUTING
-                     </a>
-                   </li>
-                 </ul>
-               </details>
-             </li>
-
-             <li>
-               <details className="group menu [&_summary::-webkit-details-marker]:hidden">
-                 <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
-                   <span className="text-sm font-medium"> Team </span>
-
-                   <span className="shrink-0 transition duration-300 group-open:-rotate-180">
-                     <svg
-                       xmlns="http://www.w3.org/2000/svg"
-                       className="size-5"
-                       viewBox="0 0 20 20"
-                       fill="currentColor"
-                     >
-                       <path
-                         fillRule="evenodd"
-                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                         clipRule="evenodd"
-                       />
-                     </svg>
-                   </span>
-                 </summary>
-
-                 <ul className="mt-2 space-y-1 px-4">
-                   <li>
-                     <a
-                       href="/Team/CurrentTeam"
-                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                     >
-                       Current
-                     </a>
-                   </li>
-
-                   <li>
-                     <a
-                       href="/Team/Alumni"
-                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                     >
-                       Alumni
-                     </a>
-                   </li>
-                 </ul>
-               </details>
-             </li>
-
-             <li>
-               <details className="group menu [&_summary::-webkit-details-marker]:hidden">
-                 <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2">
-                   <span className="text-sm font-medium"> Work </span>
-
-                   <span className="shrink-0 transition duration-300 group-open:-rotate-180">
-                     <svg
-                       xmlns="http://www.w3.org/2000/svg"
-                       className="size-5"
-                       viewBox="0 0 20 20"
-                       fill="currentColor"
-                     >
-                       <path
-                         fillRule="evenodd"
-                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                         clipRule="evenodd"
-                       />
-                     </svg>
-                   </span>
-                 </summary>
-
-                 <ul className="mt-2 space-y-1 px-4">
-                   <li>
-                     <a
-                       href="/Work/CurrentYear"
-                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                     >
-                       Current Year
-                     </a>
-                   </li>
-
-                   <li>
-                     <a
-                       href="/Work/PreviousYear"
-                       className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                     >
-                       Previous Year
-                     </a>
-                   </li>
-                 </ul>
-               </details>
-             </li>
-
-             <li
-               onClick={() => {
-                 setShowNavbar(false);
-                 setTimeout(() => {
-                   handleContactClick();
-                 }, 800);
-               }}
-             >
-               <span className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                 Contact
-               </span>
-             </li>
-           </ul>
-         </div>
-       </div>
-     </div>
-   </div> //for mobile view
-  ) : (
-    <div className={`z-[120] flex justify-between top-0 w-full transition-all duration-300 backdrop:blur-sm ${isVisible ? "opacity-100" : "opacity-0"}`}>
-    {/* <nav
-   
-    className={` static w-fit ml-0 justify-start top-2 left-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex   border-solid border-[#333333]  transition-custom z-100 $`}
-  >
-       
- 
- 
-
-  </nav>  */}
     <nav
       ref={navRef}
-      className={` fixed top-2 right-0 left-0 z-50 mx-auto w-[85%] max-w-screen-lg gap-x-0 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  max-sm:p-[5px] border-solid border-[#333333]  transition-custom z-100 ${isVisible ? "opacity-100" : "opacity-0"}`}
+      className="fixed bottom-0 left-0 right-0 z-50 mx-auto max-w-screen-xl gap-x-2 gap-y-2  bg-[rgba(26,27,30,0.4)] border flex-col flex  p-[9px] max-sm:p-[5px] border-solid border-[#222325]  transition-custom "
     >
-      
       {ProjectVisible && (
-        <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col-reverse flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
-          <div className="gap-x-4 gap-y-4 grid-rows-[auto_auto] grid-cols-[1fr_1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6 ">
+        <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
+          <div className="gap-x-4 gap-y-4 grid-rows-[auto] grid-cols-[1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6 ">
             {projects.map((item) => (
               <Link
+                onClick={handleSubmenuClick}
                 key={item.name}
                 href={item.href}
-                className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
-                onClick={handleSubmenuClick}
+                className="text-white text-center text-md font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
               >
-                <item.icon className="inline mx-4 w-6 h-6" />
+                <item.icon className="inline mx-4 w-7 h-7" />
                 {item.name}
               </Link>
             ))}
@@ -598,15 +299,15 @@ export default function Navigation() {
       )}
       {WorkVisible && (
         <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
-          <div className="grid-rows-[auto] grid-cols-[1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6">
+          <div className="gap-x-4 gap-y-4 grid-rows-[auto] grid-cols-[1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6">
             {ourwork.map((item) => (
               <Link
+                onClick={handleSubmenuClick}
                 key={item.name}
                 href={item.href}
-                onClick={handleSubmenuClick}
-                className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
+                className="text-white text-center text-md font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
               >
-                <item.icon className="inline mx-4 w-6 h-6" />
+                <item.icon className="inline mx-4 w-7 h-7" />
                 {item.name}
               </Link>
             ))}
@@ -615,110 +316,223 @@ export default function Navigation() {
       )}
       {TeamVisible && (
         <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
-          <div className="gap-x-4 gap-y-4 grid-rows-[auto] grid-cols-[1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6">
+          <div className="gap-x-4 gap-y-4 grid-rows-[auto] grid-cols-[1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6">
             {ourteam.map((item) => (
               <Link
                 onClick={handleSubmenuClick}
                 key={item.name}
                 href={item.href}
-                className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
+                className="text-white text-center text-md font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
               >
-                <item.icon className="inline mx-4 w-6 h-6" />
+                <item.icon className="inline mx-4 w-7 h-7" />
                 {item.name}
               </Link>
             ))}
           </div>
         </div>
       )}
-      <div className="w-full gap-x-0 max-md:gap-1 gap-y-0 rounded-[var(--border-radius--menu-link)] bg-[#1a1b1e] justify-between flex items-center overflow-auto p-0 max-sm:p-2 transition-custom">
-      <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[20px] p-1">
-           <li className="w-20">
-             <img
-               src="/vibhav_logo.png"
-               className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
-             />
-           </li>
-          
-
-         </ul>
-         <div className="flex">
-        <p
+      <div className="w-full gap-x-2 max-md:gap-1 gap-y-2 bg-[#1a1b1e] justify-between flex overflow-auto p-3 max-sm:p-2 transition-custom">
+        <div
           onClick={(e) => {
             handleProjectClick(e);
           }}
-          className={`text-white menuLink ${
-            pathname.startsWith("/Projects/") ? "active" : ""
+          className={`menuLinkm ${
+            activeRoute === "/Projects/[id]" ? "active" : ""
           }`}
         >
-          Projects
-        </p>
-        <p
+          <div>
+            <BookMarked className="w-7 h-7 text-gray-200 mx-auto" />
+            <p>Projects</p>
+          </div>
+        </div>
+
+        <div
           onClick={(e) => {
             handleWorkClick(e);
           }}
-          className={`menuLink ${
-            pathname.startsWith("/Work/") ? "active" : ""
+          className={`menuLinkm ${
+            activeRoute === "/OurWork/[id]" ? "active" : ""
           }`}
         >
-          Work
-        </p>
+          <div>
+            <History className="w-7 h-7 text-gray-200 mx-auto" />
+            <p> Work</p>
+          </div>
+        </div>
 
         <Link
           href="/"
-          className={`flex gap-2 items-center menuLink ${pathname === "/" ? "active" : ""}`}
+          className={`menuLinkm ${location.pathname === "/" ? "active" : ""}`}
         >
-          <Home className="w-5 h-5 text-gray-300" />
-          Home
+          <div>
+            <Home className="w-7 h-7 text-gray-300 mx-auto" />
+            <p>Home</p>
+          </div>
         </Link>
 
-        <p
+        <div
           onClick={(e) => {
             handleTeamClick(e);
           }}
-          className={`menuLink ${
-            pathname.startsWith("/Team/") ? "active" : ""
+          className={`menuLinkm ${
+            activeRoute === "/OurTeam/[id]" ? "active" : ""
           }`}
         >
-          Team
-        </p>
+          <div>
+            <User className="w-7 h-7 text-gray-200 mx-auto" />
+            <p>Team</p>
+          </div>
+        </div>
 
         <Link href="/" scroll={false}>
-          <p className="menuLink" onClick={handleContactClick}>
-            Contact
-          </p>
+          <div onClick={scrollToBottom} className="menuLinkm">
+            <div>
+              <Mail className="w-7 h-7 text-gray-200 mx-auto " />
+              <p>Contact</p>
+            </div>
+          </div>
         </Link>
-        </div>
-        <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[20px] p-1">
-           <li className="w-20">
-             <img
-               src="/nimbusLogo.png"
-               className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
-             />
-           </li>
-          
-
-         </ul>
       </div>
-      
-    </nav> 
-    <nav
-    
-    className=" fixed top-2 right-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex border-solid border-[#333333]  transition-custom "
-  >
-       {/* <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[20px] p-1">
-           <li className="w-20">
-             <img
-               src="/nimbusLogo.png"
-               className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
-             />
-           </li>
-          
+    </nav> //for mobile view
+  ) : (
+    <>
+      <nav
+        ref={navRef}
+        className={`fixed top-8 left-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333] transition-custom ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[30px] p-1">
+          <li className="w-20">
+            <img
+              src="/vibhav_logo.png"
+              className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
+            />
+          </li>
+        </ul>
+      </nav>
+      <nav
+        ref={navRef}
+        className={` fixed top-8 right-0 left-0 z-50 mx-auto w-2/3 max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        {ProjectVisible && (
+          <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col-reverse flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
+            <div className="gap-x-4 gap-y-4 grid-rows-[auto_auto] grid-cols-[1fr_1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6 ">
+              {projects.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
+                  onClick={handleSubmenuClick}
+                >
+                  <item.icon className="inline mx-4 w-6 h-6" />
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+        {WorkVisible && (
+          <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
+            <div className="grid-rows-[auto] grid-cols-[1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6">
+              {ourwork.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={handleSubmenuClick}
+                  className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
+                >
+                  <item.icon className="inline mx-4 w-6 h-6" />
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+        {TeamVisible && (
+          <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
+            <div className="gap-x-4 gap-y-4 grid-rows-[auto] grid-cols-[1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6">
+              {ourteam.map((item) => (
+                <Link
+                  onClick={handleSubmenuClick}
+                  key={item.name}
+                  href={item.href}
+                  className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
+                >
+                  <item.icon className="inline mx-4 w-6 h-6" />
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+        <div className="w-full gap-x-2 max-md:gap-1 gap-y-2 rounded-[var(--border-radius--menu-link)] bg-[#1a1b1e] justify-between flex overflow-auto p-3 max-sm:p-2 transition-custom">
+          <p
+            onClick={(e) => {
+              handleProjectClick(e);
+            }}
+            className={`text-white menuLink ${
+              pathname.startsWith("/Work/") ? "active" : ""
+            }`}
+          >
+            Projects
+          </p>
+          <p
+            onClick={(e) => {
+              handleWorkClick(e);
+            }}
+            className={`menuLink ${
+              activeRoute === "/OurWork/[id]" ? "active" : ""
+            }`}
+          >
+            Work
+          </p>
 
-         </ul> */}
- 
- 
+          <Link
+            href="/"
+            className={`flex gap-2 items-center menuLink ${
+              location.pathname === "/" ? "active" : ""
+            }`}
+          >
+            <Home className="w-5 h-5 text-gray-300" />
+            Home
+          </Link>
 
-  </nav> 
-    </div>
+          <p
+            onClick={(e) => {
+              handleTeamClick(e);
+            }}
+            className={`menuLink ${
+              activeRoute === "/OurTeam/[id]" ? "active" : ""
+            }`}
+          >
+            Team
+          </p>
+
+          <Link href="/" scroll={false}>
+            <p className="menuLink" onClick={scrollToBottom}>
+              Contact
+            </p>
+          </Link>
+        </div>
+      </nav>
+      <nav
+        ref={navRef}
+        className={`fixed top-8 right-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom ${
+          isVisible ? "translate-y-0" : "-translate-y-full p-0"
+        }`}
+      >
+        <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[30px] p-1">
+          <li className="w-20">
+            <img
+              src="/vibhav_logo.png"
+              className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
+            />
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }

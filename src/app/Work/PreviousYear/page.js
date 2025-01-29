@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import WorkCard, {SkeletonWorkCard} from "@/Components/Cards/WorkCard";
 
 import ourWorkData from "@/Data/Ourwork.json";
-import { SparklesCore } from "@/Components/ui/sparkles";
+// import { SparklesCore } from "@/Components/ui/sparkles";
 
 
 
@@ -27,7 +27,7 @@ export default function Home() {
     <div className="container text-center mx-auto mt-0 p-1" style={{ backgroundImage: `url("/WorkPageBackGnd.jpg")` , backgroundSize:"contain"}}>
       <h1 className="text-3xl font-extrabold">Our Work</h1>
     
-      {/* <div className="h-[10rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className="h-[10rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <h1 className="md:text-4xl text-2xl lg:text-4xl font-bold text-center text-white relative z-20">
           Our Work
         </h1>
@@ -39,18 +39,18 @@ export default function Home() {
           <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
         
-          <SparklesCore
+          {/* <SparklesCore
             background="transparent"
             minSize={0.4}
             maxSize={1}
             particleDensity={1200}
             className="w-full h-full"
             particleColor="#FFFFFF"
-          />
+          /> */}
 
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
-      </div> */}
+      </div>
 
      
       <div className="mb-3 md:p-5 xl:p-10">

@@ -30,8 +30,6 @@ export default function RootLayout({ children }) {
           className={`${geistSans.variable} ${geistMono.variable} antialiased `}
         >
           <div className=" background bg-black "></div>
-          {/* <video src="/assets/video/video2.mp4" autoPlay muted className="opacity-35 absolute"></video> */}
-          {/* <Navbar /> */}
           <Navigation/>
           <div className="text-white mt-24">
             <BackToTop />
