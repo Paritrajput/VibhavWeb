@@ -259,7 +259,7 @@ export default function PixelCard({
     <div className="w-screen relative ">
       <div
         ref={containerRef}
-        className={` relative w-[90%] sm:w-[60%] overflow-hidden grid place-items-center aspect-[4/5] border border-[#27272a] rounded-[25px] hover:underline isolate transition-colors duration-200 mx-auto ease-[cubic-bezier(0.5,1,0.89,1)  mt-14] select-none ${className}`}
+        className={` relative w-[90%] sm:w-[60%] overflow-hidden grid place-items-center  border border-[#27272a] rounded-[25px]  isolate transition-colors duration-200 mx-auto ease-[cubic-bezier(0.5,1,0.89,1)  mt-14] select-none ${className}`}
 
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
@@ -269,12 +269,12 @@ export default function PixelCard({
         tabIndex={finalNoFocus ? -1 : 0}
       >
         <canvas
-          className=" w-[70%] h-max block opacity-45"
+          className=" absolute inset-0 opacity-45"
           ref={canvasRef}
         />
-        <div className="flex flex-col gap-3 absolute top-0  m-4 items-center justify-start">
-          <h1 className="text-2xl sm:text-4xl">About Us</h1>
-          <p className="text-xl sm:text-lg p-0 pt-2">Team Vibhav is the Departmental team of Electronics & Communication Engineering Department which works for Nimbus-Annual Technical Festival of National Institute of Technology, Hamirpur.
+        <div className="flex flex-col gap-3 p-6">
+          <h1 className="text-2xl sm:text-4xl text-center">About Us</h1>
+          <p className="text-base sm:text-lg p-0 pt-2 text-justify">Team Vibhav is the Departmental team of Electronics & Communication Engineering Department which works for Nimbus-Annual Technical Festival of National Institute of Technology, Hamirpur.
             Team Vibhav nurtures intense and genuine commitment. We have a diverse pool of students who are constantly trying to innovate and push the boundaries.
             Team Vibhav is the Departmental team of Electronics & Communication Engineering Department which works for Nimbus-Annual Technical Festival of National Institute of Technology, Hamirpur.
 

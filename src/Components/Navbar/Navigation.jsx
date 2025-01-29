@@ -22,8 +22,8 @@ import {
 } from "lucide-react";
 import { Bot } from "lucide-react";
 import { useRef } from "react";
-import { faL } from "@fortawesome/free-solid-svg-icons";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+// import { faL } from "@fortawesome/free-solid-svg-icons";
+// import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 
 const projects = [
@@ -93,6 +93,32 @@ export default function Navigation() {
   const router = useRouter();
   const [activeRoute, setActiveRoute] = useState("");
   const pathname = usePathname();
+
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [lastScrollY]);
 
   const scrollToBottom = () => {
     setTimeout(() => {
@@ -373,8 +399,7 @@ export default function Navigation() {
     <>
     <nav
     ref={navRef}
-    className=" fixed top-8 left-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom "
-  >
+    className= {`fixed top-8 left-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333] transition-custom ${(isVisible) ? 'translate-y-0': '-translate-y-full'}`}>
        <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[30px] p-1">
            <li className="w-20">
              <img
@@ -391,7 +416,7 @@ export default function Navigation() {
   </nav> 
     <nav
       ref={navRef}
-      className=" fixed top-8 right-0 left-0 z-50 mx-auto w-2/3 max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom "
+      className={` fixed top-8 right-0 left-0 z-50 mx-auto w-2/3 max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom ${(isVisible) ? 'translate-y-0': '-translate-y-full'}`}
     >
       {ProjectVisible && (
         <div className="max-w-full gap-x-6 gap-y-6 bg-[#1a1b1e] flex-col-reverse flex overflow-hidden p-0 rounded-[23px] animateNav transition-custom">
@@ -494,7 +519,7 @@ export default function Navigation() {
     </nav> 
     <nav
     ref={navRef}
-    className=" fixed top-8 right-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom "
+    className={`fixed top-8 right-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom ${(isVisible) ? 'translate-y-0': '-translate-y-full p-0'}`}
   >
        <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[30px] p-1">
            <li className="w-20">

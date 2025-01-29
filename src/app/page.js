@@ -11,16 +11,17 @@ import { Video } from "lucide-react";
 
 
 
+
 export default function Home() {
   const { contactRef } = useContext(UserContext);
 
   const logoImgs = [
     { imgUrl: '/Assets/Homepage/t1.webp', altText: "React Bits Logo" },
-    { imgUrl: '/Assets/Homepage/t1.webp', altText: "React Bits Logo" },
-    { imgUrl: '/Assets/Homepage/t1.webp', altText: "React Bits Logo" },
-    { imgUrl: '/Assets/Homepage/t1.webp', altText: "React Bits Logo" },
-    { imgUrl: '/Assets/Homepage/t1.webp', altText: "React Bits Logo" },
-    { imgUrl: '/Assets/Homepage/t1.webp', altText: "React Bits Logo" },
+    { imgUrl: '/Assets/Homepage/t2.webp', altText: "React Bits Logo" },
+    { imgUrl: '/Assets/Homepage/t3.webp', altText: "React Bits Logo" },
+    { imgUrl: '/Assets/Homepage/t4.webp', altText: "React Bits Logo" },
+    { imgUrl: '/Assets/Homepage/t5.webp', altText: "React Bits Logo" },
+    { imgUrl: '/Assets/Homepage/t6.webp', altText: "React Bits Logo" },
   ];
 
   return (
@@ -32,11 +33,16 @@ export default function Home() {
         loop
         muted
       /> */}
-  
+       
+
       <Intro />
       <First />
-      <div style={{ height: '600px', width: '100%', position: 'relative' }}>
-        <div className="text"></div>
+      <div style={{ width: '100%', position: 'relative' }}>
+      <div className="flex flex-col items-center mb-4">
+      <h6 className="mx-auto sm:text-5xl text-3xl mt-10 p-7 pb-1 font-bold text-center">REFLECTING ON THE JOURNEY</h6>
+      <h6 className="pl-4 pr-4 mx-auto sm:opacity-100 sm:mx-auto sm:text-2xl sm:pl-7 sm:pt-0 text-center sm:mb-11">A glimpse into our team's past adventures, memories that shape our present.</h6>
+      {/* </div>
+        {/* <div className="text"></div> */}
         <LogoWall
           items={logoImgs}
           direction='horizontal'
@@ -45,12 +51,8 @@ export default function Home() {
           duration='60s'
           bgColor='#060606'
           bgAccentColor='#111111'
-        />
+        /></div>
       </div>
-      {/* <div className="flex flex-col items-center">
-      <h6 className="mx-auto sm:text-5xl text-3xl mt-10 p-7 pb-1 font-bold text-center">REFLECTING ON THE JOURNEY</h6>
-      <h6 className="pl-4 pr-4 mx-auto sm:opacity-100 sm:mx-auto sm:text-2xl sm:pl-7 sm:pt-0 text-center">A glimpse into our team's past adventures, memories that shape our present.</h6>
-      </div> */}
 
       {/* <div className="gallery">
         <RollingGallery autoplay={true} pauseOnHover={false} className='w-[100%]' />

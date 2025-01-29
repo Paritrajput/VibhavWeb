@@ -9,7 +9,7 @@ useTransform,
 const RollingGallery = ({
 autoplay = false,
 pauseOnHover = false,
-images = ['Assets/Homepage/t1.webp','Assets/Homepage/t2.webp','Assets/Homepage/t3.webp','Assets/Homepage/t4.webp','Assets/Homepage/t5.webp','Assets/Homepage/t6.webp','Assets/Homepage/t7.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp','Assets/Homepage/t1.webp'],
+images = ['Assets/Homepage/t1.webp','Assets/Homepage/t2.webp','Assets/Homepage/t3.webp','Assets/Homepage/t4.webp','Assets/Homepage/t4.webp','Assets/Homepage/t4.webp'],
 }) => {
 const [isScreenSizeSm, setIsScreenSizeSm] = useState(
   window.innerWidth <= 640
@@ -27,7 +27,7 @@ const faceCount = images.length;
 
 // Calculate faceWidth based on screen size
 const faceWidth=(isMobile)?(cylinderWidth/faceCount)*2.5:(cylinderWidth/faceCount)*4
-// const faceHeight=isMobile?180:340;
+const faceHeight=isMobile?180:340;
 
 console.log(`Face Width: ${faceWidth}`);
 
@@ -126,7 +126,7 @@ return (
           transform: transform,
           rotateY: rotation,
           width: cylinderWidth,
-          // height: faceHeight,
+          height: faceHeight,
           transformStyle: "preserve-3d",
         }}
         className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
@@ -134,7 +134,7 @@ return (
         {images.map((url, i) => (
           <div
             key={i}
-            className="group absolute flex h-fit items-center justify-center p-[8%] [backface-visibility:hidden] md:p-[6%]"
+            className="group absolute flex h-fit items-center justify-center m-[8%] [backface-visibility:hidden] md:m-[6%]"
             style={{
               width: `${faceWidth}px`,
               transform: `rotateY(${(360 / faceCount) * i
