@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           {/* <video src="/assets/video/video2.mp4" autoPlay muted className="opacity-35 absolute"></video> */}
           {/* <Navbar /> */}
           <Navigation/>
-          <div className="text-white">
+          <div className="text-white mt-24">
             <BackToTop />
 
             {children}

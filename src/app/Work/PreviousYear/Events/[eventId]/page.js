@@ -8,9 +8,9 @@ export default function WorkDetails() {
   const { eventId } = useParams();
 
   // Find project by ID
-  const project = workData.Previous.Events.find((item) => item.id === parseInt(eventId));
+  const Event = workData.Previous.Events.find((item) => item.id === parseInt(eventId));
 
-  if (!project) {
+  if (!Event) {
     return <div className="text-center mt-20">Project not found</div>;
   }
 
@@ -23,7 +23,7 @@ export default function WorkDetails() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        {project.name}
+        {Event.name}
       </motion.h1>
       
  
@@ -33,12 +33,12 @@ export default function WorkDetails() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {project.content}
+        {Event.content}
       </motion.h1>
       
 
       <div className="space-y-16 p-5 md:p-8 my-5">
-        {project.images.map((image, index) => (
+        {Event.images.map((image, index) => (
           <motion.div
             key={index}
             className={`flex flex-col md:flex-row ${
@@ -73,11 +73,11 @@ export default function WorkDetails() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: index * 0.3 }}
             >
-              {project[`round${2 * index + 1}`] && (
-                <p className="text-lg">{project[`round${2 * index + 1}`]}</p>
+              {Event[`round${2 * index + 1}`] && (
+                <p className="text-lg">{Event[`round${2 * index + 1}`]}</p>
               )}
-              {project[`round${2 * index + 2}`] && (
-                <p className="text-lg">{project[`round${2 * index + 2}`]}</p>
+              {Event[`round${2 * index + 2}`] && (
+                <p className="text-lg">{Event[`round${2 * index + 2}`]}</p>
               )}
             </motion.div>
           </motion.div>

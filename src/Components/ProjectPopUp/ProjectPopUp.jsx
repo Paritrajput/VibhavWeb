@@ -5,7 +5,7 @@ import { CardSpotlight } from "@/Components/ui/card-spotlight";
 // Popup Component
 export function Popup({ title, description, image, onClose }) {
   return (
-    <div className="fixed top-12 inset-0 z-50 flex items-center justify-center bg-black backdrop-opacity-100 bg-opacity-60  rounded-2xl">
+    <div className="fixed top-0 pt-10 inset-0 z-50 flex items-center justify-center bg-black backdrop-opacity-100 bg-opacity-60  rounded-2xl">
       {/* <CardSpotlight className="h-4/5 w-4/5 rounded-2xl backdrop-blur-xl">
         <motion.div
           className="relative w-full  bg-transparent rounded-lg shadow-lg p-6"
@@ -30,7 +30,7 @@ export function Popup({ title, description, image, onClose }) {
           </div>
         </motion.div>
       </CardSpotlight> */}
-      <div className="h-4/5 sm:w-4/5 w-[95%] fixed rounded-2xl bg-gray-900">
+      <div className="h-4/5 sm:w-4/5 w-[95%] fixed rounded-2xl bg-gray-900/90">
       <button
             className="absolute top-5 right-5 text-gray-200 hover:text-white transition-all duration-300 ease-in-out hover:scale-125 hover:bg-black rounded-full px-1"
             onClick={onClose}
