@@ -96,8 +96,11 @@ export default function Navigation() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+
+
   const handleScroll = () => {
     if (typeof window !== "undefined") {
+      if(window.scrollY>300){
       if (window.scrollY > lastScrollY) {
         // Scrolling down
         setIsVisible(false);
@@ -105,6 +108,7 @@ export default function Navigation() {
         // Scrolling up
         setIsVisible(true);
       }
+    }
       setLastScrollY(window.scrollY);
     }
   };
@@ -276,6 +280,7 @@ export default function Navigation() {
   };
 
   return isMobile ? (
+    
     <nav
       ref={navRef}
       className="fixed bottom-0 left-0 right-0 z-50 mx-auto max-w-screen-xl gap-x-2 gap-y-2  bg-[rgba(26,27,30,0.4)] border flex-col flex  p-[9px] max-sm:p-[5px] border-solid border-[#222325]  transition-custom "
@@ -395,11 +400,11 @@ export default function Navigation() {
       </div>
     </nav> //for mobile view
   ) : (
-    <>
+    <div className="top-1">
       <nav
         ref={navRef}
-        className={`fixed top-8 left-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333] transition-custom ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-1 left-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333] transition-custom transition-all ease-in-out duration-300 ${
+          isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
       >
         <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[30px] p-1">
@@ -413,8 +418,8 @@ export default function Navigation() {
       </nav>
       <nav
         ref={navRef}
-        className={` fixed top-8 right-0 left-0 z-50 mx-auto w-2/3 max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
+        className={` fixed top-1 right-0 left-0 z-50 mx-auto w-2/3 max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom transition-all ease-in-out duration-300 ${
+          isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
       >
         {ProjectVisible && (
@@ -520,19 +525,19 @@ export default function Navigation() {
       </nav>
       <nav
         ref={navRef}
-        className={`fixed top-8 right-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom ${
-          isVisible ? "translate-y-0" : "-translate-y-full p-0"
+        className={`fixed top-1 right-5 z-50 mx-auto  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex  p-[9px] max-sm:p-[5px] border-solid border-[#333333]  transition-custom transition-all ease-in-out duration-300 ${
+          isVisible ? "translate-y-0 opacity-100" : "-translate-y-full p-0 opacity-0"
         }`}
       >
         <ul className="flex justify-between items-center bg-[#1a1b1e] rounded-[30px] p-1">
           <li className="w-20">
             <img
-              src="/vibhav_logo.png"
+              src="/nimbusLogo.png"
               className="h-16 transition-all duration-700 delay-100 ease-in-out hover:scale-125 hover:ml-3"
             />
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 }
