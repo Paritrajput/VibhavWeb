@@ -137,8 +137,9 @@ const Aluminus = () => {
 
         {/* Render Team Members */}
         <div className="p-4 flex justify-center flex-wrap gap-12">
-          {Alumni[selectedYear].map((member) => (
+          {Alumni[selectedYear].map((member, index) => (
             <ProfileCard
+            key={index}
               name={member.Name}
               position={member.Position}
               profileImg={member.Profile}

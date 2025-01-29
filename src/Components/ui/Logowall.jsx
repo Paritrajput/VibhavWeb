@@ -86,7 +86,7 @@ function LogoWall({
                 `sm:w-[400px]`,
                 `w-[200px]`,
                 direction === "vertical" &&
-                "aspect-square w-[calc(var(--size)/1.2)]",
+                // "aspect-square w-[calc(var(--size)/1.2)]",
                 "m-6"
               ]
                 .filter(Boolean)
@@ -121,8 +121,8 @@ function LogoWall({
                 "aspect-video",
                 "w-[120px]",
                 `sm:w-[400px]`,
-                direction === "vertical" &&
-                "aspect-square w-[calc(var(--size)/1.2)] "
+                direction === "vertical"
+                // "aspect-square w-[calc(var(--size)/1.2)] "
               ]
                 .filter(Boolean)
                 .join(" ")}

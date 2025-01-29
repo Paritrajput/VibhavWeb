@@ -29,8 +29,8 @@ export default function WorkDetails() {
  
       <motion.h1
         className="text-center text-xl pt-5"
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         {project.content}
@@ -50,10 +50,10 @@ export default function WorkDetails() {
             <motion.div
               className="flex-shrink-0 max-md:w-full mx-auto"
               whileHover={
-                index % 2 !== 0 ? {rotate:-10} : {rotate:10}
+                {scale:1.05}
               }
-              initial={index % 2 !== 0 ? {rotate:30} : {rotate:-30}}
-              animate={{ rotate: 0 }}
+              initial={index % 2 !== 0 ? {x:30} : {x:-30}}
+              animate={{ x: 0 }}
               transition={{ duration: .7 }}
             >
               <img
