@@ -8,26 +8,30 @@ import Intro from "../Components/IntroSection/Intro";
 import LogoWall from "@/Components/ui/Logowall";
 import Team from "@/Data/Team.json";
 import ProfileCard from "@/Components/Cards/ProfileCard";
-import RocketLoader from "@/Components/ui/RocketLoader";
+import Cards from '@/Components/ui/Cards'
+
+// import FocusCards from '@/Components/ui/focus-card'
+// import RocketLoader from "@/Components/ui/RocketLoader";
+// import GlowingCard from '@/Components/ui/GlowingCircuit'
 
 // import Cards  from "@/Components/Cards/test"
 
 
 export default function Home() {
   const { contactRef } = useContext(UserContext);
-  const [cc, setCc] = useState([]);
+  
   const [isLoading, setIsLoading] = useState(true);
 
 
   
 
   // Fetch Core Coordinators
-  useEffect(() => {
-    const coreCoordinators = Team["Third Year"].filter(
-      (member) => member.Position === "CORE COORDINATOR"
-    );
-    setCc(coreCoordinators);
-  }, []);
+  // useEffect(() => {
+  //   const coreCoordinators = Team["Third Year"].filter(
+  //     (member) => member.Position === "CORE COORDINATOR"
+  //   );
+  //   setCc(coreCoordinators);
+  // }, []);
 
 
 
@@ -53,9 +57,9 @@ export default function Home() {
   return (
     
     <div className="overflow-x-hidden flex flex-col items-center gap-2">
-      {isLoading ? (
+      {/* {isLoading ? (
         <RocketLoader onAnimationComplete={() => setIsLoading(false)} />
-      ) : (
+      ) :*/} 
      
    
     <div className="overflow-x-hidden flex flex-col items-center gap-2">
@@ -67,9 +71,9 @@ export default function Home() {
         muted
       /> */}
        
-
+      {/* <GlowingCard/> */}
       <Intro />
-      <First />
+      <First className='z-10'/>
       <div style={{ width: '100%', position: 'relative' }}>
       <div className="flex flex-col items-center mb-4">
       <h6 className="mx-auto sm:text-5xl text-3xl mt-10 p-7 pb-1 font-bold text-center">REFLECTING ON THE JOURNEY</h6>
@@ -88,23 +92,16 @@ export default function Home() {
       </div>
 
       <div className="mt-12  ">
-        <h1 className="sm:text-4xl text-2xl  text-center font-extrabold mt-10">Core Coordinators</h1>
+        <h1 className="sm:text-4xl text-2xl  text-center font-extrabold mt-10">Club Coordinators</h1>
         <div className="flex  flex-wrap gap-24 pt-7 mt-4">
-          {cc.map((member, index) => (
-            <ProfileCard 
-            key={index} name={member.Name}
-            position={member.Position}
-            profileImg={member.Profile}
-            backgroundImg={member.Profile}/>
-            
-          ))}
+          <Cards/>
         </div>
       </div>
 
       <Faq />
       <Contact ref={contactRef} />
     </div>
-       )}
+       
     </div>
   );
 }

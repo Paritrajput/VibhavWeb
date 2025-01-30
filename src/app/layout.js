@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased `}
         >
-          <div className=" background bg-black "></div>
+          <div className=" background absolute h-screen "></div>
           <Navigation/>
           <div className="text-white mt-24">
             <BackToTop />
