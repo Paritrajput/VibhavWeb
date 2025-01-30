@@ -37,7 +37,7 @@ export default function WorkDetails() {
       </motion.h1>
       
 
-      <div className="space-y-16 p-5 md:p-8 my-5">
+      <div className="space-y-16 p-5 md:p-8 my-5 text-justify">
         {Event.images.map((image, index) => (
           <motion.div
             key={index}
@@ -57,9 +57,10 @@ export default function WorkDetails() {
               transition={{ duration: .7 }}
             >
               <img
+              
                 src={image}
                 alt={`Project image ${index + 1}`}
-                className="rounded-lg w-full md:w-80 h-80 object-cover"
+                className="rounded-lg  md:w-72  object-cover"
               />
             </motion.div>
 

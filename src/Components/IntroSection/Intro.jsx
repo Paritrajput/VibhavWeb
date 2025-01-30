@@ -16,7 +16,7 @@ function Intro() {
     </div>
       <div className="h-2/3 flex flex-col ">
         <div className="w-0 sm:w-auto image p-0 z-10 mx-auto opacity-0 absolute sm:right-40 sm:bottom-[125px] sm:opacity-90 flex items-center justify-center animate-spin-slow">
-          <Image className="hover:border-white" src={'/Assets/video/balle.png'} width={360} height={360} />
+          <Image alt="balle" className="hover:border-white" src={'/Assets/video/balle.png'} width={360} height={360} />
         </div>
         {/* <SplashCursor /> */}
         <div className="absolute z-0 sm:left-[23%]  opacity-55 ">

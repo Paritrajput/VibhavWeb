@@ -20,75 +20,7 @@ function Projects() {
   return (
   <div className="project m-6 w-[80%] mx-auto ">
     <div className="heading text-5xl font-bold text-center mb-4">Projects</div>
-    <div className="heading text-2xl font-bold text-center mb-6">Domain</div>
-    <div className="m-4 p-4 card-grid flex flex-wrap justify-around max-w-[80%] mx-auto gap-y-14 gap-x-5">
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-      <div className="card gap-4 rounded-3xl border-2 w-64 p-2">
-        <Image src="/ParthTailor.webp" width={270} height={100} className="rounded-t-3xl hover:w-64 hover:cursor-pointer position-absolute"></Image>
-        <div className="title p-3 text-center text-2xl">Project </div>
-        <span className="description pl-1 pb-1">{display}</span>
-        <button className="text-blue-200" onClick={contentCheck}>{button}</button>
-      </div>
-    </div>
+ 
   </div>
   )
 }

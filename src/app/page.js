@@ -8,7 +8,7 @@ import Intro from "../Components/IntroSection/Intro";
 import LogoWall from "@/Components/ui/Logowall";
 import Team from "@/Data/Team.json";
 import ProfileCard from "@/Components/Cards/ProfileCard";
-import RocketLoader from "@/Components/ui/RocketLoader";
+import Loader from "@/Components/ui/RocketLoader";
 
 // import Cards  from "@/Components/Cards/test"
 
@@ -53,10 +53,7 @@ export default function Home() {
   return (
     
     <div className="overflow-x-hidden flex flex-col items-center gap-2">
-      {isLoading ? (
-        <RocketLoader onAnimationComplete={() => setIsLoading(false)} />
-      ) : (
-     
+
    
     <div className="overflow-x-hidden flex flex-col items-center gap-2">
             {/* <video
@@ -104,7 +101,7 @@ export default function Home() {
       <Faq />
       <Contact ref={contactRef} />
     </div>
-       )}
+       
     </div>
   );
 }
