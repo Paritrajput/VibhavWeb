@@ -8,11 +8,18 @@ import Intro from "../Components/IntroSection/Intro";
 import LogoWall from "@/Components/ui/Logowall";
 import Team from "@/Data/Team.json";
 import ProfileCard from "@/Components/Cards/ProfileCard";
+import RocketLoader from "@/Components/ui/RocketLoader";
+
+// import Cards  from "@/Components/Cards/test"
 
 
 export default function Home() {
   const { contactRef } = useContext(UserContext);
   const [cc, setCc] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  
 
   // Fetch Core Coordinators
   useEffect(() => {
@@ -32,8 +39,25 @@ export default function Home() {
     { imgUrl: '/Assets/Homepage/t5.webp', altText: "React Bits Logo" },
     { imgUrl: '/Assets/Homepage/t6.webp', altText: "React Bits Logo" },
   ];
+ 
+
+  useEffect(() => {
+    // Simulating a delay (e.g., fetching data, images, etc.)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 7000); // Change time as per your requirement (2000ms = 2s)
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
 
   return (
+    
+    <div className="overflow-x-hidden flex flex-col items-center gap-2">
+      {isLoading ? (
+        <RocketLoader onAnimationComplete={() => setIsLoading(false)} />
+      ) : (
+     
+   
     <div className="overflow-x-hidden flex flex-col items-center gap-2">
             {/* <video
         className="fixed top-0 left-0 w-screen h-screen object-cover "
@@ -79,6 +103,8 @@ export default function Home() {
 
       <Faq />
       <Contact ref={contactRef} />
+    </div>
+       )}
     </div>
   );
 }
