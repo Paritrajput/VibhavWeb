@@ -8,6 +8,7 @@ import Intro from "../Components/IntroSection/Intro";
 import LogoWall from "@/Components/ui/Logowall";
 import Team from "@/Data/Team.json";
 import ProfileCard from "@/Components/Cards/ProfileCard";
+import Loader from "@/Components/ui/RocketLoader";
 import Cards from '@/Components/ui/Cards'
 
 // import FocusCards from '@/Components/ui/focus-card'
@@ -101,6 +102,7 @@ export default function Home() {
       <Faq />
       <Contact ref={contactRef} />
     </div>
+       
        
     </div>
   );

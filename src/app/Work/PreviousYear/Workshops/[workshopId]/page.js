@@ -61,13 +61,13 @@ export default function WorkDetails() {
             <img
               src={image}
               alt={`Project image ${index + 1}`}
-              className="rounded-lg w-full md:w-80 h-80 object-cover"
+              className="rounded-lg w-full md:w-80 h-80 object-cover aspect-auto"
             />
           </motion.div>
 
           {/* Text Section */}
           <motion.div
-            className="md:w-[65%] w-full flex md:p-10 flex-col justify-center space-y-4"
+            className="md:w-[65%] w-full flex md:p-10 flex-col  justify-start items-start space-y-4"
             whileInView={
               index % 2 !== 0 ? {x:10} : {x:-10}
             }

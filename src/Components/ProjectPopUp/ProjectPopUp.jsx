@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CardSpotlight } from "@/Components/ui/card-spotlight";
+import Link from "next/link";
 
 // Popup Component
-export function Popup({ title, description, image, onClose }) {
+export function Popup({ title, description, image, onClose, github }) {
   return (
     <div className="fixed top-0 pt-10 inset-0 z-50 flex items-center justify-center bg-black backdrop-opacity-100 bg-opacity-60  rounded-2xl">
       {/* <CardSpotlight className="h-4/5 w-4/5 rounded-2xl backdrop-blur-xl">
@@ -30,25 +31,40 @@ export function Popup({ title, description, image, onClose }) {
           </div>
         </motion.div>
       </CardSpotlight> */}
-      <div className="h-4/5 sm:w-4/5 w-[95%] fixed rounded-2xl bg-gray-900/90">
-      <button
-            className="absolute top-5 right-5 text-gray-200 hover:text-white transition-all duration-300 ease-in-out hover:scale-125 hover:bg-black rounded-full px-1"
-            onClick={onClose}
+      <div className="h-fit max-h-3/5 p-5 sm:w-3/4 w-[95%] fixed rounded-2xl bg-gray-900/90">
+        <button
+          className="absolute top-5 right-5 text-gray-200 hover:text-white transition-all duration-300 ease-in-out hover:scale-125 hover:bg-black rounded-full px-1"
+          onClick={onClose}
+        >
+          ✕
+        </button>
+        <motion.div className="sm:indent-20 flex flex-col justify-center items-center text-justify p-1 sm:p-8 max-sm:mt-5 ">
+          <motion.h2
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="sm:text-3xl text-2xl font-bold my-3"
           >
-            ✕
-          </button>
-          <div className="sm:indent-20 flex flex-col items-center p-1 sm:p-8 max-sm:mt-5">
-          <h2 className="sm:text-3xl text-2xl font-bold my-7">{title}</h2>
-          <div className="text-gray-200 text-lg w-[95%] sm:w-[88%] max-h-[330px] text-start overflow-y-auto">
-          <p className="p-2">{description}</p>
-            
-          </div>
-          </div>
-          </div>
+            {title}
+          </motion.h2>
+          <motion.div className="text-gray-200 text-lg w-[95%] sm:w-[88%] max-h-[490px] text-justify  overflow-y-auto">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="p-2 text-justify"
+            >
+              {description}
+            </motion.p>
+          </motion.div>
+        </motion.div>
+        <Link href={github} className=" flex justify-center">
+          <img alt="github" src="/github.png" className="h-10 hover:scale-105 mx-0" />
+        </Link>
+      </div>
     </div>
   );
 }
-
 
 const Step = ({ title }) => {
   return (
@@ -58,7 +74,6 @@ const Step = ({ title }) => {
     </li>
   );
 };
-
 
 const CheckIcon = () => {
   return (
