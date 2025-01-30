@@ -4,7 +4,7 @@ import PixelCard from "@/Components/ui/PixelCard"
 
 const First = () => {
   return (
-    <div>
+    <div className='mt-36'>
       <PixelCard/>
     </div>
   )

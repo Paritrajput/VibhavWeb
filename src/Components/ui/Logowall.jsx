@@ -117,7 +117,7 @@ function LogoWall({
               className={[
                 "bg-[var(--color-bg-accent)]",
                 "rounded-md",
-                "object-contain",
+                "object-cover",
                 "aspect-video",
                 "w-[120px]",
                 `sm:w-[400px]`,

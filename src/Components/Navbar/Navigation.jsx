@@ -585,7 +585,7 @@ export default function Navigation() {
       </nav>
       <nav
         ref={navRef}
-        className={` fixed top-1 right-0 left-0 z-50 mx-auto sm:w-[70%] xl:w-[50%] max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex   max-sm:p-[5px] border-solid border-[#333333]  transition-custom transition-all ease-in-out duration-300 ${
+        className={` fixed top-1 right-0 left-0 z-50 mx-auto sm:w-[70%]  max-w-screen-lg gap-x-2 gap-y-2 text-gray-200 rounded-[var(--border-radius--menu-wrapper)]  bg-[rgba(26,27,30,0.4)] border flex-col-reverse flex   max-sm:p-[5px] border-solid border-[#333333]  transition-custom transition-all ease-in-out duration-300 ${
           isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
       >
@@ -645,7 +645,7 @@ export default function Navigation() {
             </div>
           </div>
         )}
-        <div className="w-full gap-x-1 overflow-x-hidden md:gap-x-7 max-md:gap-1 gap-y-2 rounded-[var(--border-radius--menu-link)] bg-[#1a1b1e] justify-center items-center flex overflow-auto p-3 max-sm:p-2 transition-custom">
+        <div className="w-full justify-evenly gap-x-1  overflow-x-hidden md:gap-x-7 max-md:gap-1 gap-y-2 rounded-[var(--border-radius--menu-link)] bg-[#1a1b1e]  items-center flex overflow-auto p-3 max-sm:p-2 transition-custom">
           <p
             onClick={(e) => {
               handleProjectClick(e);
