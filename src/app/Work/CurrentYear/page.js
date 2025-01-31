@@ -20,7 +20,7 @@ export default function Home() {
   }, []);
   if  (events.length === 0 && workshops.length === 0)  {
     return (
-      <div className="mt-12 mx-auto flex flex-col justify-center items-center h-[70vh] gap-5 w-full p-5 ">
+      <div className="pt-12 mx-auto flex flex-col justify-center items-center h-[70vh] gap-5 w-full p-5 relative">
         
         <h1 className=" text-2xl sm:text-4xl font-bold ">
           Current Year Work
@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <div
-      className="container text-center mx-auto mt-0 p-1"
+      className="container text-center mx-auto mt-0 p-1 "
      
     >
       {/* <div className="container h-full w-full text-center mx-auto mt-0 p-1"
@@ -46,7 +46,7 @@ export default function Home() {
         position:"fixed",
         
       }}></div> */}
-      <div className="z-50">
+      <div className="z-50 relative  text-white">
       <h1 className="text-3xl font-extraboldnz-50">Our Work</h1>
 
       {/* <div className="h-[10rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
@@ -94,7 +94,7 @@ export default function Home() {
         </div>
       )}
       {workshops.length > 0 && (
-        <div className="mt-7 mb-4 pt-7 md:p-5 xl:p-10 z-50">
+        <div className=" mb-4 pt-7 md:p-5 xl:p-10 z-50 ">
           <div className="text-3xl font-bold pb-5">Current Year Workshops</div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center max-sm:gap-10 mt-5">
             {isLoading

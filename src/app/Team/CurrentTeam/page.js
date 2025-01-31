@@ -49,11 +49,11 @@ const CurrentTeam = () => {
   }, [isOpen]);
 
   return (
-    <div className="p-4 mt-12">
+    <div className="p-4 pt-32 relative text-white">
       <h1 className="sm:text-4xl text-3xl font-extrabold text-center mb-7">Current Team</h1>
       <div className="flex flex-col items-center">
         <div className="w-[95vw] flex items-center justify-center mb-12 absolute">
-          <div className="flex justify-evenly backdrop-blur max-sm:hidden rounded-[90px] px-7 transition-all duration-500 ease-in-out hover:px-12 py-6 w-fit gap-12 items-center backdrop-brightness-75 opacity-90 bg-zinc-900 border-1 border-gray-200 relative">
+          <div className="flex justify-evenly backdrop-blur max-sm:hidden rounded-[90px] px-7 transition-all duration-500 ease-in-out  py-6 w-fit gap-12 items-center backdrop-brightness-75 opacity-90 bg-zinc-900 border-1 border-gray-200 relative">
             {Object.keys(Team).map((year) => (
               <button
                 key={year}

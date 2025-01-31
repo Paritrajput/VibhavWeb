@@ -8,18 +8,30 @@
 
 
 body {
-  
   font-family: Arial, Helvetica, sans-serif;
   background-attachment: fixed;
-  background-image: url("/assets/video/background2.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  overflow-y: scroll;
-  scrollbar-width:thin;
-  /* background-color: black; */
 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
 }
+
+
+@media (max-width: 600px) {
+  body {
+    background-size: contain; /* ✅ Ensures proper scaling on small screens */
+    background-position: top center;
+  }
+}
+
 
 .menuLink {
   @apply gap-x-2 max-md:gap-x-1 text-white cursor-pointer border flex-none justify-between items-center text-sm max-sm:text-xs font-normal leading-[114.286%] max-sm:leading-none no-underline transition-[background-color] duration-200 ease-in-out flex py-4 max-sm:py-2 px-6 max-sm:px-3 rounded-[8px] border-none border-[#999999] hover:border-[#] hover:bg-[#36353a];
@@ -46,14 +58,24 @@ body {
   animation-fill-mode: forwards;
 }
 .background{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+position:fixed;
+background-image: url("/Assets/video/background2.png"); 
+
   background-size: cover;
   filter: blur(3px);
   filter: brightness(50%);
+  background-attachment: fixed;
+ 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden; 
+  overflow-y: auto;
+  scrollbar-width: thin;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 
 
   

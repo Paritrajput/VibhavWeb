@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
           <div className=" background bg-black "></div>
     
               <Navigation />
-              <div className="text-white mt-24">
+              <div className="text-white bg-transparent">
                 <BackToTop />
 
                 {children}

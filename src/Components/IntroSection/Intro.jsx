@@ -43,11 +43,11 @@ function Intro() {
             className={'text-6xl font-thin relative w-fit sm:text-5xl sm:ml-7'}
           />
           <div className="flex flex-wrap z-10 gap-3 m-5">
-          <Image src={'/assets/icons/star.png'} width={32} height={32}></Image>
-          <Image src={'/assets/icons/star.png'} width={32} height={32}></Image>
-          <Image src={'/assets/icons/star.png'} width={32} height={32}></Image>
-          <Image src={'/assets/icons/star.png'} width={32} height={32}></Image>
-          <Image src={'/assets/icons/star.png'} width={32} height={32}></Image>
+          <Image alt="star" src={'/assets/icons/star.png'} width={32} height={32}></Image>
+          <Image alt="star" src={'/assets/icons/star.png'} width={32} height={32}></Image>
+          <Image alt="star" src={'/assets/icons/star.png'} width={32} height={32}></Image>
+          <Image alt="star" src={'/assets/icons/star.png'} width={32} height={32}></Image>
+          <Image alt="star" src={'/assets/icons/star.png'} width={32} height={32}></Image>
           
           </div>
 
