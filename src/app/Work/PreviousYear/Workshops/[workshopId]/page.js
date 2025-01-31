@@ -16,8 +16,7 @@ export default function WorkDetails() {
   }
 
   return (
-    <div className="container mx-auto mt-5 p-6 text-white ">
-
+    <div className="container mx-auto pt-32 p-6 text-white relative">
 
     <motion.h1
       className="text-4xl text-center font-extrabold mb-8"
@@ -39,18 +38,18 @@ export default function WorkDetails() {
     </motion.h1>
     
 
-    <div className="space-y-16 p-5 md:p-8 my-5">
+    <div className="space-y-16 p-5 md:p-8 my-5 text-justify">
       {workshop.images.map((image, index) => (
         <motion.div
           key={index}
-          className={`flex flex-col md:flex-row ${
+          className={`flex flex-col justify-center md:flex-row ${
             index % 2 !== 0 ? "md:flex-row-reverse" : ""
           } gap-10 md:gap-2`}
          
         >
        
           <motion.div
-            className="flex-shrink-0 max-md:w-full mx-auto"
+            className="flex-shrink-0 max-md:w-full mx-auto flex items-center"
             whileHover={
               {scale:1.05}
             }
@@ -59,15 +58,16 @@ export default function WorkDetails() {
             transition={{ duration: .7 }}
           >
             <img
+            
               src={image}
               alt={`Project image ${index + 1}`}
-              className="rounded-lg w-full md:w-80 h-80 object-cover aspect-auto"
+              className="rounded-lg  md:h-96  object-cover"
             />
           </motion.div>
 
           {/* Text Section */}
           <motion.div
-            className="md:w-[65%] w-full flex md:p-10 flex-col  justify-start items-start space-y-4"
+            className="md:w-[65%] w-full flex md:p-10 flex-col justify-center space-y-4"
             whileInView={
               index % 2 !== 0 ? {x:10} : {x:-10}
             }

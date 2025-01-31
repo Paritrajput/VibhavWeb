@@ -594,18 +594,16 @@ export default function Navigation() {
             <div className="gap-x-4 gap-y-4 grid-rows-[auto_auto] grid-cols-[1fr_1fr_1fr] auto-cols-[1fr] justify-items-center grid my-6 mx-6 ">
               {projects.map((item) => (
                 
-                <button
-               
-                onClick={(e) => {
-                  e.preventDefault(); // Prevents URL from showing in status bar
-                  router.push("/");
-              
-             
-                }}
+                <Link
+                  
+                key={item.name}
+                href={item.href}
+                onClick={handleSubmenuClick}
+                className="text-white text-center text-sm max-sm:text-xs font-normal leading-[142.857%] max-sm:leading-none no-underline hover:underline transition-all duration-[0.2s] ease-[ease-in-out]"
               >
                 <item.icon className="inline mx-4 w-6 h-6" />
                 {item.name}
-              </button>
+              </Link>
               ))}
             </div>
           </div>

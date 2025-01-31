@@ -11,11 +11,11 @@ export default function WorkDetails() {
   const Event = workData.Previous.Events.find((item) => item.id === parseInt(eventId));
 
   if (!Event) {
-    return <div className="text-center mt-20">Project not found</div>;
+    return <div className="text-center pt-20">Project not found</div>;
   }
 
   return (
-    <div className="container mx-auto mt-5 p-6 text-white">
+    <div className="container mx-auto pt-32 p-6 text-white relative">
 
       <motion.h1
         className="text-4xl text-center font-extrabold mb-8"
@@ -41,14 +41,14 @@ export default function WorkDetails() {
         {Event.images.map((image, index) => (
           <motion.div
             key={index}
-            className={`flex flex-col md:flex-row ${
+            className={`flex flex-col justify-center md:flex-row ${
               index % 2 !== 0 ? "md:flex-row-reverse" : ""
             } gap-10 md:gap-2`}
            
           >
          
             <motion.div
-              className="flex-shrink-0 max-md:w-full mx-auto"
+              className="flex-shrink-0 max-md:w-full mx-auto flex items-center"
               whileHover={
                 {scale:1.05}
               }
@@ -60,7 +60,7 @@ export default function WorkDetails() {
               
                 src={image}
                 alt={`Project image ${index + 1}`}
-                className="rounded-lg  md:w-72  object-cover"
+                className="rounded-lg  md:h-96  object-cover"
               />
             </motion.div>
 
