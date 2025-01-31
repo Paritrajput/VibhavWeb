@@ -88,7 +88,7 @@ export const TextRevealCard = ({
               textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
             }}
             className="text-xl sm:text-[3rem] py-10 font-bold text-white bg-clip-text text-transparent bg-neutral-800">
-            {revealText}
+            &nbsp;&nbsp;{revealText}
           </p>
         </motion.div>
         <motion.div

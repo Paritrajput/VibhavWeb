@@ -41,13 +41,13 @@ function SocialHandle() {
 
   return (
     <div
-      className={`static right-5 top-1/3  transition-all duration-500`}
+      className={`static right-5 top-1/3  transition-all duration-500 bg-white rounded-lg`}
     >
-      <ul className="flex gap-2 items-center p-1 transition-all duration-300">
+      <ul className="flex gap-4 items-center p-1 transition-all duration-300">
         {icons.map((icon, index) => (
           <li key={index}>
             <Link href="#">
-              <Image src={icon.src} width={35} height={35} alt={icon.alt} />
+              <Image src={icon.src} width={45} height={45} alt={icon.alt} />
             </Link>
           </li>
         ))}

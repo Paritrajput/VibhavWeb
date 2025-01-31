@@ -216,7 +216,13 @@ background-image: url("/Assets/video/background2.png");
 
 @font-face {
   font-family: 'azonix';
-  src: url('/fonts/Azonix.woff2') format('woff2');
+  src: url('/assets/fonts/Azonix.woff2') format('woff2');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'batman';
+  src: url('/assets/fonts/BatmanForever.ttf') format('truetype');
   font-weight: 700; /* Bold weight */
   font-style: normal;
 }

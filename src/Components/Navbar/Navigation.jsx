@@ -643,7 +643,7 @@ export default function Navigation() {
             </div>
           </div>
         )}
-        <div className="w-full justify-evenly gap-x-1  overflow-x-hidden md:gap-x-7 max-md:gap-1 gap-y-2 rounded-[var(--border-radius--menu-link)] bg-[#1a1b1e]  items-center flex overflow-auto p-3 max-sm:p-2 transition-custom">
+        <div className="w-full justify-evenly gap-x-1 overflow-x-hidden md:gap-x-7 max-md:gap-1 gap-y-2 rounded-[var(--border-radius--menu-link)] bg-[#1a1b1e]  items-center flex overflow-auto p-3 max-sm:p-2 transition-custom">
           <p
             onClick={(e) => {
               handleProjectClick(e);
