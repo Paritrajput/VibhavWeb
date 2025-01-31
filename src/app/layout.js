@@ -34,11 +34,9 @@ export default function RootLayout({ children }) {
         >
           <Layout >
           <div className=" background bg-black "></div>
-    
               <Navigation />
-              <div className="text-white mt-24">
+              <div className="text-white">
                 <BackToTop />
-
                 {children}
               </div>
               <Footer />

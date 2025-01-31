@@ -11,9 +11,13 @@ export default {
   ],
 	theme: {
 		extend: {
+			boxShadow: {
+				'glow': '0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8)',
+			  },
 			fontFamily: {
 				robotech: ['robotech', 'sans-serif'],
 				azonix: ["Azonix", "sans-serif"],
+				batman: ["batman", "sans-serif"]
 			},
 
 			transitionDuration: {
@@ -32,13 +36,19 @@ export default {
 				scrollY: {
 					"0%": { transform: "translateY(0)" },
 					"100%": { transform: "translateY(-100%)" }
-				}
+				},
+				fadeIn: {
+					'0%': { opacity: '0.5' },
+					'100%': { opacity: '1' },
+				},
+		  
 			},
 			animation: {
 				scrollX: "scrollX 15s linear infinite",
 				scrollY: "scrollY 15s linear infinite",
 				'spin-slow': 'spin 8s linear infinite',
-				gradient: 'gradient 8s linear infinite'
+				gradient: 'gradient 8s linear infinite',
+				'fade-in': 'fadeIn 0.75s linear infinite',
 			},
 			colors: {
 				background: 'hsl(var(--background))',

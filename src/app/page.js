@@ -93,7 +93,7 @@ export default function Home() {
       </div>
 
       <div className="mt-12  ">
-        <h1 className="sm:text-4xl text-2xl  text-center font-extrabold mt-10">Club Coordinators</h1>
+        <h1 className="sm:text-4xl text-2xl  text-center font-extrabold text-white mt-10">Club Coordinators</h1>
         <div className="flex  flex-wrap gap-24 pt-7 mt-4">
           <Cards/>
         </div>
